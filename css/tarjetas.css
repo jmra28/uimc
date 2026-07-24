@@ -1,0 +1,108 @@
+/* =========================================================
+   TARJETAS.CSS
+   Bloque BEM: .tarjetas
+   Grid de 6 tarjetas horizontales (imagen + título + texto).
+   1 columna en móvil, 2 en tablet, 3 en desktop (3x2).
+   ========================================================= */
+
+.tarjetas {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.tarjetas__header {
+  margin-bottom: var(--space-5);
+}
+
+.tarjetas__title {
+  font-size: var(--fs-xl);
+}
+
+.tarjetas__title-part--blue {
+  color: var(--color-blue);
+}
+
+.tarjetas__title-part--red {
+  color: var(--color-red);
+}
+
+.tarjetas__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-red);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Grid de tarjetas -------------------- */
+.tarjetas__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.tarjetas__card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: var(--border-width) solid var(--color-gray-medium);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    5px 5px 18px rgba(226, 35, 26, 0.12),
+    -5px -5px 18px rgba(27, 30, 140, 0.1);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.tarjetas__card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    8px 8px 26px rgba(226, 35, 26, 0.22),
+    -8px -8px 26px rgba(27, 30, 140, 0.18);
+}
+
+.tarjetas__image {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-align: center;
+}
+
+.tarjetas__content {
+  flex: 1;
+}
+
+.tarjetas__card-title {
+  margin-bottom: var(--space-1);
+  color: var(--color-blue);
+  font-size: var(--fs-base);
+}
+
+.tarjetas__text {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .tarjetas__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .tarjetas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .tarjetas__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

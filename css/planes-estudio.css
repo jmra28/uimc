@@ -1,0 +1,129 @@
+/* =========================================================
+   PLANES-ESTUDIO.CSS
+   Bloque BEM: .planes
+   Grid de 5 tarjetas (imagen + título + 3 viñetas + botón).
+   1 columna en móvil, 2 en tablet, 5 en desktop.
+   ========================================================= */
+
+.planes {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.planes__header {
+  margin-bottom: var(--space-5);
+}
+
+.planes__title {
+  font-size: var(--fs-xl);
+}
+
+.planes__title-part--blue {
+  color: var(--color-blue);
+}
+
+.planes__title-part--red {
+  color: var(--color-red);
+}
+
+.planes__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-red);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Grid de tarjetas -------------------- */
+.planes__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.planes__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: var(--border-width) solid var(--color-gray-medium);
+}
+
+.planes__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.planes__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--space-4);
+}
+
+.planes__card-title {
+  margin-bottom: var(--space-3);
+  color: var(--color-blue);
+  font-size: var(--fs-lg);
+}
+
+.planes__list {
+  margin-bottom: var(--space-4);
+}
+
+.planes__list-item {
+  position: relative;
+  padding-left: var(--space-3);
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+}
+
+.planes__list-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-red);
+  font-weight: var(--fw-bold);
+}
+
+.planes__button {
+  display: block;
+  margin-top: auto;
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-black);
+  text-align: center;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.planes__button:hover {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .planes__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .planes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .planes__grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-4);
+  }
+}

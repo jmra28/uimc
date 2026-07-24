@@ -1,0 +1,89 @@
+/* =========================================================
+   VIDEO-PROMO.CSS
+   Bloque BEM: .video-promo
+   Columna video+título+texto+botón junto a columna
+   imagen+título+texto. Se apilan en móvil, lado a lado desde
+   desktop (columna del video más ancha).
+   ========================================================= */
+
+.video-promo {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.video-promo__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.video-promo__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-promo__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: var(--space-3);
+  background-color: var(--color-gray-light);
+}
+
+.video-promo__media--video {
+  aspect-ratio: 16 / 9;
+  color: var(--color-red);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+
+.video-promo__media--image {
+  aspect-ratio: 4 / 3;
+  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+}
+
+.video-promo__title {
+  margin-bottom: var(--space-2);
+  color: var(--color-blue);
+  font-size: var(--fs-lg);
+}
+
+.video-promo__text {
+  margin-bottom: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+}
+
+.video-promo__button {
+  display: inline-block;
+  align-self: flex-start;
+  padding: var(--space-2) var(--space-5);
+  border: var(--border-width) solid var(--color-black);
+  text-align: center;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.video-promo__button:hover {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+/* -------------------- Desktop (>= 1024px): lado a lado -------------------- */
+@media (min-width: 1024px) {
+  .video-promo__grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: var(--space-5);
+  }
+
+  .video-promo__media--video {
+    font-size: var(--fs-2xl);
+  }
+}

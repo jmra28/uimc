@@ -1,0 +1,145 @@
+/* =========================================================
+   FORMULARIO.CSS
+   Bloque BEM: .formulario
+   2 columnas: formulario (inputs + dropdowns + textarea +
+   botón) / lista de información (título + texto, separados
+   por líneas). Se apilan en móvil.
+   ========================================================= */
+
+.formulario {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.formulario__header {
+  margin-bottom: var(--space-5);
+}
+
+.formulario__title {
+  font-size: var(--fs-xl);
+}
+
+.formulario__title-part--blue {
+  color: var(--color-blue);
+}
+
+.formulario__title-part--red {
+  color: var(--color-red);
+}
+
+.formulario__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-red);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Grid de 2 columnas -------------------- */
+.formulario__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* -------------------- Columna: formulario -------------------- */
+.formulario__form-header {
+  margin-bottom: var(--space-4);
+}
+
+.formulario__form-title {
+  color: var(--color-blue);
+  font-size: var(--fs-lg);
+}
+
+.formulario__form-subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.formulario__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.formulario__label {
+  color: var(--color-text);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+
+.formulario__input,
+.formulario__select,
+.formulario__textarea {
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-gray-medium);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  font-family: inherit;
+  font-size: var(--fs-base);
+}
+
+.formulario__textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.formulario__submit {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  border: var(--border-width) solid var(--color-black);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.formulario__submit:hover {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+/* -------------------- Columna: información -------------------- */
+.formulario__info-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario__info-item {
+  padding-block: var(--space-3);
+  border-bottom: var(--border-width) solid var(--color-gray-medium);
+}
+
+.formulario__info-item:last-child {
+  border-bottom: none;
+}
+
+.formulario__info-title {
+  margin-bottom: var(--space-1);
+  color: var(--color-blue);
+  font-size: var(--fs-base);
+}
+
+.formulario__info-text {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .formulario__title {
+    font-size: var(--fs-2xl);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px): lado a lado -------------------- */
+@media (min-width: 1024px) {
+  .formulario__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

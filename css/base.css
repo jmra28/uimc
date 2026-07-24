@@ -1,0 +1,140 @@
+/* =========================================================
+   BASE.CSS
+   Variables globales, reset y utilidades compartidas.
+   Este archivo se carga PRIMERO en todas las páginas, antes
+   que cualquier CSS de sección.
+   ========================================================= */
+
+:root {
+  /* -------------------- Colores -------------------- */
+  --color-blue: #1b1e8c;
+  --color-blue-dark: #12145e;
+  --color-red: #e2231a;
+  --color-red-dark: #b81b14;
+
+  --color-black: #111111;
+  --color-white: #ffffff;
+
+  --color-gray-light: #f2f2f2;
+  --color-gray-medium: #cfcfcf;
+  --color-gray-dark: #9c9c9c;
+  --gradient-gray: linear-gradient(180deg, var(--color-gray-light) 0%, var(--color-gray-dark) 100%);
+
+  --color-text: var(--color-black);
+  --color-text-muted: #555555;
+  --color-bg: var(--color-white);
+
+  /* -------------------- Tipografía -------------------- */
+  --font-family-base: "Segoe UI", Arial, Helvetica, sans-serif;
+
+  --fs-xs: 0.75rem;    /* 12px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-base: 1rem;     /* 16px */
+  --fs-lg: 1.25rem;    /* 20px */
+  --fs-xl: 1.5rem;     /* 24px */
+  --fs-2xl: 2rem;      /* 32px */
+  --fs-3xl: 2.5rem;    /* 40px */
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --line-height-base: 1.5;
+  --line-height-heading: 1.2;
+
+  /* -------------------- Espaciados -------------------- */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 1rem;     /* 16px */
+  --space-4: 1.5rem;   /* 24px */
+  --space-5: 2rem;      /* 32px */
+  --space-6: 3rem;      /* 48px */
+  --space-7: 4rem;      /* 64px */
+  --space-8: 6rem;      /* 96px */
+
+  --section-padding-y: var(--space-7);
+  --section-padding-x: var(--space-4);
+
+  /* -------------------- Layout -------------------- */
+  --container-max-width: 1200px;
+  --border-width: 1px;
+  --transition-base: 0.2s ease;
+}
+
+/*
+  Nota sobre breakpoints (mobile-first, referencia para todos los
+  archivos de sección; CSS custom properties no funcionan dentro
+  de @media, por eso se documentan aquí como valores fijos):
+
+  Móvil:    estilos base (< 480px)
+  Tablet:   min-width: 768px
+  Desktop:  min-width: 1024px
+*/
+
+/* -------------------- Reset -------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-heading);
+  font-weight: var(--fw-bold);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* -------------------- Utilidades compartidas -------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.section-divider {
+  width: 100%;
+  height: var(--space-2);
+  background: var(--gradient-gray);
+}

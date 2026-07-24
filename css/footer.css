@@ -1,0 +1,136 @@
+/* =========================================================
+   FOOTER.CSS
+   Bloque BEM: .footer
+   Logo + redes sociales, 3 columnas de links y barra de copy.
+   ========================================================= */
+
+.footer {
+  width: 100%;
+  border-top: var(--border-width) solid var(--color-gray-medium);
+  padding-block: var(--space-6);
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+/* -------------------- Marca + redes -------------------- */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.footer__logo {
+  display: inline-block;
+  color: var(--color-red);
+  background-color: var(--color-blue);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  padding: var(--space-2) var(--space-4);
+}
+
+.footer__socials {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  transition: background-color var(--transition-base);
+}
+
+.footer__social:hover {
+  background-color: var(--color-red);
+}
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* -------------------- Columnas de links -------------------- */
+.footer__columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.footer__column-label {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  border-bottom: var(--border-width) solid var(--color-gray-medium);
+}
+
+.footer__column-title {
+  margin-bottom: var(--space-2);
+  color: var(--color-blue);
+  font-size: var(--fs-base);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer__link {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  transition: color var(--transition-base);
+}
+
+.footer__link:hover {
+  color: var(--color-blue);
+}
+
+/* -------------------- Barra de copy -------------------- */
+.footer__copy {
+  padding-top: var(--space-4);
+  border-top: var(--border-width) solid var(--color-gray-medium);
+}
+
+.footer__copy-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer__copy-text {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .footer__top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__columns {
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1;
+    margin-left: var(--space-6);
+  }
+
+  .footer__copy-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

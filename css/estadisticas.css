@@ -1,0 +1,61 @@
+/* =========================================================
+   ESTADISTICAS.CSS
+   Bloque BEM: .estadisticas
+   4 bloques de número + texto. 2 columnas en móvil, 4 en
+   tablet/desktop.
+   ========================================================= */
+
+.estadisticas {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.estadisticas__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.estadisticas__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-4) var(--space-3);
+  text-align: center;
+  border: var(--border-width) solid var(--color-gray-medium);
+}
+
+.estadisticas__number {
+  color: var(--color-blue);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.estadisticas__text {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .estadisticas__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .estadisticas__number {
+    font-size: var(--fs-3xl);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .estadisticas__grid {
+    gap: var(--space-5);
+  }
+
+  .estadisticas__item {
+    padding: var(--space-5) var(--space-4);
+  }
+}

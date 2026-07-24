@@ -1,0 +1,152 @@
+/* =========================================================
+   PASOS.CSS
+   Bloque BEM: .pasos
+   3 círculos conectados con flechas, cada uno con título +
+   texto + botón. Se apilan verticalmente en móvil (flecha
+   apuntando hacia abajo); en fila desde tablet (flecha
+   apuntando a la derecha).
+   ========================================================= */
+
+.pasos {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.pasos__header {
+  margin-bottom: var(--space-6);
+}
+
+.pasos__title {
+  font-size: var(--fs-xl);
+}
+
+.pasos__title-part--blue {
+  color: var(--color-blue);
+}
+
+.pasos__title-part--red {
+  color: var(--color-red);
+}
+
+.pasos__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-red);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Lista de pasos -------------------- */
+.pasos__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.pasos__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 260px;
+  text-align: center;
+  transition: transform var(--transition-base);
+}
+
+.pasos__item:hover {
+  transform: translateY(-6px);
+}
+
+.pasos__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-3);
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  box-shadow:
+    4px 4px 14px rgba(226, 35, 26, 0.12),
+    -4px -4px 14px rgba(27, 30, 140, 0.1);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pasos__item:hover .pasos__circle {
+  transform: scale(1.08);
+  box-shadow:
+    6px 6px 20px rgba(226, 35, 26, 0.28),
+    -6px -6px 20px rgba(27, 30, 140, 0.22);
+}
+
+.pasos__step-title {
+  margin-bottom: var(--space-2);
+  color: var(--color-blue);
+  font-size: var(--fs-lg);
+}
+
+.pasos__text {
+  margin-bottom: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.pasos__button {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-width) solid var(--color-black);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.pasos__button:hover {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.pasos__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  color: var(--color-gray-dark);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  transform: rotate(90deg);
+}
+
+/* -------------------- Tablet (>= 768px): en fila -------------------- */
+@media (min-width: 768px) {
+  .pasos__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .pasos__list {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-5);
+  }
+
+  .pasos__item {
+    max-width: 280px;
+  }
+
+  .pasos__arrow {
+    margin-top: 20px;
+    transform: rotate(0deg);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px): más separación -------------------- */
+@media (min-width: 1024px) {
+  .pasos__list {
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+
+  .pasos__item {
+    max-width: 300px;
+  }
+}

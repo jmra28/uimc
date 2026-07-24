@@ -1,0 +1,108 @@
+/* =========================================================
+   EMPRESAS.CSS
+   Bloque BEM: .empresas
+   Slider automático de logos (marquee infinito en CSS puro,
+   sin JS): se duplica el set de logos y se anima con
+   translateX(-50%) en loop.
+   ========================================================= */
+
+.empresas {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.empresas__header {
+  margin-bottom: var(--space-5);
+}
+
+.empresas__title {
+  font-size: var(--fs-xl);
+}
+
+.empresas__title-part--blue {
+  color: var(--color-blue);
+}
+
+.empresas__title-part--red {
+  color: var(--color-red);
+}
+
+.empresas__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-red);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Slider automático -------------------- */
+.empresas__slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.empresas__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: var(--space-5);
+  animation: empresas-marquee 20s linear infinite;
+}
+
+.empresas__slider:hover .empresas__track {
+  animation-play-state: paused;
+}
+
+.empresas__item {
+  flex: 0 0 auto;
+}
+
+.empresas__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 64px;
+  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+}
+
+@keyframes empresas-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .empresas__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .empresas__logo {
+    width: 150px;
+    height: 76px;
+  }
+
+  .empresas__track {
+    gap: var(--space-6);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .empresas__logo {
+    width: 170px;
+    height: 84px;
+  }
+}
+
+/* Respeta la preferencia de reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .empresas__track {
+    animation: none;
+  }
+}

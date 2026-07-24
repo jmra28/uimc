@@ -1,0 +1,38 @@
+/* =========================================================
+   SEDES-VIDEO.CSS
+   Bloques BEM: .sedes / .video-particulas
+   Dos bloques full-bleed (100% del ancho): imagen de sedes y
+   video con partículas, uno debajo del otro.
+   ========================================================= */
+
+.sedes__media,
+.video-particulas__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  min-height: 320px;
+}
+
+.sedes__media {
+  background-color: var(--color-gray-light);
+  color: var(--color-red);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+}
+
+.video-particulas__media {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .sedes__media,
+  .video-particulas__media {
+    height: 60vh;
+  }
+}
