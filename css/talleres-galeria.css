@@ -1,0 +1,92 @@
+/* =========================================================
+   TALLERES-GALERIA.CSS
+   Bloque BEM: .talleres-galeria
+   Título (sin subtítulo) + grilla de 6 tarjetas simples
+   (imagen + título, sin texto ni botón).
+   ========================================================= */
+
+.talleres-galeria {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.talleres-galeria__header {
+  margin-bottom: var(--space-5);
+}
+
+.talleres-galeria__title {
+  font-size: var(--fs-xl);
+}
+
+.talleres-galeria__title-part--blue {
+  color: var(--color-blue);
+}
+
+.talleres-galeria__title-part--red {
+  color: var(--color-red);
+}
+
+/* -------------------- Grid de tarjetas -------------------- */
+.talleres-galeria__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.talleres-galeria__card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-width) solid var(--color-gray-medium);
+  overflow: hidden;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.talleres-galeria__card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-blue);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.talleres-galeria__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  transition: transform var(--transition-base);
+}
+
+.talleres-galeria__card:hover .talleres-galeria__image {
+  transform: scale(1.05);
+}
+
+.talleres-galeria__card-title {
+  padding: var(--space-2) var(--space-2);
+  color: var(--color-blue);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  text-align: center;
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .talleres-galeria__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .talleres-galeria__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px): en una sola fila -------------------- */
+@media (min-width: 1024px) {
+  .talleres-galeria__grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-3);
+  }
+}

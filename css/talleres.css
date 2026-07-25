@@ -1,0 +1,30 @@
+/* =========================================================
+   TALLERES.CSS
+   Bloque BEM: .talleres
+   Bloque full-bleed con una imagen informativa de talleres
+   (mismo criterio que los bloques de imagen/video de
+   sedes-video.css).
+   ========================================================= */
+
+.talleres__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  min-height: 320px;
+  background-color: var(--color-gray-light);
+  color: var(--color-text);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  text-align: center;
+  padding-inline: var(--space-4);
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .talleres__media {
+    height: 60vh;
+    font-size: var(--fs-xl);
+  }
+}

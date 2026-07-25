@@ -1,0 +1,121 @@
+/* =========================================================
+   OFERTA-ACADEMICA.CSS
+   Bloque BEM: .oferta-academica
+   Grid de tarjetas de programas: título + doble acción
+   (Descargar / Inscribirse) + imagen. Bloque independiente de
+   .descargas y .planes, pensado para reutilizarse en más
+   páginas (oferta académica con doble CTA).
+   ========================================================= */
+
+.oferta-academica {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.oferta-academica__header {
+  margin-bottom: var(--space-5);
+}
+
+.oferta-academica__title {
+  font-size: var(--fs-xl);
+}
+
+.oferta-academica__title-part--blue {
+  color: var(--color-blue);
+}
+
+.oferta-academica__title-part--red {
+  color: var(--color-red);
+}
+
+.oferta-academica__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-red);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Grid de tarjetas -------------------- */
+.oferta-academica__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.oferta-academica__card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-width) solid var(--color-gray-medium);
+}
+
+.oferta-academica__card-title {
+  padding: var(--space-3);
+  color: var(--color-blue);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  text-align: center;
+  border-bottom: var(--border-width) solid var(--color-gray-medium);
+}
+
+.oferta-academica__actions {
+  display: flex;
+  border-bottom: var(--border-width) solid var(--color-gray-medium);
+}
+
+.oferta-academica__action {
+  flex: 1;
+  padding: var(--space-2) var(--space-1);
+  text-align: center;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.oferta-academica__action--download {
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border-right: var(--border-width) solid var(--color-gray-medium);
+}
+
+.oferta-academica__action--download:hover {
+  background-color: var(--color-gray-light);
+}
+
+.oferta-academica__action--enroll {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+.oferta-academica__action--enroll:hover {
+  background-color: var(--color-blue-dark);
+}
+
+.oferta-academica__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .oferta-academica__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .oferta-academica__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .oferta-academica__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

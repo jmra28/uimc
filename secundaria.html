@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIMC</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/slider-carrusel.css" />
+  <link rel="stylesheet" href="css/talleres.css" />
+  <link rel="stylesheet" href="css/descargas.css" />
+  <link rel="stylesheet" href="css/pasos.css" />
+  <link rel="stylesheet" href="css/formulario.css" />
+  <link rel="stylesheet" href="css/sedes-video.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <!-- Los CSS de cada sección se irán agregando aquí, en orden, a medida que se construyan -->
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <a href="#" class="header__logo">logo</a>
+
+      <input type="checkbox" id="header-menu-toggle" class="header__toggle-input" />
+      <label for="header-menu-toggle" class="header__toggle" aria-label="Abrir menú de navegación">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </label>
+
+      <nav class="header__nav" aria-label="Menú principal">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">item1</a>
+          </li>
+          <li class="header__item header__item--dropdown">
+            <a href="#" class="header__link">item2</a>
+            <ul class="header__submenu">
+              <li><a href="#" class="header__sublink">subitem 1</a></li>
+              <li><a href="#" class="header__sublink">subitem 2</a></li>
+              <li><a href="#" class="header__sublink">subitem 3</a></li>
+            </ul>
+          </li>
+          <li class="header__item header__item--dropdown">
+            <a href="#" class="header__link">item3</a>
+            <ul class="header__submenu">
+              <li><a href="#" class="header__sublink">subitem 1</a></li>
+              <li><a href="#" class="header__sublink">subitem 2</a></li>
+            </ul>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">item4</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link header__link--highlight">item5</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link header__link--highlight">item6</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <section class="slider-carrusel">
+    <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-1" class="slider-carrusel__radio" checked />
+    <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-2" class="slider-carrusel__radio" />
+    <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-3" class="slider-carrusel__radio" />
+
+    <div class="slider-carrusel__track">
+      <div class="slider-carrusel__slide">
+        <div class="slider-carrusel__image">imagen 1</div>
+        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
+        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+      </div>
+      <div class="slider-carrusel__slide">
+        <div class="slider-carrusel__image">imagen 2</div>
+        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
+        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+      </div>
+      <div class="slider-carrusel__slide">
+        <div class="slider-carrusel__image">imagen 3</div>
+        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
+        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="talleres">
+    <div class="talleres__media">imagen informativa de talleres</div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Sección de descarga de archivos: estructura básica, pendiente de contenido final -->
+  <section class="descargas">
+    <div class="descargas__container container">
+      <div class="descargas__header">
+        <h2 class="descargas__title">
+          <span class="descargas__title-part descargas__title-part--blue">titulo</span>
+          <span class="descargas__title-part descargas__title-part--red">titulo</span>
+        </h2>
+        <p class="descargas__subtitle">subtitulo</p>
+      </div>
+
+      <div class="descargas__grid">
+        <article class="descargas__card">
+          <div class="descargas__image">imagen</div>
+          <div class="descargas__body">
+            <h3 class="descargas__card-title">titulo</h3>
+            <a href="#" class="descargas__button">DESCARGAR</a>
+          </div>
+        </article>
+
+        <article class="descargas__card">
+          <div class="descargas__image">imagen</div>
+          <div class="descargas__body">
+            <h3 class="descargas__card-title">titulo</h3>
+            <a href="#" class="descargas__button">DESCARGAR</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="pasos">
+    <div class="pasos__container container">
+      <div class="pasos__header">
+        <h2 class="pasos__title">
+          <span class="pasos__title-part pasos__title-part--blue">titulo</span>
+          <span class="pasos__title-part pasos__title-part--red">titulo</span>
+        </h2>
+        <p class="pasos__subtitle">subtitulo</p>
+      </div>
+
+      <div class="pasos__list">
+        <div class="pasos__item">
+          <div class="pasos__circle"></div>
+          <h3 class="pasos__step-title">titulo</h3>
+          <p class="pasos__text">texto</p>
+          <a href="#" class="pasos__button">boton</a>
+        </div>
+
+        <div class="pasos__arrow">→</div>
+
+        <div class="pasos__item">
+          <div class="pasos__circle"></div>
+          <h3 class="pasos__step-title">titulo</h3>
+          <p class="pasos__text">texto</p>
+          <a href="#" class="pasos__button">boton</a>
+        </div>
+
+        <div class="pasos__arrow">→</div>
+
+        <div class="pasos__item">
+          <div class="pasos__circle"></div>
+          <h3 class="pasos__step-title">titulo</h3>
+          <p class="pasos__text">texto</p>
+          <a href="#" class="pasos__button">boton</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="formulario">
+    <div class="formulario__container container">
+      <div class="formulario__header">
+        <h2 class="formulario__title">
+          <span class="formulario__title-part formulario__title-part--blue">titulo</span>
+          <span class="formulario__title-part formulario__title-part--red">titulo</span>
+        </h2>
+        <p class="formulario__subtitle">subtitulo</p>
+      </div>
+
+      <div class="formulario__grid">
+        <div class="formulario__form-col">
+          <div class="formulario__form-header">
+            <h3 class="formulario__form-title">titulo</h3>
+            <p class="formulario__form-subtitle">subtitulo</p>
+          </div>
+
+          <form class="formulario__form">
+            <div class="formulario__field">
+              <label for="formulario-secundaria-nombre" class="formulario__label">titulo</label>
+              <input type="text" id="formulario-secundaria-nombre" class="formulario__input" />
+            </div>
+            <div class="formulario__field">
+              <label for="formulario-secundaria-email" class="formulario__label">titulo</label>
+              <input type="email" id="formulario-secundaria-email" class="formulario__input" />
+            </div>
+            <div class="formulario__field">
+              <label for="formulario-secundaria-telefono" class="formulario__label">titulo</label>
+              <input type="tel" id="formulario-secundaria-telefono" class="formulario__input" />
+            </div>
+            <div class="formulario__field">
+              <label for="formulario-secundaria-asunto" class="formulario__label">titulo</label>
+              <input type="text" id="formulario-secundaria-asunto" class="formulario__input" />
+            </div>
+            <div class="formulario__field">
+              <label for="formulario-secundaria-select-1" class="formulario__label">titulo</label>
+              <select id="formulario-secundaria-select-1" class="formulario__select">
+                <option>lista desplegable</option>
+              </select>
+            </div>
+            <div class="formulario__field">
+              <label for="formulario-secundaria-select-2" class="formulario__label">titulo</label>
+              <select id="formulario-secundaria-select-2" class="formulario__select">
+                <option>lista desplegable</option>
+              </select>
+            </div>
+            <div class="formulario__field">
+              <label for="formulario-secundaria-comentarios" class="formulario__label">titulo</label>
+              <textarea id="formulario-secundaria-comentarios" class="formulario__textarea" placeholder="comentarios"></textarea>
+            </div>
+            <button type="submit" class="formulario__submit">boton</button>
+          </form>
+        </div>
+
+        <div class="formulario__info-col">
+          <ul class="formulario__info-list">
+            <li class="formulario__info-item">
+              <h3 class="formulario__info-title">titulo</h3>
+              <p class="formulario__info-text">texto</p>
+            </li>
+            <li class="formulario__info-item">
+              <h3 class="formulario__info-title">titulo</h3>
+              <p class="formulario__info-text">texto</p>
+              <p class="formulario__info-text">texto</p>
+            </li>
+            <li class="formulario__info-item">
+              <h3 class="formulario__info-title">titulo</h3>
+              <p class="formulario__info-text">texto</p>
+              <p class="formulario__info-text">texto</p>
+            </li>
+            <li class="formulario__info-item">
+              <h3 class="formulario__info-title">titulo</h3>
+              <p class="formulario__info-text">texto</p>
+              <p class="formulario__info-text">texto</p>
+            </li>
+            <li class="formulario__info-item">
+              <h3 class="formulario__info-title">titulo</h3>
+              <p class="formulario__info-text">texto</p>
+              <p class="formulario__info-text">texto</p>
+            </li>
+            <li class="formulario__info-item">
+              <h3 class="formulario__info-title">titulo</h3>
+              <p class="formulario__info-text">texto</p>
+              <p class="formulario__info-text">texto</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="sedes">
+    <div class="sedes__media">imagen</div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section class="video-particulas">
+    <div class="video-particulas__media">VIDEO</div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">logo</a>
+
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 12a10 10 0 1 0-11.5 9.95v-7.04H7.9V12h2.6V9.8c0-2.57 1.53-4 3.87-4 1.12 0 2.3.2 2.3.2v2.53h-1.3c-1.28 0-1.68.8-1.68 1.62V12h2.86l-.46 2.91h-2.4v7.04A10 10 0 0 0 22 12Z" />
+              </svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 3c.3 1.9 1.6 3.4 3.5 3.8V9.4c-1.3 0-2.5-.4-3.5-1.1v6.4a5.1 5.1 0 1 1-4.3-5v2.6a2.5 2.5 0 1 0 1.8 2.4V3H16Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <span class="footer__column-label">texto</span>
+            <h3 class="footer__column-title">titulo</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">texto</a></li>
+              <li><a href="#" class="footer__link">texto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <span class="footer__column-label">texto</span>
+            <h3 class="footer__column-title">titulo</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">texto</a></li>
+              <li><a href="#" class="footer__link">texto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <span class="footer__column-label">texto</span>
+            <h3 class="footer__column-title">titulo</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">texto</a></li>
+              <li><a href="#" class="footer__link">texto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__copy">
+      <div class="footer__copy-container container">
+        <p class="footer__copy-text">texto</p>
+        <p class="footer__copy-text">texto</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
