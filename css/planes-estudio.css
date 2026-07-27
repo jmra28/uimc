@@ -15,7 +15,7 @@
 }
 
 .planes__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
 }
 
 .planes__title-part--blue {
@@ -29,7 +29,8 @@
 .planes__subtitle {
   margin-top: var(--space-1);
   color: var(--color-red);
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
 }
 
 /* -------------------- Grid de tarjetas -------------------- */
@@ -44,6 +45,17 @@
   flex-direction: column;
   height: 100%;
   border: var(--border-width) solid var(--color-gray-medium);
+  box-shadow:
+    5px 5px 18px rgba(226, 35, 26, 0.12),
+    -5px -5px 18px rgba(27, 30, 140, 0.1);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.planes__card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    8px 8px 26px rgba(226, 35, 26, 0.22),
+    -8px -8px 26px rgba(27, 30, 140, 0.18);
 }
 
 .planes__image {
@@ -112,7 +124,7 @@
 /* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .planes__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 
   .planes__grid {

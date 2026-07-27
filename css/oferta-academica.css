@@ -17,7 +17,7 @@
 }
 
 .oferta-academica__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
 }
 
 .oferta-academica__title-part--blue {
@@ -31,7 +31,8 @@
 .oferta-academica__subtitle {
   margin-top: var(--space-1);
   color: var(--color-red);
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
 }
 
 /* -------------------- Grid de tarjetas -------------------- */
@@ -105,7 +106,7 @@
 /* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .oferta-academica__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 
   .oferta-academica__grid {

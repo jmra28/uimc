@@ -16,7 +16,7 @@
 }
 
 .faq__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
 }
 
 .faq__title-part--blue {
@@ -30,7 +30,8 @@
 .faq__subtitle {
   margin-top: var(--space-1);
   color: var(--color-red);
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
 }
 
 /* -------------------- Tabs -------------------- */
@@ -137,7 +138,7 @@
 /* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .faq__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 
   .faq__tab-label {

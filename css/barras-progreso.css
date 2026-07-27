@@ -32,7 +32,7 @@
 }
 
 .barras-progreso__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
   margin-bottom: var(--space-2);
 }
 
@@ -121,7 +121,7 @@
 /* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .barras-progreso__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 }
 

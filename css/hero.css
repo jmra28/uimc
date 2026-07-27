@@ -47,9 +47,13 @@
   left: var(--space-5);
   z-index: 5;
   width: min(85%, 300px);
-  background-color: var(--color-white);
-  border: var(--border-width) solid var(--color-gray-medium);
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: var(--border-width) solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
 }
 
 .hero__radio {
@@ -66,34 +70,38 @@
 
 .hero__track {
   position: relative;
+  display: grid;
   min-height: 140px;
 }
 
 .hero__slide {
-  display: none;
-  position: relative;
-  padding: var(--space-4) var(--space-5);
-  min-height: 140px;
-}
-
-/* Muestra el slide correspondiente al radio activo (1, 2 o 3) */
-.hero__radio:nth-of-type(1):checked ~ .hero__track .hero__slide:nth-child(1),
-.hero__radio:nth-of-type(2):checked ~ .hero__track .hero__slide:nth-child(2),
-.hero__radio:nth-of-type(3):checked ~ .hero__track .hero__slide:nth-child(3) {
   display: flex;
+  grid-area: 1 / 1;
   flex-direction: column;
   justify-content: center;
+  padding: var(--space-4) var(--space-5);
+  min-height: 140px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.hero__slide--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .hero__slide-title {
   font-size: var(--fs-lg);
-  color: var(--color-blue);
+  color: var(--color-red);
   margin-bottom: var(--space-2);
 }
 
 .hero__slide-text {
   font-size: var(--fs-sm);
-  color: var(--color-text-muted);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .hero__arrow {

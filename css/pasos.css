@@ -17,7 +17,7 @@
 }
 
 .pasos__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
 }
 
 .pasos__title-part--blue {
@@ -31,7 +31,8 @@
 .pasos__subtitle {
   margin-top: var(--space-1);
   color: var(--color-red);
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
 }
 
 /* -------------------- Lista de pasos -------------------- */
@@ -119,7 +120,7 @@
 /* -------------------- Tablet (>= 768px): en fila -------------------- */
 @media (min-width: 768px) {
   .pasos__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 
   .pasos__list {

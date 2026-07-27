@@ -5,6 +5,42 @@
    que cualquier CSS de sección.
    ========================================================= */
 
+/* -------------------- Fuente Gotham (local, en assets/fonts) -------------------- */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-BookItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Medium.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* No hay un archivo "Gotham-Bold" (regular) en assets/fonts, solo
+   "Gotham-BoldItalic". Se usa "Gotham-Ultra" (el peso más grueso
+   disponible sin cursiva) como sustituto para font-weight 700. */
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Ultra.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* -------------------- Colores -------------------- */
   --color-blue: #1b1e8c;
@@ -12,6 +48,8 @@
   --color-red: #e2231a;
   --color-red-dark: #b81b14;
 
+  --fondo1: url(../assets/images/back.jpg);
+  
   --color-black: #111111;
   --color-white: #ffffff;
   --color-gray:#f6f5f5;
@@ -26,7 +64,7 @@
   --color-bg: var(--color-gray);
 
   /* -------------------- Tipografía -------------------- */
-  --font-family-base: "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-family-base: "Gotham", "Segoe UI", Arial, Helvetica, sans-serif;
 
   --fs-xs: 0.75rem;    /* 12px */
   --fs-sm: 0.875rem;   /* 14px */
@@ -139,3 +177,5 @@ select {
   height: var(--space-2);
   background: var(--gradient-gray);
 }
+/* -------------------- empresas fondo gris textura -------------------- */
+

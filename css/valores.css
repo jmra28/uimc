@@ -16,7 +16,7 @@
 }
 
 .valores__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
 }
 
 .valores__title-part--blue {
@@ -30,7 +30,8 @@
 .valores__subtitle {
   margin-top: var(--space-1);
   color: var(--color-red);
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
 }
 
 /* -------------------- Grid de imágenes -------------------- */
@@ -63,7 +64,7 @@
 /* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .valores__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 
   .valores__grid {

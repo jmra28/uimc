@@ -7,6 +7,7 @@
    ========================================================= */
 
 .empresas {
+background-image: var(--fondo1);
   width: 100%;
   padding-block: var(--section-padding-y);
 }
@@ -16,7 +17,7 @@
 }
 
 .empresas__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
 }
 
 .empresas__title-part--blue {
@@ -30,7 +31,8 @@
 .empresas__subtitle {
   margin-top: var(--space-1);
   color: var(--color-red);
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
 }
 
 /* -------------------- Slider automático -------------------- */
@@ -59,12 +61,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 64px;
-  background-color: var(--color-gray-light);
+  width: 170px;
+  height: 90px;
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
   font-weight: var(--fw-semibold);
+}
+
+.empresas__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @keyframes empresas-marquee {
@@ -79,12 +86,12 @@
 /* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .empresas__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 
   .empresas__logo {
-    width: 150px;
-    height: 76px;
+    width: 210px;
+    height: 110px;
   }
 
   .empresas__track {
@@ -95,8 +102,8 @@
 /* -------------------- Desktop (>= 1024px) -------------------- */
 @media (min-width: 1024px) {
   .empresas__logo {
-    width: 170px;
-    height: 84px;
+    width: 240px;
+    height: 130px;
   }
 }
 
