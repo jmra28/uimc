@@ -9,7 +9,7 @@
 .header {
   position: relative;
   width: 100%;
-  background-color: var(--color-white);
+  background-color: var(--color-gray);
   border-bottom: var(--border-width) solid var(--color-gray-medium);
 }
 
@@ -88,8 +88,29 @@
   font-weight: var(--fw-semibold);
 }
 
-.header__link--highlight {
-  color: var(--color-red);
+/* Botones tipo "pill" para Acceso Alumnos / Acceso Docentes */
+.header__link.header__link--alumnos,
+.header__link.header__link--docentes {
+  color: var(--color-white);
+  font-weight: var(--fw-bold);
+  border-radius: 10px;
+  padding: var(--space-2) var(--space-4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: filter var(--transition-base), box-shadow var(--transition-base);
+}
+
+.header__link--alumnos {
+  background: linear-gradient(to top, var(--color-blue) 0%, #000000 100%);
+}
+
+.header__link--docentes {
+  background: linear-gradient(to top, var(--color-red) 0%, #000000 100%);
+}
+
+.header__link--alumnos:hover,
+.header__link--docentes:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
 }
 
 .header__item--dropdown > .header__link::after {
@@ -148,8 +169,9 @@
 
   .header__list {
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    gap: var(--space-4);
+    gap: var(--space-2);
   }
 
   .header__item {
@@ -159,6 +181,17 @@
 
   .header__link {
     padding: var(--space-2) var(--space-1);
+    font-size: var(--fs-sm);
+    white-space: nowrap;
+  }
+
+  .header__link.header__link--alumnos,
+  .header__link.header__link--docentes {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .header__logo img {
+    height: 55px !important;
   }
 
   .header__submenu {
