@@ -69,7 +69,7 @@
 }
 
 .header__toggle-input:checked ~ .header__nav {
-  max-height: 600px;
+  max-height: 1200px;
 }
 
 .header__list {
@@ -94,14 +94,35 @@
 
 .header__item--dropdown > .header__link::after {
   content: "⌄";
+  display: inline-block;
   margin-left: var(--space-1);
+  transition: transform var(--transition-base);
 }
 
-/* En móvil el submenú va siempre visible/anidado dentro del panel */
+/* -------------------- Submenú móvil: acordeón (radio hack, sin JS) -------------------- */
+.header__submenu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header__link {
+  cursor: pointer;
+}
+
+/* En móvil el submenú está cerrado por defecto; se abre uno a la vez */
 .header__submenu {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: var(--color-gray-light);
+}
+
+.header__submenu-toggle:checked ~ .header__submenu {
+  display: flex;
+}
+
+.header__submenu-toggle:checked ~ .header__link::after {
+  transform: rotate(180deg);
 }
 
 .header__sublink {
