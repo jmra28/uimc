@@ -1,0 +1,51 @@
+/* =========================================================
+   MENSAJE.CSS
+   Bloque BEM: .mensaje
+   Imagen + texto en 2 columnas, sin encabezado de título.
+   Se apila en móvil.
+   ========================================================= */
+
+.mensaje {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.mensaje__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.mensaje__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+}
+
+.mensaje__text {
+  color: var(--color-text);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+}
+
+.mensaje__text p {
+  margin-bottom: var(--space-3);
+}
+
+.mensaje__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* -------------------- Tablet (>= 768px): en fila -------------------- */
+@media (min-width: 768px) {
+  .mensaje__grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}

@@ -1,0 +1,65 @@
+/* =========================================================
+   MISION.CSS
+   Bloque BEM: .mision
+   Título + 2 cajas lado a lado (mini-título tipo "MISIÓN" +
+   párrafo de texto). Se apilan en móvil.
+   ========================================================= */
+
+.mision {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.mision__header {
+  margin-bottom: var(--space-5);
+}
+
+.mision__title {
+  font-size: var(--fs-xl);
+}
+
+.mision__title-part--blue {
+  color: var(--color-blue);
+}
+
+.mision__title-part--red {
+  color: var(--color-red);
+}
+
+/* -------------------- Grid de cajas -------------------- */
+.mision__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.mision__card {
+  padding: var(--space-5) var(--space-4);
+  border: var(--border-width) solid var(--color-gray-medium);
+  text-align: center;
+}
+
+.mision__card-title {
+  margin-bottom: var(--space-2);
+  color: var(--color-blue);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.mision__card-text {
+  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Tablet (>= 768px): en fila -------------------- */
+@media (min-width: 768px) {
+  .mision__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .mision__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UIMC</title>
+  <title>UIM</title>
 
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/header.css" />
@@ -20,12 +20,17 @@
   <link rel="stylesheet" href="css/sedes-video.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <!-- Los CSS de cada sección se irán agregando aquí, en orden, a medida que se construyan -->
+
+      <link rel="shortcut icon" type="image/icon" href="assets/images/icon_bufalo.png"/>
+
 </head>
 <body>
 
   <header class="header">
     <div class="header__container container">
-      <a href="#" class="header__logo">logo</a>
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/Logotipo UIM-03.png"  alt="UIM Logo" style="height: 85px; margin-right: 10px;">
+      </a>
 
       <input type="checkbox" id="header-menu-toggle" class="header__toggle-input" />
       <label for="header-menu-toggle" class="header__toggle" aria-label="Abrir menú de navegación">
@@ -37,31 +42,41 @@
       <nav class="header__nav" aria-label="Menú principal">
         <ul class="header__list">
           <li class="header__item">
-            <a href="#" class="header__link">item1</a>
+            <a href="index.html" class="header__link">INICIO</a>
           </li>
           <li class="header__item header__item--dropdown">
-            <a href="#" class="header__link">item2</a>
+            <a href="#" class="header__link">OFERTA ACADÉMICA</a>
             <ul class="header__submenu">
-              <li><a href="#" class="header__sublink">subitem 1</a></li>
-              <li><a href="#" class="header__sublink">subitem 2</a></li>
-              <li><a href="#" class="header__sublink">subitem 3</a></li>
+              <li><a href="secundaria.html" class="header__sublink">Secundaria</a></li>
+              <li><a href="preparatoria.html" class="header__sublink">Preparatoria</a></li>
+              <li><a href="licenciatura.html" class="header__sublink">Licenciatura</a></li>
+              <li><a href="maestria.html" class="header__sublink">Maestría</a></li>
+              <li><a href="doctorado.html" class="header__sublink">Doctorado</a></li>              
             </ul>
           </li>
           <li class="header__item header__item--dropdown">
-            <a href="#" class="header__link">item3</a>
+            <a href="#" class="header__link">CONÓCENOS</a>
             <ul class="header__submenu">
-              <li><a href="#" class="header__sublink">subitem 1</a></li>
-              <li><a href="#" class="header__sublink">subitem 2</a></li>
+              <li><a href="identidad.html" class="header__sublink">Identidad Búfalo</a></li>
+              <li><a href="mensaje-rectora.html" class="header__sublink">Mensaje de la Rectora</a></li>
             </ul>
           </li>
-          <li class="header__item">
-            <a href="#" class="header__link">item4</a>
+          
+          <li class="header__item header__item--dropdown">
+            <a href="#" class="header__link header__link--highlight">ACCESO ALUMNOS</a>
+            <ul class="header__submenu">
+              <li><a href="https://uim.mx/moo/login/index.php" class="header__sublink">Plataforma UIM</a></li>
+              <li><a href=" https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::" class="header__sublink">Control Escolar</a></li>
+              <li><a href="https://uim.mx/me/ " class="header__sublink">Realizar Pagos</a></li>
+            </ul>
           </li>
-          <li class="header__item">
-            <a href="#" class="header__link header__link--highlight">item5</a>
-          </li>
-          <li class="header__item">
-            <a href="#" class="header__link header__link--highlight">item6</a>
+          <li class="header__item header__item--dropdown">
+            <a href="#" class="header__link header__link--highlight">ACCESO DOCENTES</a>
+            <ul class="header__submenu">
+              <li><a href="https://uim.mx/moo/login/index.php" class="header__sublink">Plataforma UIM</a></li>
+              <li><a href=" https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::" class="header__sublink">Control Escolar</a></li>
+              <li><a href="https://uim.mx/me/ " class="header__sublink">Realizar Pagos</a></li>
+            </ul>
           </li>
         </ul>
       </nav>

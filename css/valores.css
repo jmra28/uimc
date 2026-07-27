@@ -1,0 +1,79 @@
+/* =========================================================
+   VALORES.CSS
+   Bloque BEM: .valores
+   Título + subtítulo + grid estático de 10 imágenes (sin
+   título debajo de cada una). 5 columnas x 2 filas en
+   desktop.
+   ========================================================= */
+
+.valores {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+.valores__header {
+  margin-bottom: var(--space-5);
+}
+
+.valores__title {
+  font-size: var(--fs-xl);
+}
+
+.valores__title-part--blue {
+  color: var(--color-blue);
+}
+
+.valores__title-part--red {
+  color: var(--color-red);
+}
+
+.valores__subtitle {
+  margin-top: var(--space-1);
+  color: var(--color-red);
+  font-size: var(--fs-base);
+}
+
+/* -------------------- Grid de imágenes -------------------- */
+.valores__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.valores__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  border: var(--border-width) solid var(--color-gray-medium);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.valores__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .valores__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .valores__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* -------------------- Desktop (>= 1024px): 5 columnas -------------------- */
+@media (min-width: 1024px) {
+  .valores__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
