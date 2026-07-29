@@ -1,38 +1,100 @@
 /* =========================================================
    SEDES-VIDEO.CSS
    Bloques BEM: .sedes / .video-particulas
-   Dos bloques full-bleed (100% del ancho): imagen de sedes y
-   video con partículas, uno debajo del otro.
+   .sedes: imagen full-bleed (100% del ancho).
+   .video-particulas: video de partículas de fondo + imagen
+   "invierte" flotando encima, con fade in/out al hacer scroll
+   (JS, ver js/video-particulas.js).
    ========================================================= */
 
-.sedes__media,
-.video-particulas__media {
+.sedes__media {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 50vh;
   min-height: 320px;
-}
-
-.sedes__media {
+  overflow: hidden;
   background-color: var(--color-gray-light);
-  color: var(--color-red);
-  font-size: var(--fs-2xl);
-  font-weight: var(--fw-bold);
 }
 
-.video-particulas__media {
+.sedes__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------- Video partículas + imagen -------------------- */
+.video-particulas {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 320px;
+  overflow: hidden;
   background-color: var(--color-black);
-  color: var(--color-white);
-  font-size: var(--fs-2xl);
-  font-weight: var(--fw-bold);
+}
+
+.video-particulas__bg-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-particulas__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.video-particulas__overlay-image {
+  max-width: 55%;
+  max-height: 60%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+/* Mientras está a la vista, entra y sale en un ciclo continuo */
+.video-particulas__overlay-image--visible {
+  animation: video-particulas-pulse 4s ease-in-out infinite;
+}
+
+@keyframes video-particulas-pulse {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-particulas__overlay-image {
+    transition: none;
+  }
+
+  .video-particulas__overlay-image--visible {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 /* -------------------- Desktop (>= 1024px) -------------------- */
 @media (min-width: 1024px) {
   .sedes__media,
-  .video-particulas__media {
+  .video-particulas {
     height: 60vh;
+  }
+
+  .video-particulas__overlay-image {
+    max-width: 35%;
   }
 }

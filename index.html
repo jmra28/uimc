@@ -370,145 +370,239 @@
     <div class="video-promo__container container">
       <div class="video-promo__grid">
         <div class="video-promo__col">
-          <div class="video-promo__media video-promo__media--video">
-            <video class="video-promo__video" controls playsinline>
-              <source src="assets/video/es bueno saberlo.mp4" type="video/mp4">
-              Tu navegador no soporta el video.
-            </video>
+          <div class="video-promo__panel">
+            <div class="video-promo__media video-promo__media--video">
+              <video class="video-promo__video" controls playsinline>
+                <source src="assets/video/es bueno saberlo.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <h2 class="video-promo__title">
+              <span class="video-promo__title-part video-promo__title-part--blue">ES BUENO</span>
+              <span class="video-promo__title-part video-promo__title-part--red">SABER QUÉ</span>
+            </h2>
+            <p class="video-promo__text">Las micro, pequeñas y medianas empresas, tienen particular importancia para las economías nacionales, no solo por sus aportaciones a la producción y distribución de bienes y servicios, si no también por la flexibilidad de adaptarse a los cambios tecnológicos y gran potencial de generación de empleos.</p>
+            <a href="#" class="video-promo__button">Inscríbete aquí</a>
           </div>
-          <h2 class="video-promo__title">titulo</h2>
-          <p class="video-promo__text">texto</p>
-          <a href="#" class="video-promo__button">boton</a>
         </div>
 
-        <div class="video-promo__col">
-          <div class="video-promo__media video-promo__media--image">imagen</div>
-          <h2 class="video-promo__title">titulo</h2>
-          <p class="video-promo__text">texto</p>
+        <div class="video-promo__col video-promo__col--image">
+          <div class="video-promo__media video-promo__media--image">
+            <img src="assets/images/buf_t.png" alt="somos búfalos">
+          </div>
+          <div class="video-promo__panel video-promo__panel--compact">
+            <h2 class="video-promo__title">
+              <span class="video-promo__title-part video-promo__title-part--blue">ES</span>
+              <span class="video-promo__title-part video-promo__title-part--red">BUENO</span>
+            </h2>
+            <p class="video-promo__text">Saber que en <strong>UIM</strong> tenémos los mejores profesores reconocidos a nivel internacional que te guiarán en tu desarrollo profesional.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="comentarios">
-    <div class="comentarios__container container">
+    <div class="comentarios__header-wrap container">
       <div class="comentarios__header">
         <h2 class="comentarios__title">
-          <span class="comentarios__title-part comentarios__title-part--blue">titulo</span>
-          <span class="comentarios__title-part comentarios__title-part--red">titulo</span>
+          <span class="comentarios__title-part comentarios__title-part--blue">ELLOS YA SON</span>
+          <span class="comentarios__title-part comentarios__title-part--red">BÚFALOS UIM</span>
         </h2>
-        <p class="comentarios__subtitle">subtitulo</p>
+        <p class="comentarios__subtitle">HISTORIAS REALES, LOGROS REALES</p>
       </div>
+    </div>
 
+    <div class="comentarios__carousel-wrap container">
       <div class="comentarios__carousel">
         <input type="radio" name="comentarios-slide" id="comentarios-slide-1" class="comentarios__radio" checked />
         <input type="radio" name="comentarios-slide" id="comentarios-slide-2" class="comentarios__radio" />
         <input type="radio" name="comentarios-slide" id="comentarios-slide-3" class="comentarios__radio" />
+        <input type="radio" name="comentarios-slide" id="comentarios-slide-4" class="comentarios__radio" />
+        <input type="radio" name="comentarios-slide" id="comentarios-slide-5" class="comentarios__radio" />
+        <input type="radio" name="comentarios-slide" id="comentarios-slide-6" class="comentarios__radio" />
+        <input type="radio" name="comentarios-slide" id="comentarios-slide-7" class="comentarios__radio" />
+        <input type="radio" name="comentarios-slide" id="comentarios-slide-8" class="comentarios__radio" />
 
-        <div class="comentarios__track">
-          <!-- Slide 1: destacado = testimonio 1 -->
-          <div class="comentarios__group comentarios__group--active">
-            <div class="comentarios__card comentarios__card--side">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
+        <div class="comentarios__viewport">
+          <div class="comentarios__track">
+            <!-- Clon de R8 (para el loop hacia atrás) -->
+            <div class="comentarios__card" aria-hidden="true">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt=""></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Carmen Gabriela Delgado Gonzalez</h3>
+                  <p class="comentarios__card-role">Estudiante de Licenciatura en Administración Financiera</p>
+                  <p class="comentarios__text">Desde mi experiencia estudiando en la UIM, puedo decir que es una escuela con gran potencial académico, los docentes realmente están capacitados para preparar a los alumnos a salir a un ambiente laboral y para mi algo igual de importante es que apoyan a todos sus alumnos a crecer como personas, haciendo una formación con valores.</p>
+                </div>
+              </div>
             </div>
-            <div class="comentarios__card comentarios__card--featured">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
-            </div>
-            <div class="comentarios__card comentarios__card--side">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
-            </div>
-          </div>
 
-          <!-- Slide 2: destacado = testimonio 2 -->
-          <div class="comentarios__group">
-            <div class="comentarios__card comentarios__card--side">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
-            </div>
+            <!-- R1 -->
             <div class="comentarios__card comentarios__card--featured">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Alejandro Adhemi Quiñones Velazquez"></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Alejandro Adhemi Quiñones Velazquez</h3>
+                  <p class="comentarios__card-role">Estudiante de 1° semestre de enfermería</p>
+                  <p class="comentarios__text">Una excelente universidad en cuestión de profesionalismo.</p>
+                </div>
+              </div>
             </div>
-            <div class="comentarios__card comentarios__card--side">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
-            </div>
-          </div>
 
-          <!-- Slide 3: destacado = testimonio 3 -->
-          <div class="comentarios__group">
-            <div class="comentarios__card comentarios__card--side">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
+            <!-- R2 -->
+            <div class="comentarios__card">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Aida Ríos"></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Aida Ríos</h3>
+                  <p class="comentarios__card-role">Estudiante de 1° Semestre de enfermería</p>
+                  <p class="comentarios__text">La UIM es una muy buena universidad tiene exelentes maestros y buenas instalaciones con gran accesibilidad.</p>
+                </div>
+              </div>
             </div>
-            <div class="comentarios__card comentarios__card--featured">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
+
+            <!-- R3 -->
+            <div class="comentarios__card">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Eduardo Eloy Ortega Delgado"></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Eduardo Eloy Ortega Delgado</h3>
+                  <p class="comentarios__card-role">Estudiante de 6° semestre Ingeniería Industrial y de Sistemas</p>
+                  <p class="comentarios__text">La UIM es una institución académica bastante accesible donde puedes comenzar tu carrera cuando quieras. Hay buen ambiente por parte de los docentes y los administrativos.</p>
+                </div>
+              </div>
             </div>
-            <div class="comentarios__card comentarios__card--side">
-              <div class="comentarios__avatar"></div>
-              <h3 class="comentarios__card-title">titulo</h3>
-              <p class="comentarios__text">texto</p>
+
+            <!-- R4 -->
+            <div class="comentarios__card">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Karla Judith Mapula Rodriguez"></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Karla Judith Mapula Rodriguez</h3>
+                  <p class="comentarios__card-role">Estudiante de 1° semestre de enfermería</p>
+                  <p class="comentarios__text">Buenas instalaciones, buenos modos de pago y accesibilidad.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- R5 (genérico) -->
+            <div class="comentarios__card">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Fernanda Caballero Barajas</h3>
+                  <p class="comentarios__card-role">Estudiante de 2° Semestre de Preparatoria</p>
+                  <p class="comentarios__text">Para mi esta institución ha sido una de las mejores ya que inculcan buenos valores e interactúan muy bien con los alumnos, incluyéndonos y ayudándonos hacer buenas personas. Yo me siento muy a gusto y agradecida con mi escuela por su gran apoyo.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- R6 (genérico) -->
+            <div class="comentarios__card">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Natalia Regalado Meraz</h3>
+                  <p class="comentarios__card-role">Estudiante de 6° Semestre de Preparatoria</p>
+                  <p class="comentarios__text"> La UIM ha superado mis expectativas desde hace 3 años que ingresé, he visto como ha crecido con instalaciones más grandes y bonitas, mejorando su calidad educativa y conservando la calidad humana de los docentes.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- R7 (genérico) -->
+            <div class="comentarios__card">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__card-body">
+                <h3 class="comentarios__card-name">Carmen Gabriela Delgado Gonzalez</h3>
+                  <p class="comentarios__card-role">Estudiante de Licenciatura en Administración Financiera</p>
+                  <p class="comentarios__text">Desde mi experiencia estudiando en la UIM, puedo decir que es una escuela con gran potencial académico, los docentes realmente están capacitados para preparar a los alumnos a salir a un ambiente laboral y para mi algo igual de importante es que apoyan a todos sus alumnos a crecer como personas, haciendo una formación con valores.</p> 
+                </div>
+              </div>
+            </div>
+
+            <!-- R8 (genérico) -->
+            <div class="comentarios__card">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Paloma Cecilia Moreno</h3>
+                  <p class="comentarios__card-role">Estudiante de Licenciatura en Administración de Empresas</p>
+                  <p class="comentarios__text"> La Universidad Internacional Mexicana es la Institución Educativa que me ha brindado la oportunidad de descubrir y ejercer lo que me apasiona. Todo esto es gracias al personal docente y administrativo, que cuentan con la experiencia profesional, el entusiasmo por la enseñanza y nos brindan la confianza y orgullo de formar parte de la familia Búfalo.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clon de R1 (para el loop hacia adelante) -->
+            <div class="comentarios__card" aria-hidden="true">
+              <div class="comentarios__card-inner">
+                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt=""></div>
+                <div class="comentarios__card-body">
+                  <h3 class="comentarios__card-name">Alejandro Adhemi Quiñones Velazquez</h3>
+                  <p class="comentarios__card-role">Estudiante de 1° semestre de enfermería</p>
+                  <p class="comentarios__text">Una excelente universidad en cuestión de profesionalismo.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <button type="button" class="comentarios__nav comentarios__nav--prev" aria-label="Comentario anterior">←</button>
-        <button type="button" class="comentarios__nav comentarios__nav--next" aria-label="Comentario siguiente">→</button>
 
         <div class="comentarios__dots">
           <label for="comentarios-slide-1" class="comentarios__dot" aria-label="Testimonio 1"></label>
           <label for="comentarios-slide-2" class="comentarios__dot" aria-label="Testimonio 2"></label>
           <label for="comentarios-slide-3" class="comentarios__dot" aria-label="Testimonio 3"></label>
+          <label for="comentarios-slide-4" class="comentarios__dot" aria-label="Testimonio 4"></label>
+          <label for="comentarios-slide-5" class="comentarios__dot" aria-label="Testimonio 5"></label>
+          <label for="comentarios-slide-6" class="comentarios__dot" aria-label="Testimonio 6"></label>
+          <label for="comentarios-slide-7" class="comentarios__dot" aria-label="Testimonio 7"></label>
+          <label for="comentarios-slide-8" class="comentarios__dot" aria-label="Testimonio 8"></label>
         </div>
       </div>
     </div>
   </section>
 
   <section class="pasos">
+    <video class="pasos__bg-video" autoplay muted loop playsinline>
+      <source src="assets/video/particulas2.mp4" type="video/mp4">
+    </video>
+    <div class="pasos__overlay"></div>
+
     <div class="pasos__container container">
       <div class="pasos__header">
         <h2 class="pasos__title">
-          <span class="pasos__title-part pasos__title-part--blue">titulo</span>
-          <span class="pasos__title-part pasos__title-part--red">titulo</span>
+          <span class="pasos__title-part pasos__title-part--blue">ESTAS A </span>
+          <span class="pasos__title-part pasos__title-part--red"> 3 PASOS DEL ÉXITO PROFESIONAL </span>
         </h2>
-        <p class="pasos__subtitle">subtitulo</p>
+        <p class="pasos__subtitle">AQUÍ COMIENZA TU CAMINO PARA UN FUTURO MEJOR</p>
       </div>
 
       <div class="pasos__list">
         <div class="pasos__item">
-          <div class="pasos__circle"></div>
-          <h3 class="pasos__step-title">titulo</h3>
-          <p class="pasos__text">texto</p>
-          <a href="#" class="pasos__button">boton</a>
+          <div class="pasos__circle"> <img src="assets/images/p1.png" alt="" srcset="">  </div>
+          <h3 class="pasos__step-title">Haz tu test</h3>
+          <p class="pasos__text">Llena nuestro formulario inicial para comenzar tu proceso de inscripción en UIM.</p>
+          <a href="#" class="pasos__button">Entrar</a>
         </div>
 
         <div class="pasos__arrow">→</div>
 
         <div class="pasos__item">
-          <div class="pasos__circle"></div>
-          <h3 class="pasos__step-title">titulo</h3>
-          <p class="pasos__text">texto</p>
-          <a href="#" class="pasos__button">boton</a>
+          <div class="pasos__circle"><img src="assets/images/p2.png" alt="" srcset=""> </div>
+          <h3 class="pasos__step-title">Solicita tu beca</h3>
+          <p class="pasos__text">Postúlate a una de nuestras becas.</p>
+          <a href="#" class="pasos__button">Entrar</a>
         </div>
 
         <div class="pasos__arrow">→</div>
 
         <div class="pasos__item">
-          <div class="pasos__circle"></div>
-          <h3 class="pasos__step-title">titulo</h3>
-          <p class="pasos__text">texto</p>
+          <div class="pasos__circle"><img src="assets/images/p3.png" alt="" srcset=""> </div>
+          <h3 class="pasos__step-title">Contacta un asesor</h3>
+          <p class="pasos__text">Agenda una llamada con un asesor para resolver tus dudas y dar el siguiente paso.
+
+
+</p>
           <a href="#" class="pasos__button">boton</a>
         </div>
       </div>
@@ -521,10 +615,10 @@
     <div class="faq__container container">
       <div class="faq__header">
         <h2 class="faq__title">
-          <span class="faq__title-part faq__title-part--blue">titulo</span>
-          <span class="faq__title-part faq__title-part--red">titulo</span>
+          <span class="faq__title-part faq__title-part--blue">PREGUNTAS </span>
+          <span class="faq__title-part faq__title-part--red"> FRECUENTES</span>
         </h2>
-        <p class="faq__subtitle">subtitulo</p>
+        <p class="faq__subtitle">TODO LO QUE NECESITAS SABER DE UIM</p>
       </div>
 
       <div class="faq__tabs">
@@ -534,70 +628,70 @@
         <input type="radio" name="faq-tab" id="faq-tab-4" class="faq__tab-radio" />
 
         <div class="faq__tab-list">
-          <label for="faq-tab-1" class="faq__tab-label">sección 1</label>
-          <label for="faq-tab-2" class="faq__tab-label">sección 2</label>
-          <label for="faq-tab-3" class="faq__tab-label">sección 3</label>
-          <label for="faq-tab-4" class="faq__tab-label">sección 4</label>
+          <label for="faq-tab-1" class="faq__tab-label">ADMISIONES</label>
+          <label for="faq-tab-2" class="faq__tab-label">PLATAFORMA</label>
+          <label for="faq-tab-3" class="faq__tab-label">ACADÉMICO</label>
+          <label for="faq-tab-4" class="faq__tab-label">OTRAS</label>
         </div>
 
         <div class="faq__panels">
           <div class="faq__panel">
             <details class="faq__item" open>
-              <summary class="faq__question">¿Pregunta 1?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Cuáles son los requisitos de admisión?</summary>
+              <p class="faq__answer">Debes contar con tu documentación académica completa (certificado, acta de nacimiento, CURP e identificación oficial) y realizar tu proceso de inscripción con uno de nuestros asesores.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 2?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Cuándo son las fechas de inscripción?</summary>
+              <p class="faq__answer">Las inscripciones están abiertas todo el año, ya que manejamos ingresos en distintos periodos escolares.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 3?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Ofrecen becas o descuentos?</summary>
+              <p class="faq__answer">Sí, contamos con distintos programas de becas y facilidades de pago. Puedes solicitar información con un asesor educativo.</p>
             </details>
           </div>
 
           <div class="faq__panel">
             <details class="faq__item" open>
-              <summary class="faq__question">¿Pregunta 1?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Cómo accedo a la plataforma UIM?</summary>
+              <p class="faq__answer">Puedes ingresar desde el menú "Acceso Alumnos" o "Acceso Docentes" en la parte superior del sitio, usando el usuario y contraseña que te proporcionamos al inscribirte.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 2?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Qué hago si olvidé mi contraseña?</summary>
+              <p class="faq__answer">Puedes restablecerla desde la misma plataforma o solicitar ayuda directamente con control escolar.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 3?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Puedo usar la plataforma desde mi celular?</summary>
+              <p class="faq__answer">Sí, la plataforma es totalmente compatible con dispositivos móviles.</p>
             </details>
           </div>
 
           <div class="faq__panel">
             <details class="faq__item" open>
-              <summary class="faq__question">¿Pregunta 1?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Las clases son en línea, presenciales o mixtas?</summary>
+              <p class="faq__answer">Ofrecemos modalidades presencial, en línea y mixta, según el programa que elijas.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 2?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Cuánto dura cada programa académico?</summary>
+              <p class="faq__answer">La duración varía según el nivel (secundaria, preparatoria, licenciatura, maestría o doctorado); un asesor puede darte el detalle específico del programa que te interese.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 3?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Los planes de estudio tienen validez oficial?</summary>
+              <p class="faq__answer">Sí, todos nuestros programas cuentan con Reconocimiento de Validez Oficial de Estudios (RVOE).</p>
             </details>
           </div>
 
           <div class="faq__panel">
             <details class="faq__item" open>
-              <summary class="faq__question">¿Pregunta 1?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Dónde están ubicadas sus sedes?</summary>
+              <p class="faq__answer">Contamos con varias sedes; puedes consultar la ubicación más cercana a ti en la sección de contacto de esta página.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 2?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Cómo puedo contactar a un asesor?</summary>
+              <p class="faq__answer">Puedes llenar el formulario de contacto en esta misma página o comunicarte directamente a nuestros teléfonos de atención.</p>
             </details>
             <details class="faq__item">
-              <summary class="faq__question">¿Pregunta 3?</summary>
-              <p class="faq__answer">Respuesta de ejemplo.</p>
+              <summary class="faq__question">¿Cómo realizo mis pagos?</summary>
+              <p class="faq__answer">Puedes realizar tus pagos desde la opción "Realizar Pagos" dentro del menú de Acceso Alumnos.</p>
             </details>
           </div>
         </div>
@@ -611,108 +705,155 @@
     <div class="formulario__container container">
       <div class="formulario__header">
         <h2 class="formulario__title">
-          <span class="formulario__title-part formulario__title-part--blue">titulo</span>
-          <span class="formulario__title-part formulario__title-part--red">titulo</span>
+          <span class="formulario__title-part formulario__title-part--blue">ES MOMENTO DE</span>
+          <span class="formulario__title-part formulario__title-part--red">TOMAR ACCIÓN</span>
         </h2>
-        <p class="formulario__subtitle">subtitulo</p>
+        <p class="formulario__subtitle">DEMOS JUNTOS EL PRIMER PASO</p>
       </div>
 
       <div class="formulario__grid">
         <div class="formulario__form-col">
           <div class="formulario__form-header">
-            <h3 class="formulario__form-title">titulo</h3>
-            <p class="formulario__form-subtitle">subtitulo</p>
+            <h3 class="formulario__form-title">¡HABLEMOS!</h3>
+            <p class="formulario__form-subtitle">Estamos listos para ayudarte a avanzar y que seas un #BúfaloUIM</p>
           </div>
 
           <form class="formulario__form">
             <div class="formulario__field">
-              <label for="formulario-nombre" class="formulario__label">titulo</label>
-              <input type="text" id="formulario-nombre" class="formulario__input" />
+              <label for="formulario-nombre" class="formulario__label">Nombre*</label>
+              <input type="text" id="formulario-nombre" class="formulario__input"placeholder="Ingresa tu nombre*" />
             </div>
             <div class="formulario__field">
-              <label for="formulario-email" class="formulario__label">titulo</label>
-              <input type="email" id="formulario-email" class="formulario__input" />
+              <label for="formulario-email" class="formulario__label">Apellidos*</label>
+              <input type="email" id="formulario-email" class="formulario__input" placeholder="Ingresa tus apellidos*" />
             </div>
             <div class="formulario__field">
-              <label for="formulario-telefono" class="formulario__label">titulo</label>
-              <input type="tel" id="formulario-telefono" class="formulario__input" />
+              <label for="formulario-telefono" class="formulario__label">Correo Electrónico*</label>
+              <input type="tel" id="formulario-telefono" class="formulario__input" placeholder="Ingresa tu correo electrónico*"  />
             </div>
             <div class="formulario__field">
-              <label for="formulario-asunto" class="formulario__label">titulo</label>
-              <input type="text" id="formulario-asunto" class="formulario__input" />
+              <label for="formulario-asunto" class="formulario__label">Teléfono*</label>
+              <input type="text" id="formulario-asunto" class="formulario__input" placeholder="Ingresa tu teléfono*"  />
             </div>
             <div class="formulario__field">
-              <label for="formulario-select-1" class="formulario__label">titulo</label>
+              <label for="formulario-select-1" class="formulario__label">Nivel*</label>
               <select id="formulario-select-1" class="formulario__select">
-                <option>lista desplegable</option>
+                <option>Selecciona tu nivel de interes...</option>
               </select>
             </div>
             <div class="formulario__field">
-              <label for="formulario-select-2" class="formulario__label">titulo</label>
+              <label for="formulario-select-2" class="formulario__label">Programa*</label>
               <select id="formulario-select-2" class="formulario__select">
-                <option>lista desplegable</option>
+                <option>Selecciona tu programa de interes ... </option>
               </select>
             </div>
             <div class="formulario__field">
-              <label for="formulario-comentarios" class="formulario__label">titulo</label>
+              <label for="formulario-comentarios" class="formulario__label">Mensaje</label>
               <textarea id="formulario-comentarios" class="formulario__textarea" placeholder="comentarios"></textarea>
             </div>
-            <button type="submit" class="formulario__submit">boton</button>
+            <button type="submit" class="formulario__submit">Enviar Mensaje</button>
+            <p class="formulario__disclaimer">*Al enviar tus datos, aceptas nuestros <a href="#" class="formulario__disclaimer-link">Términos y Condiciones</a> y puedes verificar nuestro <a href="#" class="formulario__disclaimer-link">Aviso de Privacidad</a>.</p>
           </form>
         </div>
 
         <div class="formulario__info-col">
-          <ul class="formulario__info-list">
-            <li class="formulario__info-item">
-              <h3 class="formulario__info-title">titulo</h3>
-              <p class="formulario__info-text">texto</p>
-            </li>
-            <li class="formulario__info-item">
-              <h3 class="formulario__info-title">titulo</h3>
-              <p class="formulario__info-text">texto</p>
-              <p class="formulario__info-text">texto</p>
-            </li>
-            <li class="formulario__info-item">
-              <h3 class="formulario__info-title">titulo</h3>
-              <p class="formulario__info-text">texto</p>
-              <p class="formulario__info-text">texto</p>
-            </li>
-            <li class="formulario__info-item">
-              <h3 class="formulario__info-title">titulo</h3>
-              <p class="formulario__info-text">texto</p>
-              <p class="formulario__info-text">texto</p>
-            </li>
-            <li class="formulario__info-item">
-              <h3 class="formulario__info-title">titulo</h3>
-              <p class="formulario__info-text">texto</p>
-              <p class="formulario__info-text">texto</p>
-            </li>
-            <li class="formulario__info-item">
-              <h3 class="formulario__info-title">titulo</h3>
-              <p class="formulario__info-text">texto</p>
-              <p class="formulario__info-text">texto</p>
-            </li>
-          </ul>
+          <div class="formulario__info-card">
+            <div class="formulario__info-intro">
+              <h3 class="formulario__info-title">
+                <span class="formulario__info-title-part formulario__info-title-part--blue">OFICINAS</span>
+                <span class="formulario__info-title-part formulario__info-title-part--red">UIM</span>
+              </h3>
+              <p class="formulario__info-lead">Llama o visita cualquiera de nuestras sedes.</p>
+            </div>
+
+            <ul class="formulario__info-list">
+              <li class="formulario__info-item">
+                <h4 class="formulario__sede-title">Sede: Durango</h4>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                  <strong>Dirección:</strong> Calle Amex #131 Fracc. Las Tres Misiones Durango, Durango
+                </p>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+                  <strong>Teléfono:</strong> 618-156-03-78
+                </p>
+              </li>
+              <li class="formulario__info-item">
+                <h4 class="formulario__sede-title">Sede: Matamoros</h4>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                  <strong>Dirección:</strong> Zaragoza #19 entre Niños Héroes y Alatorre
+                </p>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+                  <strong>Teléfono:</strong> 871-762-47-32
+                </p>
+              </li>
+              <li class="formulario__info-item">
+                <h4 class="formulario__sede-title">Sede: Lerdo</h4>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                  <strong>Dirección:</strong> Calle Ortiz de Zárate No. 790, Col. Centro (contra esquina de calle Chihuahua)
+                </p>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+                  <strong>Teléfono:</strong> 871-725-59-01
+                </p>
+              </li>
+              <li class="formulario__info-item">
+                <h4 class="formulario__sede-title">Sede: Cuencamé</h4>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                  <strong>Dirección:</strong> Calle 16 de Septiembre No. 454, Col. La Esperanza
+                </p>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+                  <strong>Teléfono:</strong> 618-815-79-99
+                </p>
+              </li>
+              <li class="formulario__info-item">
+                <h4 class="formulario__sede-title">Sede: Saltillo</h4>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                  <strong>Dirección:</strong> Salazar 896, Col. Centro, Saltillo, Coahuila
+                </p>
+                <p class="formulario__sede-line">
+                  <svg class="formulario__sede-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+                  <strong>Teléfono:</strong> 444-277-85-20
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="sedes">
-    <div class="sedes__media">imagen</div>
+    <div class="sedes__media">
+      <img src="assets/images/sedes2025.jpg" alt="Presencia Búfalo UIM 2025">
+    </div>
   </section>
 
   <div class="section-divider"></div>
 
   <section class="video-particulas">
-    <div class="video-particulas__media">VIDEO</div>
+    <video class="video-particulas__bg-video" autoplay muted loop playsinline>
+      <source src="assets/video/particulas2.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+
+    <div class="video-particulas__content">
+      <img src="assets/images/invierte.png" alt="Invierte en tu futuro" class="video-particulas__overlay-image">
+    </div>
   </section>
 
   <footer class="footer">
+    <div class="footer__top-bg">
     <div class="footer__container container">
       <div class="footer__top">
         <div class="footer__brand">
-          <a href="#" class="footer__logo">logo</a>
+          <a href="#" class="footer__logo"> <img src="assets/images/logo-b.png" alt="logo"></a>
 
           <div class="footer__socials">
             <a href="#" class="footer__social" aria-label="Facebook">
@@ -737,39 +878,43 @@
 
         <div class="footer__columns">
           <div class="footer__column">
-            <span class="footer__column-label">texto</span>
-            <h3 class="footer__column-title">titulo</h3>
+            <span class="footer__column-label">OFERTA ACADÉMICA</span>
             <ul class="footer__links">
-              <li><a href="#" class="footer__link">texto</a></li>
-              <li><a href="#" class="footer__link">texto</a></li>
+              <li><a href="#" class="footer__link">SECUNDARIA</a></li>
+              <li><a href="#" class="footer__link">PREPARATORIA</a></li>
+              <li><a href="#" class="footer__link">LICENCIATURA</a></li>
+              <li><a href="#" class="footer__link">MAESTRÍA</a></li>
+              <li><a href="#" class="footer__link">DOCTORADO</a></li>
             </ul>
           </div>
 
           <div class="footer__column">
-            <span class="footer__column-label">texto</span>
-            <h3 class="footer__column-title">titulo</h3>
+            <span class="footer__column-label">LINKS DIRECTOS</span>
             <ul class="footer__links">
-              <li><a href="#" class="footer__link">texto</a></li>
-              <li><a href="#" class="footer__link">texto</a></li>
+              <li><a href="#" class="footer__link">PLATAFORMA UIM</a></li>
+              <li><a href="#" class="footer__link">CONTROL ESCOLAR</a></li>
+              <li><a href="#" class="footer__link">PAGOS</a></li>
             </ul>
           </div>
 
           <div class="footer__column">
-            <span class="footer__column-label">texto</span>
-            <h3 class="footer__column-title">titulo</h3>
+            <span class="footer__column-label">CONTACTO</span>            
             <ul class="footer__links">
-              <li><a href="#" class="footer__link">texto</a></li>
-              <li><a href="#" class="footer__link">texto</a></li>
+              <li><a href="#" class="footer__link"> Calle Amex #131 Fracc. Las Tres Misiones Durango, Durango</a></li>
+              <li><a href="#" class="footer__link">Tel: 618-156-03-78</a></li>
+              <li><a href="#" class="footer__link">vinculacion@uim.mx</a></li>
+              <li><a href="#" class="footer__link">comunicacionymarketing@uim.mx</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+    </div>
 
     <div class="footer__copy">
       <div class="footer__copy-container container">
-        <p class="footer__copy-text">texto</p>
-        <p class="footer__copy-text">texto</p>
+        <p class="footer__copy-text">UNIVERSIDAD INTERNACIONAL MEXICANA | ©2025</p>
+        <p class="footer__copy-text">AVISO DE PRIVACIDAD | TÉRMINOS Y CONDICIONES | UVN</p>
       </div>
     </div>
   </footer>
@@ -777,5 +922,6 @@
   <script src="js/hero.js" defer></script>
   <script src="js/estadisticas.js" defer></script>
   <script src="js/comentarios.js" defer></script>
+  <script src="js/video-particulas.js" defer></script>
 </body>
 </html>

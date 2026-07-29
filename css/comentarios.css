@@ -1,9 +1,12 @@
 /* =========================================================
    COMENTARIOS.CSS
    Bloque BEM: .comentarios
-   Carrusel de testimonios (radio hack, sin JS) con tarjeta
-   central destacada y tarjetas laterales de vista previa +
-   dots de navegación.
+   Carrusel "filmstrip" de 8 testimonios: una sola tira de
+   tarjetas que se desliza de a una por vez (JS calcula el
+   transform), con tarjetas clon al inicio/final para el loop
+   infinito sin salto visible. Tarjeta central destacada
+   (fondo degradado azul) + laterales atenuadas + dots
+   cuadrados. Sin flechas.
    ========================================================= */
 
 .comentarios {
@@ -34,10 +37,16 @@
   font-weight: var(--fw-bold);
 }
 
+/* El carrusel ocupa más ancho que el contenedor estándar del sitio,
+   pero el título/subtítulo se quedan en el ancho normal (.container)
+   para alinearse con el resto de las secciones. */
+.comentarios__carousel-wrap {
+  max-width: 1400px;
+}
+
 /* -------------------- Carrusel -------------------- */
 .comentarios__carousel {
   position: relative;
-  padding-inline: 48px;
 }
 
 .comentarios__radio {
@@ -52,100 +61,113 @@
   border: 0;
 }
 
+.comentarios__viewport {
+  overflow: hidden;
+}
+
 .comentarios__track {
-  display: grid;
-}
-
-.comentarios__group {
   display: flex;
-  grid-area: 1 / 1;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.6s ease;
+  transition: transform 0.6s ease;
 }
 
-.comentarios__group--active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
+/* -------------------- Tarjeta (slot de la tira) -------------------- */
 .comentarios__card {
-  display: none;
-  flex-direction: column;
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-inline: var(--space-2);
+}
+
+.comentarios__card-inner {
+  display: flex;
   align-items: center;
-  text-align: center;
-  padding: var(--space-4);
-  border: var(--border-width) solid var(--color-gray-medium);
+  gap: var(--space-3);
+  height: 220px;
+  padding: var(--space-3);
+  text-align: left;
+  opacity: 0.45;
+  transform: scale(0.94);
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .comentarios__avatar {
+  flex: 0 0 auto;
   width: 56px;
   height: 56px;
-  margin-bottom: var(--space-3);
   border-radius: 50%;
-  background-color: var(--color-blue);
+  overflow: hidden;
 }
 
-.comentarios__card-title {
-  margin-bottom: var(--space-2);
-  color: var(--color-blue);
+.comentarios__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comentarios__card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.comentarios__card-name {
+  margin-bottom: 2px;
+  overflow: hidden;
+  color: var(--color-red);
+  font-weight: var(--fw-bold);
   font-size: var(--fs-base);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.comentarios__card-role {
+  margin-bottom: var(--space-1);
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .comentarios__text {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
+  line-height: 1.4;
 }
 
-/* En móvil solo se ve la tarjeta destacada, a todo el ancho */
-.comentarios__card--featured {
-  display: flex;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+/* Tarjeta destacada (la que está centrada en el viewport) */
+.comentarios__card--featured .comentarios__card-inner {
+  opacity: 1;
+  transform: scale(1);
+  padding: var(--space-5);
+  border-radius: 20px;
+  background: linear-gradient(160deg, var(--color-blue) 0%, #2a2f6e 55%, var(--color-blue-dark) 100%);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .comentarios__card--featured .comentarios__avatar {
-  width: 84px;
-  height: 84px;
+  width: 90px;
+  height: 90px;
 }
 
-.comentarios__card--featured .comentarios__card-title {
-  font-size: var(--fs-lg);
+.comentarios__card--featured .comentarios__card-role {
+  color: var(--color-white);
 }
 
-/* -------------------- Flechas prev/next -------------------- */
-.comentarios__nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: var(--border-width) solid var(--color-black);
-  border-radius: 50%;
-  background-color: var(--color-white);
-  font-weight: var(--fw-bold);
-  cursor: pointer;
-  z-index: 5;
+.comentarios__card--featured .comentarios__text {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.comentarios__nav--prev {
-  left: 0;
-}
-
-.comentarios__nav--next {
-  right: 0;
-}
-
-/* -------------------- Dots -------------------- */
+/* -------------------- Dots (cuadrados) -------------------- */
 .comentarios__dots {
   display: flex;
   align-items: center;
@@ -155,29 +177,44 @@
 }
 
 .comentarios__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-gray-medium);
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: var(--color-blue-dark);
   cursor: pointer;
+  transition: background-color var(--transition-base);
 }
 
 .comentarios__radio:nth-of-type(1):checked ~ .comentarios__dots .comentarios__dot:nth-child(1),
 .comentarios__radio:nth-of-type(2):checked ~ .comentarios__dots .comentarios__dot:nth-child(2),
-.comentarios__radio:nth-of-type(3):checked ~ .comentarios__dots .comentarios__dot:nth-child(3) {
+.comentarios__radio:nth-of-type(3):checked ~ .comentarios__dots .comentarios__dot:nth-child(3),
+.comentarios__radio:nth-of-type(4):checked ~ .comentarios__dots .comentarios__dot:nth-child(4),
+.comentarios__radio:nth-of-type(5):checked ~ .comentarios__dots .comentarios__dot:nth-child(5),
+.comentarios__radio:nth-of-type(6):checked ~ .comentarios__dots .comentarios__dot:nth-child(6),
+.comentarios__radio:nth-of-type(7):checked ~ .comentarios__dots .comentarios__dot:nth-child(7),
+.comentarios__radio:nth-of-type(8):checked ~ .comentarios__dots .comentarios__dot:nth-child(8) {
   background-color: var(--color-red);
 }
 
-/* -------------------- Tablet (>= 768px): se ven las tarjetas laterales -------------------- */
+/* -------------------- Tablet (>= 768px): se ven 3 tarjetas -------------------- */
 @media (min-width: 768px) {
   .comentarios__title {
     font-size: var(--fs-3xl);
   }
 
-  .comentarios__card--side {
-    display: flex;
-    flex: 0 0 200px;
-    opacity: 0.6;
-    transform: scale(0.92);
+  .comentarios__card {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  .comentarios__card-inner {
+    height: 260px;
+  }
+}
+
+/* -------------------- Desktop (>= 1024px) -------------------- */
+@media (min-width: 1024px) {
+  .comentarios__card-inner {
+    height: 280px;
   }
 }

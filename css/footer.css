@@ -2,19 +2,26 @@
    FOOTER.CSS
    Bloque BEM: .footer
    Logo + redes sociales, 3 columnas de links y barra de copy.
+   El bloque superior (.footer__top-bg) y la barra de copy
+   (.footer__copy) llevan fondos distintos, cada uno a todo el
+   ancho de la pantalla.
    ========================================================= */
 
 .footer {
   width: 100%;
-  border-top: var(--border-width) solid var(--color-gray-medium);
+}
+
+/* -------------------- Bloque superior: degradado gris a negro -------------------- */
+.footer__top-bg {
+  width: 100%;
   padding-block: var(--space-6);
+  background: linear-gradient(180deg, #0a0145 0%, #000000 100%);
 }
 
 .footer__top {
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  margin-bottom: var(--space-5);
 }
 
 /* -------------------- Marca + redes -------------------- */
@@ -27,11 +34,11 @@
 
 .footer__logo {
   display: inline-block;
-  color: var(--color-red);
-  background-color: var(--color-blue);
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-bold);
-  padding: var(--space-2) var(--space-4);
+}
+
+.footer__logo img {
+  height: 48px;
+  width: auto;
 }
 
 .footer__socials {
@@ -46,13 +53,15 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: var(--color-blue-dark);
+  border: var(--border-width) solid rgba(251, 251, 251, 0.5);
+  background-color: transparent;
   color: var(--color-white);
-  transition: background-color var(--transition-base);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
 .footer__social:hover {
   background-color: var(--color-red);
+  border-color: var(--color-red);
 }
 
 .footer__social svg {
@@ -72,37 +81,33 @@
   display: inline-block;
   margin-bottom: var(--space-2);
   padding-bottom: var(--space-1);
-  color: var(--color-text-muted);
-  font-size: var(--fs-sm);
-  border-bottom: var(--border-width) solid var(--color-gray-medium);
-}
-
-.footer__column-title {
-  margin-bottom: var(--space-2);
-  color: var(--color-blue);
+  color: var(--color-red);
   font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  border-bottom: 2px solid var(--color-red);
 }
 
 .footer__links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-2);
 }
 
 .footer__link {
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.75);
   font-size: var(--fs-sm);
   transition: color var(--transition-base);
 }
 
 .footer__link:hover {
-  color: var(--color-blue);
+  color: var(--color-white);
 }
 
-/* -------------------- Barra de copy -------------------- */
+/* -------------------- Barra de copy: fondo claro -------------------- */
 .footer__copy {
-  padding-top: var(--space-4);
-  border-top: var(--border-width) solid var(--color-gray-medium);
+  width: 100%;
+  padding-block: var(--space-4);
+  background: linear-gradient(180deg, #ffffff 0%, #dcdbdb 100%);
 }
 
 .footer__copy-container {
@@ -112,8 +117,10 @@
 }
 
 .footer__copy-text {
-  color: var(--color-text-muted);
+  color: #333333;
   font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
 }
 
 /* -------------------- Tablet (>= 768px) -------------------- */

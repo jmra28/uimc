@@ -1,36 +1,57 @@
 const comentariosCarousel = document.querySelector(".comentarios__carousel");
 
 if (comentariosCarousel) {
+  const track = comentariosCarousel.querySelector(".comentarios__track");
+  const cards = Array.from(comentariosCarousel.querySelectorAll(".comentarios__card"));
   const radios = Array.from(comentariosCarousel.querySelectorAll(".comentarios__radio"));
-  const groups = Array.from(comentariosCarousel.querySelectorAll(".comentarios__group"));
-  const prevBtn = comentariosCarousel.querySelector(".comentarios__nav--prev");
-  const nextBtn = comentariosCarousel.querySelector(".comentarios__nav--next");
   const autoplayDelay = 5000;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const desktopQuery = window.matchMedia("(min-width: 768px)");
+
+  const lastTrackIndex = cards.length - 1; // clon de R1
+  let trackIndex = 1; // R1 (primer testimonio real)
   let autoplayTimer = null;
 
-  function getCurrentIndex() {
-    return radios.findIndex((radio) => radio.checked);
+  function visibleCount() {
+    return desktopQuery.matches ? 3 : 1;
   }
 
-  function updateActiveGroup() {
-    const index = getCurrentIndex();
-    groups.forEach((group, i) => group.classList.toggle("comentarios__group--active", i === index));
+  function updateTransform(animate) {
+    if (!animate) track.style.transition = "none";
+
+    const percent = 100 / visibleCount();
+    const offset = Math.floor(visibleCount() / 2);
+    track.style.transform = `translateX(-${(trackIndex - offset) * percent}%)`;
+
+    if (!animate) {
+      void track.offsetWidth;
+      track.style.transition = "";
+    }
   }
 
-  function goTo(index) {
-    const length = radios.length;
-    const wrapped = (index + length) % length;
-    radios[wrapped].checked = true;
-    updateActiveGroup();
+  function updateFeaturedCard() {
+    cards.forEach((card) => card.classList.remove("comentarios__card--featured"));
+    cards[trackIndex].classList.add("comentarios__card--featured");
+  }
+
+  function syncRadio() {
+    let real = trackIndex;
+    if (trackIndex === 0) real = radios.length;
+    if (trackIndex === lastTrackIndex) real = 1;
+    radios[real - 1].checked = true;
   }
 
   function goNext() {
-    goTo(getCurrentIndex() + 1);
+    trackIndex += 1;
+    updateTransform(true);
+    updateFeaturedCard();
+    syncRadio();
   }
 
-  function goPrev() {
-    goTo(getCurrentIndex() - 1);
+  function goToReal(real) {
+    trackIndex = real;
+    updateTransform(true);
+    updateFeaturedCard();
   }
 
   function startAutoplay() {
@@ -48,26 +69,30 @@ if (comentariosCarousel) {
     startAutoplay();
   }
 
-  prevBtn.addEventListener("click", () => {
-    goPrev();
-    resetAutoplay();
+  track.addEventListener("transitionend", (event) => {
+    if (event.propertyName !== "transform") return;
+    if (trackIndex === lastTrackIndex) {
+      trackIndex = 1;
+      updateTransform(false);
+      updateFeaturedCard();
+    }
   });
 
-  nextBtn.addEventListener("click", () => {
-    goNext();
-    resetAutoplay();
-  });
-
-  radios.forEach((radio) =>
+  radios.forEach((radio, i) =>
     radio.addEventListener("change", () => {
-      updateActiveGroup();
+      if (!radio.checked) return;
+      goToReal(i + 1);
       resetAutoplay();
     })
   );
 
+  desktopQuery.addEventListener("change", () => updateTransform(false));
+  window.addEventListener("resize", () => updateTransform(false));
+
   comentariosCarousel.addEventListener("mouseenter", stopAutoplay);
   comentariosCarousel.addEventListener("mouseleave", startAutoplay);
 
-  updateActiveGroup();
+  updateTransform(false);
+  updateFeaturedCard();
   startAutoplay();
 }

@@ -1,9 +1,10 @@
 /* =========================================================
    VIDEO-PROMO.CSS
    Bloque BEM: .video-promo
-   Columna video+título+texto+botón junto a columna
-   imagen+título+texto. Se apilan en móvil, lado a lado desde
-   desktop (columna del video más ancha).
+   Video de partículas de fondo a toda la sección. Encima,
+   dos paneles: panel principal (video real + título + texto +
+   botón) y columna secundaria (imagen del búfalo + panel
+   compacto de texto). Clases propias de esta sección.
    ========================================================= */
 
 .video-promo {
@@ -26,7 +27,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .video-promo__container {
@@ -40,23 +41,25 @@
   gap: var(--space-6);
 }
 
-.video-promo__col {
-  display: flex;
-  flex-direction: column;
+/* -------------------- Panel (tarjeta clara con sombra) -------------------- */
+.video-promo__panel {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
+  border-radius: 20px;
+  padding: var(--space-5);
+  box-shadow: 0 0 36px rgba(255, 255, 255, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.video-promo__media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.video-promo__panel--compact {
   width: 100%;
-  margin-bottom: var(--space-3);
-  background-color: var(--color-gray-light);
 }
 
 .video-promo__media--video {
+  width: 100%;
   aspect-ratio: 16 / 9;
+  border-radius: 14px;
   overflow: hidden;
+  margin-bottom: var(--space-4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .video-promo__video {
@@ -66,48 +69,83 @@
   object-fit: cover;
 }
 
-.video-promo__media--image {
-  aspect-ratio: 4 / 3;
-  color: var(--color-text-muted);
-  font-size: var(--fs-base);
-  font-weight: var(--fw-semibold);
+.video-promo__title {
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
-.video-promo__title {
-  margin-bottom: var(--space-2);
-  color: var(--color-white);
-  font-size: var(--fs-lg);
+.video-promo__title-part--blue {
+  color: var(--color-blue);
+}
+
+.video-promo__title-part--red {
+  color: var(--color-red);
 }
 
 .video-promo__text {
-  margin-bottom: var(--space-3);
-  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
   font-size: var(--fs-base);
 }
 
 .video-promo__button {
   display: inline-block;
-  align-self: flex-start;
-  padding: var(--space-2) var(--space-5);
-  border: var(--border-width) solid var(--color-white);
-  text-align: center;
-  font-weight: var(--fw-semibold);
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-red);
   color: var(--color-white);
-  background-color: transparent;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(226, 35, 26, 0.4);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .video-promo__button:hover {
-  background-color: var(--color-white);
-  border-color: var(--color-white);
-  color: var(--color-black);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(226, 35, 26, 0.5);
+}
+
+/* -------------------- Columna secundaria: imagen + panel compacto -------------------- */
+.video-promo__col--image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.video-promo__media--image {
+  width: 100%;
+  max-width: 260px;
+}
+
+.video-promo__media--image img {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------- Tablet (>= 768px) -------------------- */
+@media (min-width: 768px) {
+  .video-promo__title {
+    font-size: var(--fs-2xl);
+  }
 }
 
 /* -------------------- Desktop (>= 1024px): lado a lado -------------------- */
 @media (min-width: 1024px) {
   .video-promo__grid {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-    gap: var(--space-5);
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .video-promo__col--image {
+    align-items: flex-end;
+  }
+
+  .video-promo__media--image {
+    max-width: 320px;
   }
 }

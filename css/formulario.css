@@ -1,18 +1,21 @@
 /* =========================================================
    FORMULARIO.CSS
    Bloque BEM: .formulario
-   2 columnas: formulario (inputs + dropdowns + textarea +
-   botón) / lista de información (título + texto, separados
-   por líneas). Se apilan en móvil.
+   2 columnas: formulario (inputs redondeados + botón rojo
+   tipo píldora) / tarjeta blanca flotante con la lista de
+   sedes (ícono + dirección/teléfono). Se apilan en móvil.
    ========================================================= */
 
 .formulario {
   width: 100%;
-  padding-block: var(--section-padding-y);
+  padding-block: var(--space-5);
+  background-image: var(--fondo1);
+  background-size: cover;
+  background-position: center;
 }
 
 .formulario__header {
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-3);
 }
 
 .formulario__title {
@@ -38,35 +41,41 @@
 .formulario__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-6);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.formulario__info-col {
+  display: flex;
 }
 
 /* -------------------- Columna: formulario -------------------- */
 .formulario__form-header {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
 }
 
 .formulario__form-title {
   color: var(--color-blue);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
 }
 
 .formulario__form-subtitle {
   margin-top: var(--space-1);
-  color: var(--color-text-muted);
-  font-size: var(--fs-sm);
+  color: var(--color-text);
+  font-size: var(--fs-base);
 }
 
 .formulario__field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
-  margin-bottom: var(--space-3);
+  gap: 2px;
+  margin-bottom: var(--space-2);
 }
 
 .formulario__label {
   color: var(--color-text);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   font-size: var(--fs-sm);
 }
 
@@ -74,38 +83,99 @@
 .formulario__select,
 .formulario__textarea {
   padding: var(--space-2) var(--space-3);
-  border: var(--border-width) solid var(--color-gray-medium);
+  border: var(--border-width) solid transparent;
+  border-radius: 10px;
   color: var(--color-text);
   background-color: var(--color-white);
   font-family: inherit;
   font-size: var(--fs-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.formulario__input::placeholder,
+.formulario__textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.formulario__input:focus,
+.formulario__select:focus,
+.formulario__textarea:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  box-shadow: 0 2px 10px rgba(27, 30, 140, 0.2);
 }
 
 .formulario__textarea {
-  min-height: 110px;
+  min-height: 70px;
   resize: vertical;
 }
 
 .formulario__submit {
   display: inline-block;
   align-self: flex-start;
-  margin-top: var(--space-2);
+  margin-top: 2px;
+  margin-bottom: var(--space-2);
   padding: var(--space-2) var(--space-5);
-  border: var(--border-width) solid var(--color-black);
-  color: var(--color-text);
-  background-color: var(--color-white);
-  font-weight: var(--fw-semibold);
+  border: none;
+  border-radius: 999px;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  font-weight: var(--fw-bold);
   cursor: pointer;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+  box-shadow: 0 6px 16px rgba(226, 35, 26, 0.35);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
 }
 
 .formulario__submit:hover {
-  background-color: var(--color-blue);
-  border-color: var(--color-blue);
-  color: var(--color-white);
+  background-color: var(--color-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(226, 35, 26, 0.45);
 }
 
-/* -------------------- Columna: información -------------------- */
+.formulario__disclaimer {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+}
+
+.formulario__disclaimer-link {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+
+/* -------------------- Columna: información (tarjeta flotante) -------------------- */
+.formulario__info-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: var(--space-4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.formulario__info-intro {
+  margin-bottom: var(--space-3);
+}
+
+.formulario__info-title {
+  font-size: var(--fs-xl);
+}
+
+.formulario__info-title-part--blue {
+  color: var(--color-blue);
+}
+
+.formulario__info-title-part--red {
+  color: var(--color-red);
+}
+
+.formulario__info-lead {
+  margin-top: var(--space-1);
+  color: var(--color-text);
+  font-size: var(--fs-base);
+}
+
 .formulario__info-list {
   display: flex;
   flex-direction: column;
@@ -116,19 +186,38 @@
   border-bottom: var(--border-width) solid var(--color-gray-medium);
 }
 
-.formulario__info-item:last-child {
-  border-bottom: none;
+.formulario__info-item:first-child {
+  padding-top: 0;
 }
 
-.formulario__info-title {
+.formulario__info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.formulario__sede-title {
   margin-bottom: var(--space-1);
   color: var(--color-blue);
   font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
 }
 
-.formulario__info-text {
-  color: var(--color-text-muted);
+.formulario__sede-line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
   font-size: var(--fs-sm);
+  line-height: 1.4;
+}
+
+.formulario__sede-icon {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  fill: var(--color-red);
 }
 
 /* -------------------- Tablet (>= 768px) -------------------- */
@@ -142,5 +231,9 @@
 @media (min-width: 1024px) {
   .formulario__grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .formulario__info-card {
+    margin-top: 56px;
   }
 }
