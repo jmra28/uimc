@@ -1,8 +1,12 @@
 /* =========================================================
    MENSAJE.CSS
    Bloque BEM: .mensaje
-   Imagen + texto en 2 columnas, sin encabezado de título.
-   Se apila en móvil.
+   Imagen a todo lo ancho de la pantalla (pegada al borde
+   izquierdo, sin contenedor) + texto en columna aparte con su
+   propio padding. Se apila en móvil/tablet; lado a lado desde
+   desktop, con un degradado en el borde de la imagen para que
+   la transición hacia el fondo de la página no se vea como un
+   corte.
    ========================================================= */
 
 .mensaje {
@@ -13,19 +17,43 @@
 .mensaje__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-5);
 }
 
 .mensaje__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
+  overflow: hidden;
   background-color: var(--color-gray-light);
-  color: var(--color-text-muted);
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-semibold);
+}
+
+.mensaje__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% center;
+}
+
+.mensaje__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 70%, var(--color-bg) 100%);
+  pointer-events: none;
+}
+
+.mensaje__text-col {
+  padding: var(--space-5) var(--section-padding-x);
+}
+
+.mensaje__heading {
+  margin-bottom: var(--space-4);
+  color: var(--color-blue);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  text-align: center;
 }
 
 .mensaje__text {
@@ -42,10 +70,54 @@
   margin-bottom: 0;
 }
 
-/* -------------------- Tablet (>= 768px): en fila -------------------- */
-@media (min-width: 768px) {
+.mensaje__closing,
+.mensaje__signature {
+  text-align: center;
+  font-weight: var(--fw-bold);
+}
+
+.mensaje__closing {
+  margin-top: var(--space-5);
+  color: var(--color-red);
+  font-size: var(--fs-xl);
+}
+
+.mensaje__signature {
+  margin-top: var(--space-2);
+  color: var(--color-blue);
+  font-size: var(--fs-lg);
+}
+
+/* -------------------- Desktop (>= 1024px): lado a lado, imagen pegada al borde izquierdo -------------------- */
+@media (min-width: 1024px) {
+  .mensaje {
+    padding-block: 0;
+  }
+
   .mensaje__grid {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+  }
+
+  .mensaje__image {
+    position: sticky;
+    top: 0;
+    aspect-ratio: auto;
+    height: 100vh;
+    align-self: start;
+  }
+
+  .mensaje__image::after {
+    background: linear-gradient(to right, transparent 65%, var(--color-bg) 100%);
+  }
+
+  .mensaje__text-col {
+    display: flex;
+    align-items: center;
+    padding: var(--space-6) var(--section-padding-x) var(--space-6) var(--space-6);
+  }
+
+  .mensaje__text {
+    max-width: 640px;
   }
 }

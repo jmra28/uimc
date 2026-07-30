@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UIMC</title>
+  <title>Maestría - UIM</title>
 
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/header.css" />
@@ -88,23 +88,52 @@
     <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-1" class="slider-carrusel__radio" checked />
     <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-2" class="slider-carrusel__radio" />
     <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-3" class="slider-carrusel__radio" />
+    <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-4" class="slider-carrusel__radio" />
 
     <div class="slider-carrusel__track">
       <div class="slider-carrusel__slide">
-        <div class="slider-carrusel__image">imagen 1</div>
-        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
-        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+        <div class="slider-carrusel__image"> <img src="assets/images/portadas/maes/port_maes.jpg" alt="" srcset=""> </div>
+        <label for="slider-carrusel-slide-4" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
       </div>
       <div class="slider-carrusel__slide">
-        <div class="slider-carrusel__image">imagen 2</div>
-        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
-        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+        <div class="slider-carrusel__image"><img src="assets/images/portadas/maes/port_maes2.jpg" alt="" srcset=""></div>
+        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
       </div>
       <div class="slider-carrusel__slide">
-        <div class="slider-carrusel__image">imagen 3</div>
-        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
-        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+        <div class="slider-carrusel__image"><img src="assets/images/portadas/maes/port_maes3.jpg" alt="" srcset=""></div>
+        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-4" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
       </div>
+      <div class="slider-carrusel__slide">
+        <div class="slider-carrusel__image"><img src="assets/images/portadas/maes/port_maes4.jpg" alt="" srcset=""></div>
+        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+      </div>
+    </div>
+
+    <div class="slider-carrusel__dots">
+      <label for="slider-carrusel-slide-1" class="slider-carrusel__dot" aria-label="Imagen 1"></label>
+      <label for="slider-carrusel-slide-2" class="slider-carrusel__dot" aria-label="Imagen 2"></label>
+      <label for="slider-carrusel-slide-3" class="slider-carrusel__dot" aria-label="Imagen 3"></label>
+      <label for="slider-carrusel-slide-4" class="slider-carrusel__dot" aria-label="Imagen 4"></label>
     </div>
   </section>
 
@@ -113,22 +142,22 @@
   <section class="barras-progreso">
     <div class="barras-progreso__container container">
       <div class="barras-progreso__grid">
-        <div class="barras-progreso__image">imagen</div>
+        <div class="barras-progreso__image"> <img src="assets/images/maest_bann.jpeg" alt="" srcset=""> </div>
 
         <div class="barras-progreso__content">
           <h2 class="barras-progreso__title">
-            <span class="barras-progreso__title-part barras-progreso__title-part--blue">titulo</span>
-            <span class="barras-progreso__title-part barras-progreso__title-part--red">titulo</span>
+            <span class="barras-progreso__title-part barras-progreso__title-part--blue">¿POR QUÉ ESTUDIAR <br></span>
+            <span class="barras-progreso__title-part barras-progreso__title-part--red">UNA MAESTRÍA?</span>
           </h2>
-          <p class="barras-progreso__text">texto</p>
+          <p class="barras-progreso__text">Explora el impacto que una maestría en UIM puede tener en tu futuro.</p>
 
           <div class="barras-progreso__list">
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
+              <span class="barras-progreso__item-title">VENTAJA COMPETITIVA</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
-                </span>
+                <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">                
+              </span>
                 <div class="barras-progreso__track">
                   <span class="barras-progreso__fill" data-target="90"></span>
                 </div>
@@ -137,41 +166,41 @@
             </div>
 
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
+              <span class="barras-progreso__item-title">AUMENTO DE INGRESOS</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
-                </span>
+                  <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">               
+               </span>
                 <div class="barras-progreso__track">
-                  <span class="barras-progreso__fill" data-target="75"></span>
+                  <span class="barras-progreso__fill" data-target="95"></span>
                 </div>
-                <span class="barras-progreso__percent" data-target="75">0%</span>
+                <span class="barras-progreso__percent" data-target="95">0%</span>
               </div>
             </div>
 
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
+              <span class="barras-progreso__item-title">TASA DE EMPLEO</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
-                </span>
+                  <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">                
+              </span>
                 <div class="barras-progreso__track">
-                  <span class="barras-progreso__fill" data-target="85"></span>
+                  <span class="barras-progreso__fill" data-target="90"></span>
                 </div>
-                <span class="barras-progreso__percent" data-target="85">0%</span>
+                <span class="barras-progreso__percent" data-target="90">0%</span>
               </div>
             </div>
 
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
+              <span class="barras-progreso__item-title">ESPECTATIVA SALARIAL</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
-                </span>
+                    <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">               
+               </span>
                 <div class="barras-progreso__track">
-                  <span class="barras-progreso__fill" data-target="60"></span>
+                  <span class="barras-progreso__fill" data-target="95"></span>
                 </div>
-                <span class="barras-progreso__percent" data-target="60">0%</span>
+                <span class="barras-progreso__percent" data-target="95">0%</span>
               </div>
             </div>
           </div>
@@ -186,65 +215,64 @@
     <div class="oferta-academica__container container">
       <div class="oferta-academica__header">
         <h2 class="oferta-academica__title">
-          <span class="oferta-academica__title-part oferta-academica__title-part--blue">titulo</span>
-          <span class="oferta-academica__title-part oferta-academica__title-part--red">titulo</span>
+          <span class="oferta-academica__title-part oferta-academica__title-part--blue">PLAN DE ESTUDIOS</span>
+          <span class="oferta-academica__title-part oferta-academica__title-part--red">MAESTRÍA</span>
         </h2>
-        <p class="oferta-academica__subtitle">subtitulo</p>
       </div>
 
       <div class="oferta-academica__grid">
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Adminitración y Alta Dirección</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"> <img src="assets/images/carreras/1 Banners-40.jpg" alt="" srcset=""> </div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Administración de Hospitales</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"> <img src="assets/images/carreras/1 Banners-39.jpg" alt="" srcset=""> </div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Salud Pública</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-46.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Dirección Comercial y Mercadotecnia</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-42.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Psicología y Orientación Escolar </h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-45.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Derecho Laboral</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-41.jpg" alt="" srcset=""></div>
         </article>
       </div>
     </div>
@@ -256,58 +284,60 @@
     <div class="tarjetas__container container">
       <div class="tarjetas__header">
         <h2 class="tarjetas__title">
-          <span class="tarjetas__title-part tarjetas__title-part--blue">titulo</span>
-          <span class="tarjetas__title-part tarjetas__title-part--red">titulo</span>
+          <span class="tarjetas__title-part tarjetas__title-part--blue">BENEFICIOS DE</span>
+          <span class="tarjetas__title-part tarjetas__title-part--red">METODOLOGÍA UIM</span>
         </h2>
-        <p class="tarjetas__subtitle">subtitulo</p>
+        <p class="tarjetas__subtitle">UNA FORMA DE ESTUDIAR QUE SE ADAPTA A TU VIDA</p>
       </div>
 
       <div class="tarjetas__grid">
+       
         <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
           <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
+            <h3 class="tarjetas__card-title">Flexibilidad Total</h3>
+            <p class="tarjetas__text">Estudia a tu propio ritmo con horarios adaptados a tu vida, permitiéndote equilibrar trabajo, familia y educación.</p>
+          </div>
+        </article>
+
+       <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
+          <div class="tarjetas__content">
+            <h3 class="tarjetas__card-title">Tutor Personalizado</h3>
+            <p class="tarjetas__text"> Recibe apoyo individualizado de tutores dedicados que te guiarán en cada paso de tu camino académico. </p>
+          </div>
+        </article>
+
+       <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
+          <div class="tarjetas__content">
+            <h3 class="tarjetas__card-title">Certificación Global</h3>
+            <p class="tarjetas__text">Obtén certificaciones reconocidas a nivel mundial que impulsarán tu carrera en cualquier industria.</p>
+          </div>
+        </article>
+
+
+         <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
+          <div class="tarjetas__content">
+            <h3 class="tarjetas__card-title">Red de Empresas</h3>
+            <p class="tarjetas__text"> Conéctate con más de 50 empresas asociadas que confían en UIM para oportunidades laborales y prácticas.</p>
           </div>
         </article>
 
         <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
           <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
+            <h3 class="tarjetas__card-title"> Aprendizaje Adaptativo </h3>
+            <p class="tarjetas__text"> Personaliza tu plan de estudios con tecnología que se adapta a tu estilo de aprendizaje y necesidades específicas. </p>
           </div>
         </article>
 
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
+      <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
           <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
-          </div>
-        </article>
-
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
-          <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
-          </div>
-        </article>
-
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
-          <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
-          </div>
-        </article>
-
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
-          <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
+            <h3 class="tarjetas__card-title">Plataforma Virtual</h3>
+            <p class="tarjetas__text"> Accede a una plataforma en línea moderna con recursos interactivos, clases grabadas y soporte 24/7. </p>
           </div>
         </article>
       </div>
@@ -583,6 +613,7 @@
   </footer>
 
   <script src="js/barras-progreso.js" defer></script>
+  <script src="js/slider-carrusel.js" defer></script>
   <script src="js/video-particulas.js" defer></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UIM</title>
+  <title>Licenciatura - UIM</title>
 
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/header.css" />
@@ -88,23 +88,52 @@
     <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-1" class="slider-carrusel__radio" checked />
     <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-2" class="slider-carrusel__radio" />
     <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-3" class="slider-carrusel__radio" />
+    <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-4" class="slider-carrusel__radio" />
 
     <div class="slider-carrusel__track">
       <div class="slider-carrusel__slide">
-        <div class="slider-carrusel__image">imagen 1</div>
-        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
-        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+        <div class="slider-carrusel__image"> <img src="assets/images/portadas/lic/port_lic.jpg" alt="" srcset=""> </div>
+        <label for="slider-carrusel-slide-4" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
       </div>
       <div class="slider-carrusel__slide">
-        <div class="slider-carrusel__image">imagen 2</div>
-        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
-        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+        <div class="slider-carrusel__image"><img src="assets/images/portadas/lic/port_lic2.jpg" alt="" srcset=""></div>
+        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
       </div>
       <div class="slider-carrusel__slide">
-        <div class="slider-carrusel__image">imagen 3</div>
-        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">←</label>
-        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">→</label>
+        <div class="slider-carrusel__image"><img src="assets/images/portadas/lic/port_lic3.jpg" alt="" srcset=""></div>
+        <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-4" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
       </div>
+      <div class="slider-carrusel__slide">
+        <div class="slider-carrusel__image"><img src="assets/images/portadas/lic/port_lic4.jpg" alt="" srcset=""></div>
+        <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+        <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </label>
+      </div>
+    </div>
+
+    <div class="slider-carrusel__dots">
+      <label for="slider-carrusel-slide-1" class="slider-carrusel__dot" aria-label="Imagen 1"></label>
+      <label for="slider-carrusel-slide-2" class="slider-carrusel__dot" aria-label="Imagen 2"></label>
+      <label for="slider-carrusel-slide-3" class="slider-carrusel__dot" aria-label="Imagen 3"></label>
+      <label for="slider-carrusel-slide-4" class="slider-carrusel__dot" aria-label="Imagen 4"></label>
     </div>
   </section>
 
@@ -113,47 +142,40 @@
   <section class="barras-progreso">
     <div class="barras-progreso__container container">
       <div class="barras-progreso__grid">
-        <div class="barras-progreso__image">imagen</div>
+        <div class="barras-progreso__image">            
+        
+          <img src="assets/images/lateral.jpg" alt="" srcset="">
+        
+        </div>
 
         <div class="barras-progreso__content">
           <h2 class="barras-progreso__title">
-            <span class="barras-progreso__title-part barras-progreso__title-part--blue">titulo</span>
-            <span class="barras-progreso__title-part barras-progreso__title-part--red">titulo</span>
+            <span class="barras-progreso__title-part barras-progreso__title-part--blue">¿POR QUÉ ESTUDIAR</span>
+            <span class="barras-progreso__title-part barras-progreso__title-part--red">UNA LICENCIATURA?</span>
           </h2>
-          <p class="barras-progreso__text">texto</p>
+          <p class="barras-progreso__text">Está comprobado que quienes continúan su desarrollo profesional aumentan sus posibilidades de éxito laboral:</p>
 
           <div class="barras-progreso__list">
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
+              <span class="barras-progreso__item-title">AUMENTO SALARIAL</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
+
+                  <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">
+                
                 </span>
                 <div class="barras-progreso__track">
-                  <span class="barras-progreso__fill" data-target="90"></span>
+                  <span class="barras-progreso__fill" data-target="95"></span>
                 </div>
-                <span class="barras-progreso__percent" data-target="90">0%</span>
+                <span class="barras-progreso__percent" data-target="95">0%</span>
               </div>
             </div>
 
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
+              <span class="barras-progreso__item-title">DESARROLLO DE NUEVAS HABILIDADES</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
-                </span>
-                <div class="barras-progreso__track">
-                  <span class="barras-progreso__fill" data-target="75"></span>
-                </div>
-                <span class="barras-progreso__percent" data-target="75">0%</span>
-              </div>
-            </div>
-
-            <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
-              <div class="barras-progreso__bar-row">
-                <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
+                  <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">
                 </span>
                 <div class="barras-progreso__track">
                   <span class="barras-progreso__fill" data-target="85"></span>
@@ -163,15 +185,28 @@
             </div>
 
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">titulo</span>
+              <span class="barras-progreso__item-title">CONEXIONES Y NETWORKING</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
+                  <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">
                 </span>
                 <div class="barras-progreso__track">
-                  <span class="barras-progreso__fill" data-target="60"></span>
+                  <span class="barras-progreso__fill" data-target="90"></span>
                 </div>
-                <span class="barras-progreso__percent" data-target="60">0%</span>
+                <span class="barras-progreso__percent" data-target="90">0%</span>
+              </div>
+            </div>
+
+            <div class="barras-progreso__item">
+              <span class="barras-progreso__item-title">ASCENSO Y PROMOSIÓN LABORAL</span>
+              <div class="barras-progreso__bar-row">
+                <span class="barras-progreso__icon" aria-hidden="true">
+                  <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">
+                </span>
+                <div class="barras-progreso__track">
+                  <span class="barras-progreso__fill" data-target="95"></span>
+                </div>
+                <span class="barras-progreso__percent" data-target="95">0%</span>
               </div>
             </div>
           </div>
@@ -186,65 +221,64 @@
     <div class="oferta-academica__container container">
       <div class="oferta-academica__header">
         <h2 class="oferta-academica__title">
-          <span class="oferta-academica__title-part oferta-academica__title-part--blue">titulo</span>
-          <span class="oferta-academica__title-part oferta-academica__title-part--red">titulo</span>
+          <span class="oferta-academica__title-part oferta-academica__title-part--blue">PLAN DE </span>
+          <span class="oferta-academica__title-part oferta-academica__title-part--red">ESTUDIOS</span>
         </h2>
-        <p class="oferta-academica__subtitle">subtitulo</p>
       </div>
 
       <div class="oferta-academica__grid">
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Administración de Empresas</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-33.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Ingeniería Industrial y de Sistemas</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-31.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Licenciatura en Capital Humano</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-32.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Licenciatura en Derecho</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-36.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Licenciatura en Mercadotécnia</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-38.jpg" alt="" srcset=""></div>
         </article>
 
         <article class="oferta-academica__card">
-          <h3 class="oferta-academica__card-title">titulo</h3>
+          <h3 class="oferta-academica__card-title">Licenciatura en administracion financiera</h3>
           <div class="oferta-academica__actions">
             <a href="#" class="oferta-academica__action oferta-academica__action--download">Descargar</a>
             <a href="#" class="oferta-academica__action oferta-academica__action--enroll">Inscribirse</a>
           </div>
-          <div class="oferta-academica__image">imagen</div>
+          <div class="oferta-academica__image"><img src="assets/images/carreras/1 Banners-34.jpg" alt="" srcset=""></div>
         </article>
       </div>
     </div>
@@ -256,58 +290,59 @@
     <div class="tarjetas__container container">
       <div class="tarjetas__header">
         <h2 class="tarjetas__title">
-          <span class="tarjetas__title-part tarjetas__title-part--blue">titulo</span>
-          <span class="tarjetas__title-part tarjetas__title-part--red">titulo</span>
+          <span class="tarjetas__title-part tarjetas__title-part--blue">PORQUÉ ESTUDIAR </span>
+          <span class="tarjetas__title-part tarjetas__title-part--red">EN UIM</span>
         </h2>
-        <p class="tarjetas__subtitle">subtitulo</p>
+        <p class="tarjetas__subtitle">UNA FORMA DE ESTUDIAR QUE SE ADAPTA A TU VIDA</p>
       </div>
 
       <div class="tarjetas__grid">
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
+       <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
           <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
+            <h3 class="tarjetas__card-title">Ambientes Seguros</h3>
+            <p class="tarjetas__text">Garantizamos espacios protegidos y apoyo a los estudiantes para un aprendizaje sin preocupaciones.</p>
+          </div>
+        </article>
+
+       <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
+          <div class="tarjetas__content">
+            <h3 class="tarjetas__card-title">Bicultural</h3>
+            <p class="tarjetas__text"> En UIM combinamos lo mejor de la cultura mexicana e internacional, formando estudiantes listos para entornos globales.</p>
+          </div>
+        </article>
+
+       <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
+          <div class="tarjetas__content">
+            <h3 class="tarjetas__card-title">Enfoque Empresarial</h3>
+            <p class="tarjetas__text">Impulsamos el liderazgo y el emprendimiento con proyectos reales que preparan para el mundo de los negocios.</p>
+          </div>
+        </article>
+
+
+         <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
+          <div class="tarjetas__content">
+            <h3 class="tarjetas__card-title">Talleres Técnicos</h3>
+            <p class="tarjetas__text">Brindamos talleres prácticos en robótica, computación y administración para fortalecer habilidades profesionales.</p>
           </div>
         </article>
 
         <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
           <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
+            <h3 class="tarjetas__card-title">Instalaciones Modernas</h3>
+            <p class="tarjetas__text">Contamos con aulas y laboratorios especializados que inspiran el aprendizaje y la creatividad.</p>
           </div>
         </article>
 
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
+      <article class="tarjetas__card">
+          <div class="tarjetas__image"><img src="assets/images/vineta-fub-rojo.png" alt="" srcset=""></div>
           <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
-          </div>
-        </article>
-
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
-          <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
-          </div>
-        </article>
-
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
-          <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
-          </div>
-        </article>
-
-        <article class="tarjetas__card">
-          <div class="tarjetas__image">imagen</div>
-          <div class="tarjetas__content">
-            <h3 class="tarjetas__card-title">titulo</h3>
-            <p class="tarjetas__text">texto</p>
+            <h3 class="tarjetas__card-title">Intercambios</h3>
+            <p class="tarjetas__text">Ofrecemos programas de intercambio para vivir experiencias internacionales y ampliar oportunidades laborales.</p>
           </div>
         </article>
       </div>
@@ -583,6 +618,7 @@
   </footer>
 
   <script src="js/barras-progreso.js" defer></script>
+  <script src="js/slider-carrusel.js" defer></script>
   <script src="js/video-particulas.js" defer></script>
 </body>
 </html>

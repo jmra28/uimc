@@ -46,7 +46,9 @@
 .descargas__card {
   display: flex;
   flex-direction: column;
-  border: var(--border-width) solid var(--color-gray-medium);
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .descargas__image {
@@ -54,11 +56,21 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
   background-color: var(--color-gray-light);
-  color: var(--color-text-muted);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-semibold);
+}
+
+.descargas__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.descargas__card:hover .descargas__image img {
+  transform: scale(1.06);
 }
 
 .descargas__body {
@@ -69,27 +81,47 @@
 }
 
 .descargas__card-title {
+  text-align: center;
   margin-bottom: var(--space-3);
   color: var(--color-blue);
   font-size: var(--fs-lg);
 }
 
-.descargas__button {
-  display: block;
+.descargas__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
   margin-top: auto;
-  padding: var(--space-2) var(--space-3);
-  border: var(--border-width) solid var(--color-black);
-  text-align: center;
-  font-weight: var(--fw-semibold);
-  color: var(--color-text);
-  background-color: var(--color-white);
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
 }
 
-.descargas__button:hover {
-  background-color: var(--color-blue);
-  border-color: var(--color-blue);
+.descargas__button {
+  display: block;
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  font-weight: var(--fw-semibold);
   color: var(--color-white);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.descargas__button--download {
+  background-color: var(--color-blue);
+}
+
+.descargas__button--download:hover {
+  background-color: var(--color-red);
+}
+
+.descargas__button--enroll {
+  background-color: var(--color-red);
+}
+
+.descargas__button--enroll:hover {
+  background-color: var(--color-blue);
 }
 
 /* -------------------- Tablet (>= 768px) -------------------- */

@@ -45,50 +45,15 @@
 .oferta-academica__card {
   display: flex;
   flex-direction: column;
-  border: var(--border-width) solid var(--color-gray-medium);
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.oferta-academica__card-title {
-  padding: var(--space-3);
-  color: var(--color-blue);
-  font-size: var(--fs-base);
-  font-weight: var(--fw-semibold);
-  text-align: center;
-  border-bottom: var(--border-width) solid var(--color-gray-medium);
-}
-
-.oferta-academica__actions {
-  display: flex;
-  border-bottom: var(--border-width) solid var(--color-gray-medium);
-}
-
-.oferta-academica__action {
-  flex: 1;
-  padding: var(--space-2) var(--space-1);
-  text-align: center;
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
-  cursor: pointer;
-  transition: background-color var(--transition-base), color var(--transition-base);
-}
-
-.oferta-academica__action--download {
-  color: var(--color-text);
-  background-color: var(--color-white);
-  border-right: var(--border-width) solid var(--color-gray-medium);
-}
-
-.oferta-academica__action--download:hover {
-  background-color: var(--color-gray-light);
-}
-
-.oferta-academica__action--enroll {
-  color: var(--color-white);
-  background-color: var(--color-blue);
-}
-
-.oferta-academica__action--enroll:hover {
-  background-color: var(--color-blue-dark);
+.oferta-academica__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
 }
 
 .oferta-academica__image {
@@ -96,11 +61,67 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
   background-color: var(--color-gray-light);
-  color: var(--color-text-muted);
-  font-size: var(--fs-sm);
+}
+
+.oferta-academica__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base), filter var(--transition-base);
+}
+
+.oferta-academica__card:hover .oferta-academica__image img {
+  transform: scale(1.06);
+  filter: brightness(0.85);
+}
+
+.oferta-academica__card-title {
+  padding: var(--space-3) var(--space-3) var(--space-2);
+  color: var(--color-blue);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+
+.oferta-academica__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0 var(--space-3) var(--space-3);
+}
+
+.oferta-academica__action {
+  flex: 1;
+  padding: var(--space-2) var(--space-1);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.oferta-academica__action--download {
+  background-color: var(--color-blue);
+}
+
+.oferta-academica__action--download:hover {
+  background-color: var(--color-red);
+}
+
+.oferta-academica__action--enroll {
+  background-color: var(--color-red);
+}
+
+.oferta-academica__action--enroll:hover {
+  background-color: var(--color-blue);
 }
 
 /* -------------------- Tablet (>= 768px) -------------------- */
