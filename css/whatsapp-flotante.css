@@ -1,0 +1,184 @@
+/* =========================================================
+   WHATSAPP-FLOTANTE.CSS
+   Bloque BEM: .whatsapp-flotante
+   Botón circular fijo (siempre visible) + tarjeta de saludo
+   que se abre/cierra al hacer clic (clase --visible controlada
+   por js/whatsapp-flotante.js).
+   ========================================================= */
+
+.whatsapp-flotante {
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3);
+}
+
+/* -------------------- Botón circular -------------------- */
+.whatsapp-flotante__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background-color: #25d366;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.whatsapp-flotante__toggle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp-flotante__icon {
+  width: 30px;
+  height: 30px;
+  fill: var(--color-white);
+}
+
+/* -------------------- Tarjeta de saludo -------------------- */
+.whatsapp-flotante__card {
+  width: min(88vw, 300px);
+  background-color: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+}
+
+.whatsapp-flotante--visible .whatsapp-flotante__card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.whatsapp-flotante__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-blue-dark) 100%);
+  color: var(--color-white);
+}
+
+.whatsapp-flotante__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.whatsapp-flotante__title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2px;
+}
+
+.whatsapp-flotante__tagline {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.whatsapp-flotante__close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  font-size: var(--fs-base);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.whatsapp-flotante__close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.whatsapp-flotante__body {
+  padding: var(--space-4);
+  background-color: var(--color-gray-light);
+}
+
+.whatsapp-flotante__bubble {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: var(--space-3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-flotante__bubble-name {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--color-blue);
+  margin-bottom: var(--space-1);
+}
+
+.whatsapp-flotante__bubble-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+}
+
+.whatsapp-flotante__bubble-text + .whatsapp-flotante__bubble-text {
+  margin-top: var(--space-2);
+}
+
+.whatsapp-flotante__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: none;
+  border-radius: 999px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+  box-shadow: 0 6px 16px rgba(226, 35, 26, 0.4);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.whatsapp-flotante__action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(226, 35, 26, 0.45);
+}
+
+.whatsapp-flotante__contact {
+  display: block;
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* -------------------- Móvil pequeño (< 480px) -------------------- */
+@media (max-width: 480px) {
+  .whatsapp-flotante {
+    right: var(--space-3);
+    bottom: var(--space-3);
+  }
+}

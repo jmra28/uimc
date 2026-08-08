@@ -149,7 +149,7 @@
             <span class="barras-progreso__title-part barras-progreso__title-part--blue">¿POR QUÉ ESTUDIAR <br></span>
             <span class="barras-progreso__title-part barras-progreso__title-part--red">UNA MAESTRÍA?</span>
           </h2>
-          <p class="barras-progreso__text">Explora el impacto que una maestría en UIM puede tener en tu futuro.</p>
+          <p class="barras-progreso__text">Especializarte marca la diferencia: así impacta una maestría en UIM tu desarrollo profesional.</p>
 
           <div class="barras-progreso__list">
             <div class="barras-progreso__item">
@@ -192,7 +192,7 @@
             </div>
 
             <div class="barras-progreso__item">
-              <span class="barras-progreso__item-title">ESPECTATIVA SALARIAL</span>
+              <span class="barras-progreso__item-title">EXPECTATIVA SALARIAL</span>
               <div class="barras-progreso__bar-row">
                 <span class="barras-progreso__icon" aria-hidden="true">
                     <img src="assets/images/vineta-fub-rojo.png" alt="" srcset="">               
@@ -409,39 +409,40 @@
             <p class="formulario__form-subtitle">Estamos listos para ayudarte a avanzar y que seas un #BúfaloUIM</p>
           </div>
 
-          <form class="formulario__form">
+          <form class="formulario__form" action="https://formspree.io/f/mpqvevqw" method="POST">
             <div class="formulario__field">
               <label for="formulario-maestria-nombre" class="formulario__label">Nombre*</label>
-              <input type="text" id="formulario-maestria-nombre" class="formulario__input" placeholder="Ingresa tu nombre*" />
+              <input type="text" id="formulario-maestria-nombre" name="nombre" class="formulario__input" placeholder="Ingresa tu nombre*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-maestria-email" class="formulario__label">Apellidos*</label>
-              <input type="email" id="formulario-maestria-email" class="formulario__input" placeholder="Ingresa tus apellidos*" />
+              <input type="text" id="formulario-maestria-email" name="apellidos" class="formulario__input" placeholder="Ingresa tus apellidos*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-maestria-telefono" class="formulario__label">Correo Electrónico*</label>
-              <input type="tel" id="formulario-maestria-telefono" class="formulario__input" placeholder="Ingresa tu correo electrónico*" />
+              <input type="email" id="formulario-maestria-telefono" name="email" class="formulario__input" placeholder="Ingresa tu correo electrónico*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-maestria-asunto" class="formulario__label">Teléfono*</label>
-              <input type="text" id="formulario-maestria-asunto" class="formulario__input" placeholder="Ingresa tu teléfono*" />
+              <input type="tel" id="formulario-maestria-asunto" name="telefono" class="formulario__input" placeholder="Ingresa tu teléfono*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-maestria-select-1" class="formulario__label">Nivel*</label>
-              <select id="formulario-maestria-select-1" class="formulario__select">
+              <select id="formulario-maestria-select-1" name="nivel" class="formulario__select" required>
                 <option>Selecciona tu nivel de interes...</option>
               </select>
             </div>
             <div class="formulario__field">
               <label for="formulario-maestria-select-2" class="formulario__label">Programa*</label>
-              <select id="formulario-maestria-select-2" class="formulario__select">
+              <select id="formulario-maestria-select-2" name="programa" class="formulario__select" required>
                 <option>Selecciona tu programa de interes ... </option>
               </select>
             </div>
             <div class="formulario__field">
               <label for="formulario-maestria-comentarios" class="formulario__label">Mensaje</label>
-              <textarea id="formulario-maestria-comentarios" class="formulario__textarea" placeholder="comentarios"></textarea>
+              <textarea id="formulario-maestria-comentarios" name="mensaje" class="formulario__textarea" placeholder="comentarios"></textarea>
             </div>
+            <input type="hidden" name="_subject" value="Nuevo prospecto desde el sitio UIM (Maestría)" />
             <button type="submit" class="formulario__submit">Enviar Mensaje</button>
             <p class="formulario__disclaimer">*Al enviar tus datos, aceptas nuestros <a href="#" class="formulario__disclaimer-link">Términos y Condiciones</a> y puedes verificar nuestro <a href="#" class="formulario__disclaimer-link">Aviso de Privacidad</a>.</p>
           </form>
@@ -573,20 +574,20 @@
           <div class="footer__column">
             <span class="footer__column-label">OFERTA ACADÉMICA</span>
             <ul class="footer__links">
-              <li><a href="#" class="footer__link">SECUNDARIA</a></li>
-              <li><a href="#" class="footer__link">PREPARATORIA</a></li>
-              <li><a href="#" class="footer__link">LICENCIATURA</a></li>
-              <li><a href="#" class="footer__link">MAESTRÍA</a></li>
-              <li><a href="#" class="footer__link">DOCTORADO</a></li>
+            <li><a href="secundaria.html" class="footer__link">SECUNDARIA</a></li>
+              <li><a href="preparatoria.html" class="footer__link">PREPARATORIA</a></li>
+              <li><a href="licenciatura.html" class="footer__link">LICENCIATURA</a></li>
+              <li><a href="maestria.html" class="footer__link">MAESTRÍA</a></li>
+              <li><a href="doctorado.html" class="footer__link">DOCTORADO</a></li>
             </ul>
           </div>
 
           <div class="footer__column">
             <span class="footer__column-label">LINKS DIRECTOS</span>
             <ul class="footer__links">
-              <li><a href="#" class="footer__link">PLATAFORMA UIM</a></li>
-              <li><a href="#" class="footer__link">CONTROL ESCOLAR</a></li>
-              <li><a href="#" class="footer__link">PAGOS</a></li>
+             <li><a href="https://uim.mx/moo/login/index.php" class="footer__link">PLATAFORMA UIM</a></li>
+              <li><a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::" class="footer__link">CONTROL ESCOLAR</a></li>
+              <li><a href="https://uim.mx/me/ " class="footer__link">PAGOS</a></li>
             </ul>
           </div>
 
@@ -615,5 +616,6 @@
   <script src="js/barras-progreso.js" defer></script>
   <script src="js/slider-carrusel.js" defer></script>
   <script src="js/video-particulas.js" defer></script>
+  <script src="js/formulario-programas.js" defer></script>
 </body>
 </html>

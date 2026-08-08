@@ -49,7 +49,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow:
-    5px 5px 18px rgba(226, 35, 26, 0.12),
+    5px 5px 18px rgba(27, 23, 22, 0.12),
     -5px -5px 18px rgba(27, 30, 140, 0.1);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
@@ -57,8 +57,8 @@
 .tarjetas__card:hover {
   transform: translateY(-6px);
   box-shadow:
-    8px 8px 26px rgba(226, 35, 26, 0.22),
-    -8px -8px 26px rgba(27, 30, 140, 0.18);
+    8px 8px 26px rgba(65, 60, 60, 0.22),
+    -8px -8px 26px rgba(41, 41, 48, 0.18);
 }
 
 .tarjetas__image {

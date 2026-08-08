@@ -1,9 +1,9 @@
-?<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UIM</title>
+  <title>INICIO - UIM</title>
 
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/header.css" />
@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/formulario.css" />
   <link rel="stylesheet" href="css/sedes-video.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/whatsapp-flotante.css" />
   <!-- Los CSS de cada sección se irán agregando aquí, en orden, a medida que se construyan -->
 
       <link rel="shortcut icon" type="image/icon" href="assets/images/icon_bufalo.png"/>
@@ -103,24 +104,38 @@
       <input type="radio" name="hero-slide" id="hero-slide-1" class="hero__radio" checked />
       <input type="radio" name="hero-slide" id="hero-slide-2" class="hero__radio" />
       <input type="radio" name="hero-slide" id="hero-slide-3" class="hero__radio" />
+      <input type="radio" name="hero-slide" id="hero-slide-4" class="hero__radio" />
+      <input type="radio" name="hero-slide" id="hero-slide-5" class="hero__radio" />
 
       <div class="hero__track">
         <div class="hero__slide hero__slide--active">
-          <h2 class="hero__slide-title">Título 1</h2>
-          <p class="hero__slide-text">Texto de ejemplo para el primer slide.</p>
-          <label for="hero-slide-3" class="hero__arrow hero__arrow--prev" aria-label="Anterior">←</label>
+          <h2 class="hero__slide-title">Secundaria Bicultural</h2>
+          <p class="hero__slide-text">Sienta las bases de tu futuro con un plan bicultural, academias deportivas y actividades culturales que impulsan tu talento.</p>
+          <label for="hero-slide-5" class="hero__arrow hero__arrow--prev" aria-label="Anterior">←</label>
           <label for="hero-slide-2" class="hero__arrow hero__arrow--next" aria-label="Siguiente">→</label>
         </div>
         <div class="hero__slide">
-          <h2 class="hero__slide-title">Título 2</h2>
-          <p class="hero__slide-text">Texto de ejemplo para el segundo slide.</p>
+          <h2 class="hero__slide-title">Preparatoria Trilingüe</h2>
+          <p class="hero__slide-text">Domina tres idiomas y fórmate en talleres técnicos y academias deportivas que te preparan para la universidad.</p>
           <label for="hero-slide-1" class="hero__arrow hero__arrow--prev" aria-label="Anterior">←</label>
           <label for="hero-slide-3" class="hero__arrow hero__arrow--next" aria-label="Siguiente">→</label>
         </div>
         <div class="hero__slide">
-          <h2 class="hero__slide-title">Título 3</h2>
-          <p class="hero__slide-text">Texto de ejemplo para el tercer slide.</p>
+          <h2 class="hero__slide-title">Licenciatura Dual</h2>
+          <p class="hero__slide-text">Estudia en sistema dual y cuatrimestral, trilingüe, y gradúate listo para competir en el mercado laboral.</p>
           <label for="hero-slide-2" class="hero__arrow hero__arrow--prev" aria-label="Anterior">←</label>
+          <label for="hero-slide-4" class="hero__arrow hero__arrow--next" aria-label="Siguiente">→</label>
+        </div>
+        <div class="hero__slide">
+          <h2 class="hero__slide-title">Maestría en 16 Meses</h2>
+          <p class="hero__slide-text">Impulsa tu carrera con una maestría presencial o a distancia, diseñada para especializarte sin detener tu vida profesional.</p>
+          <label for="hero-slide-3" class="hero__arrow hero__arrow--prev" aria-label="Anterior">←</label>
+          <label for="hero-slide-5" class="hero__arrow hero__arrow--next" aria-label="Siguiente">→</label>
+        </div>
+        <div class="hero__slide">
+          <h2 class="hero__slide-title">Doctorado Internacional</h2>
+          <p class="hero__slide-text">Alcanza el más alto nivel académico con docentes internacionales y modalidades flexibles en solo 2 años.</p>
+          <label for="hero-slide-4" class="hero__arrow hero__arrow--prev" aria-label="Anterior">←</label>
           <label for="hero-slide-1" class="hero__arrow hero__arrow--next" aria-label="Siguiente">→</label>
         </div>
       </div>
@@ -429,7 +444,7 @@
             <!-- Clon de R8 (para el loop hacia atrás) -->
             <div class="comentarios__card" aria-hidden="true">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt=""></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/carmen.jpeg" alt=""></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Carmen Gabriela Delgado Gonzalez</h3>
                   <p class="comentarios__card-role">Estudiante de Licenciatura en Administración Financiera</p>
@@ -441,7 +456,7 @@
             <!-- R1 -->
             <div class="comentarios__card comentarios__card--featured">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Alejandro Adhemi Quiñones Velazquez"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/alejandro.jpeg" alt="Alejandro Adhemi Quiñones Velazquez"></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Alejandro Adhemi Quiñones Velazquez</h3>
                   <p class="comentarios__card-role">Estudiante de 1° semestre de enfermería</p>
@@ -453,7 +468,7 @@
             <!-- R2 -->
             <div class="comentarios__card">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Aida Ríos"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/aida.jpeg" alt="Aida Ríos"></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Aida Ríos</h3>
                   <p class="comentarios__card-role">Estudiante de 1° Semestre de enfermería</p>
@@ -465,7 +480,7 @@
             <!-- R3 -->
             <div class="comentarios__card">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Eduardo Eloy Ortega Delgado"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/eduardo.jpeg" alt="Eduardo Eloy Ortega Delgado"></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Eduardo Eloy Ortega Delgado</h3>
                   <p class="comentarios__card-role">Estudiante de 6° semestre Ingeniería Industrial y de Sistemas</p>
@@ -477,7 +492,7 @@
             <!-- R4 -->
             <div class="comentarios__card">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Karla Judith Mapula Rodriguez"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/karla.jpeg" alt="Karla Judith Mapula Rodriguez"></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Karla Judith Mapula Rodriguez</h3>
                   <p class="comentarios__card-role">Estudiante de 1° semestre de enfermería</p>
@@ -489,7 +504,7 @@
             <!-- R5 (genérico) -->
             <div class="comentarios__card">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/fernanda.jpg" alt="Nombre Apellido"></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Fernanda Caballero Barajas</h3>
                   <p class="comentarios__card-role">Estudiante de 2° Semestre de Preparatoria</p>
@@ -501,7 +516,7 @@
             <!-- R6 (genérico) -->
             <div class="comentarios__card">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/natalia.jpeg" alt="Nombre Apellido"></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Natalia Regalado Meraz</h3>
                   <p class="comentarios__card-role">Estudiante de 6° Semestre de Preparatoria</p>
@@ -513,7 +528,7 @@
             <!-- R7 (genérico) -->
             <div class="comentarios__card">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/carmen.jpeg" alt="Nombre Apellido"></div>
                 <div class="comentarios__card-body">
                 <h3 class="comentarios__card-name">Carmen Gabriela Delgado Gonzalez</h3>
                   <p class="comentarios__card-role">Estudiante de Licenciatura en Administración Financiera</p>
@@ -525,7 +540,7 @@
             <!-- R8 (genérico) -->
             <div class="comentarios__card">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt="Nombre Apellido"></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/paloma.jpeg" alt="Nombre Apellido"></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Paloma Cecilia Moreno</h3>
                   <p class="comentarios__card-role">Estudiante de Licenciatura en Administración de Empresas</p>
@@ -537,7 +552,7 @@
             <!-- Clon de R1 (para el loop hacia adelante) -->
             <div class="comentarios__card" aria-hidden="true">
               <div class="comentarios__card-inner">
-                <div class="comentarios__avatar"><img src="assets/images/persona1.jpg" alt=""></div>
+                <div class="comentarios__avatar"><img src="assets/images/coments/alejandro.jpeg" alt=""></div>
                 <div class="comentarios__card-body">
                   <h3 class="comentarios__card-name">Alejandro Adhemi Quiñones Velazquez</h3>
                   <p class="comentarios__card-role">Estudiante de 1° semestre de enfermería</p>
@@ -718,41 +733,42 @@
             <p class="formulario__form-subtitle">Estamos listos para ayudarte a avanzar y que seas un #BúfaloUIM</p>
           </div>
 
-          <form class="formulario__form">
+          <form class="formulario__form" action="https://formspree.io/f/mpqvevqw" method="POST">
             <div class="formulario__field">
               <label for="formulario-nombre" class="formulario__label">Nombre*</label>
-              <input type="text" id="formulario-nombre" class="formulario__input"placeholder="Ingresa tu nombre*" />
+              <input type="text" id="formulario-nombre" name="nombre" class="formulario__input" placeholder="Ingresa tu nombre*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-email" class="formulario__label">Apellidos*</label>
-              <input type="email" id="formulario-email" class="formulario__input" placeholder="Ingresa tus apellidos*" />
+              <input type="text" id="formulario-email" name="apellidos" class="formulario__input" placeholder="Ingresa tus apellidos*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-telefono" class="formulario__label">Correo Electrónico*</label>
-              <input type="tel" id="formulario-telefono" class="formulario__input" placeholder="Ingresa tu correo electrónico*"  />
+              <input type="email" id="formulario-telefono" name="email" class="formulario__input" placeholder="Ingresa tu correo electrónico*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-asunto" class="formulario__label">Teléfono*</label>
-              <input type="text" id="formulario-asunto" class="formulario__input" placeholder="Ingresa tu teléfono*"  />
+              <input type="tel" id="formulario-asunto" name="telefono" class="formulario__input" placeholder="Ingresa tu teléfono*" required />
             </div>
             <div class="formulario__field">
               <label for="formulario-select-1" class="formulario__label">Nivel*</label>
-              <select id="formulario-select-1" class="formulario__select">
+              <select id="formulario-select-1" name="nivel" class="formulario__select" required>
                 <option>Selecciona tu nivel de interes...</option>
               </select>
             </div>
             <div class="formulario__field">
               <label for="formulario-select-2" class="formulario__label">Programa*</label>
-              <select id="formulario-select-2" class="formulario__select">
+              <select id="formulario-select-2" name="programa" class="formulario__select" required>
                 <option>Selecciona tu programa de interes ... </option>
               </select>
             </div>
             <div class="formulario__field">
               <label for="formulario-comentarios" class="formulario__label">Mensaje</label>
-              <textarea id="formulario-comentarios" class="formulario__textarea" placeholder="comentarios"></textarea>
+              <textarea id="formulario-comentarios" name="mensaje" class="formulario__textarea" placeholder="comentarios"></textarea>
             </div>
+            <input type="hidden" name="_subject" value="Nuevo prospecto desde el sitio UIM" />
             <button type="submit" class="formulario__submit">Enviar Mensaje</button>
-            <p class="formulario__disclaimer">*Al enviar tus datos, aceptas nuestros <a href="#" class="formulario__disclaimer-link">Términos y Condiciones</a> y puedes verificar nuestro <a href="#" class="formulario__disclaimer-link">Aviso de Privacidad</a>.</p>
+            <p class="formulario__disclaimer">*Al enviar tus datos, aceptas nuestros <a href="assets/documentos/AVISO-DE-PRIVACIDAD-UIM-2025.pdf" class="formulario__disclaimer-link" target="_blank">Términos y Condiciones</a> y puedes verificar nuestro <a href="assets/documentos/AVISO-DE-PRIVACIDAD-UIM-2025.pdf" class="formulario__disclaimer-link" target="_blank">Aviso de Privacidad</a>.</p>
           </form>
         </div>
 
@@ -880,23 +896,22 @@
           <div class="footer__column">
             <span class="footer__column-label">OFERTA ACADÉMICA</span>
             <ul class="footer__links">
-              <li><a href="#" class="footer__link">SECUNDARIA</a></li>
-              <li><a href="#" class="footer__link">PREPARATORIA</a></li>
-              <li><a href="#" class="footer__link">LICENCIATURA</a></li>
-              <li><a href="#" class="footer__link">MAESTRÍA</a></li>
-              <li><a href="#" class="footer__link">DOCTORADO</a></li>
+              <li><a href="secundaria.html" class="footer__link">SECUNDARIA</a></li>
+              <li><a href="preparatoria.html" class="footer__link">PREPARATORIA</a></li>
+              <li><a href="licenciatura.html" class="footer__link">LICENCIATURA</a></li>
+              <li><a href="maestria.html" class="footer__link">MAESTRÍA</a></li>
+              <li><a href="doctorado.html" class="footer__link">DOCTORADO</a></li>
             </ul>
           </div>
 
           <div class="footer__column">
             <span class="footer__column-label">LINKS DIRECTOS</span>
             <ul class="footer__links">
-              <li><a href="#" class="footer__link">PLATAFORMA UIM</a></li>
-              <li><a href="#" class="footer__link">CONTROL ESCOLAR</a></li>
-              <li><a href="#" class="footer__link">PAGOS</a></li>
+              <li><a href="https://uim.mx/moo/login/index.php" class="footer__link">PLATAFORMA UIM</a></li>
+              <li><a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::" class="footer__link">CONTROL ESCOLAR</a></li>
+              <li><a href="https://uim.mx/me/ " class="footer__link">PAGOS</a></li>
             </ul>
-          </div>
-
+          </div>       
           <div class="footer__column">
             <span class="footer__column-label">CONTACTO</span>            
             <ul class="footer__links">
@@ -919,9 +934,39 @@
     </div>
   </footer>
 
+  <div class="whatsapp-flotante">
+    <div class="whatsapp-flotante__card" role="dialog" aria-label="Chat de WhatsApp UIM">
+      <div class="whatsapp-flotante__header">
+        <button type="button" class="whatsapp-flotante__close" aria-label="Cerrar">&times;</button>
+        <img src="assets/images/icon_bufalo.png" alt="" class="whatsapp-flotante__avatar">
+        <div>
+          <p class="whatsapp-flotante__title">UIM BÚFALO</p>
+          <p class="whatsapp-flotante__tagline">TU FUTURO EMPIEZA AQUÍ ✨</p>
+        </div>
+      </div>
+      <div class="whatsapp-flotante__body">
+        <div class="whatsapp-flotante__bubble">
+          <p class="whatsapp-flotante__bubble-name">UIM</p>
+          <p class="whatsapp-flotante__bubble-text">Te damos la bienvenida a la Universidad Internacional Mexicana. 🦬</p>
+          <p class="whatsapp-flotante__bubble-text">¡Hablemos!</p>
+        </div>
+        <a href="https://wa.me/526183635084?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20de%20UIM." target="_blank" rel="noopener" class="whatsapp-flotante__action">Iniciar conversación</a>
+        <a href="mailto:vinculacion@uim.mx" class="whatsapp-flotante__contact">vinculacion@uim.mx</a>
+      </div>
+    </div>
+
+    <button type="button" class="whatsapp-flotante__toggle" aria-label="Abrir chat de WhatsApp" aria-expanded="false">
+      <svg class="whatsapp-flotante__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4C7.35 4 3.5 7.85 3.5 12.55c0 1.5.4 2.96 1.14 4.25L3.4 21l4.32-1.2a8.99 8.99 0 0 0 4.33 1.1h.01c4.7 0 8.55-3.85 8.55-8.55 0-2.28-.9-4.43-2.51-6.03Zm-5.55 13.16h-.01a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.78.75-2.73-.18-.28a7.34 7.34 0 0 1-1.14-3.94c0-4.08 3.32-7.4 7.44-7.4a7.4 7.4 0 0 1 7.4 7.4c0 4.08-3.32 7.37-7.41 7.37Zm4.06-5.53c-.22-.11-1.31-.65-1.52-.72-.2-.08-.35-.11-.5.11-.14.22-.57.72-.7.87-.13.14-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.31-1.24-1.53-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.14-.22.22-.37.07-.14.04-.27-.02-.38-.05-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.81s.78 2.1.89 2.24c.11.14 1.53 2.34 3.71 3.28.52.22.92.36 1.24.46.52.17 1 .14 1.37.09.42-.06 1.31-.53 1.49-1.05.19-.51.19-.95.13-1.05-.06-.09-.2-.15-.42-.26Z"/>
+      </svg>
+    </button>
+  </div>
+
   <script src="js/hero.js" defer></script>
   <script src="js/estadisticas.js" defer></script>
   <script src="js/comentarios.js" defer></script>
   <script src="js/video-particulas.js" defer></script>
+  <script src="js/formulario-programas.js" defer></script>
+  <script src="js/whatsapp-flotante.js" defer></script>
 </body>
 </html>

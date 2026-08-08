@@ -26,7 +26,7 @@
   font-weight: var(--fw-bold);
   color: var(--color-red);
   /* background-color: var(--color-blue); */
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-2) var(--space-1);
 }
 
 /* -------------------- Toggle (hamburguesa) -------------------- */
@@ -84,8 +84,9 @@
 .header__link {
   display: block;
   padding: var(--space-3) var(--space-4);
-  color: var(--color-text);
-  font-weight: var(--fw-semibold);
+  color: var(--color-menu);
+  font-weight: var(--fw-bold-menu);
+
 }
 
 /* Botones tipo "pill" para Acceso Alumnos / Acceso Docentes */
@@ -100,11 +101,11 @@
 }
 
 .header__link--alumnos {
-  background: linear-gradient(to top, var(--color-blue) 0%, #000000 100%);
+  background: linear-gradient(to top, var(--color-blue) 0%, #120b68 100%);
 }
 
 .header__link--docentes {
-  background: linear-gradient(to top, var(--color-red) 0%, #000000 100%);
+  background: linear-gradient(to top, var(--color-red) 0%, #601010 100%);
 }
 
 .header__link--alumnos:hover,

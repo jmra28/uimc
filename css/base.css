@@ -50,6 +50,7 @@
 
   --fondo1: url(../assets/images/back.jpg);
   
+  --color-menu:#110138;
   --color-black: #111111;
   --color-white: #ffffff;
   --color-gray:#f6f5f5;
@@ -59,6 +60,7 @@
   --color-gray-dark: #9c9c9c;
   --gradient-gray: linear-gradient(180deg, var(--color-gray-light) 0%, var(--color-gray-dark) 100%);
 
+  
   --color-text: var(--color-black);
   --color-text-muted: #555555;
   --color-bg: var(--color-gray);
@@ -77,6 +79,7 @@
   --fw-regular: 400;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-bold-menu:600;
 
   --line-height-base: 1.5;
   --line-height-heading: 1.2;
