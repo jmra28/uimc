@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal UIM</title>
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --primary-hover: #1565c0;
+            --whatsapp-color: #25d366;
+            --pdf-color: #d32f2f;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #6c757d;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 480px;
+            background-color: var(--card-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            padding: 24px 20px 16px;
+            text-align: center;
+            border-bottom: 1px solid #eef2f5;
+        }
+
+        .header img {
+            max-width: 220px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .tabs-navigation {
+            display: flex;
+            background-color: #eef2f5;
+            margin: 20px;
+            padding: 4px;
+            border-radius: var(--border-radius);
+            gap: 4px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px 8px;
+            border: none;
+            background: transparent;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-area {
+            padding: 0 20px 30px;
+            flex: 1;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin: 20px 0 12px;
+            font-weight: 700;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background-color: var(--card-bg);
+            border: 1px solid #eef2f5;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+
+        .link-card:active {
+            transform: scale(0.98);
+            border-color: var(--primary-color);
+        }
+
+        .link-card.whatsapp {
+            border-left: 4px solid var(--whatsapp-color);
+        }
+
+        .link-card.pdf-card {
+            border-left: 4px solid var(--pdf-color);
+        }
+
+        .link-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .link-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: #eef2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .whatsapp .link-icon {
+            background-color: #e8fadf;
+            color: var(--whatsapp-color);
+        }
+
+        .pdf-card .link-icon {
+            background-color: #fde8e8;
+            color: var(--pdf-color);
+        }
+
+        .arrow-icon {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mobile-container">
+        <header class="header">
+            <img src="../assets/img/uim/portada.png" alt="Logo UIM">
+        </header>
+        <nav class="tabs-navigation">
+            <button class="tab-btn active" onclick="switchTab('academico', this)">Académico</button>
+            <button class="tab-btn" onclick="switchTab('administrativo', this)">Administrativo</button>
+            <button class="tab-btn" onclick="switchTab('documentos', this)">Documentos</button>
+        </nav>
+        <main class="content-area">
+            <section id="academico" class="tab-content active">
+                <p class="section-title">Plataformas y Control Escolar</p>
+                <div class="link-list">
+                    <a href="https://moo.uim.mx/" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <div class="link-info">
+                            <span class="link-icon">💻</span>
+                            <span>Moodle</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:17412120732840:::::" target="_blank"
+                        rel="noopener noreferrer" class="link-card">
+                        <div class="link-info">
+                            <span class="link-icon">🎓</span>
+                            <span>Consultar Calificaciones</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="administrativo" class="tab-content">
+                <p class="section-title">Pagos y Consultas</p>
+                <div class="link-list">
+                    <a href="https://uim.mx/me/" target="_blank" rel="noopener noreferrer" class="link-card">
+                        <div class="link-info">
+                            <span class="link-icon">💳</span>
+                            <span>Consultar Pagos</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+                </div>
+
+                <p class="section-title">Soporte de Pagos (WhatsApp)</p>
+                <div class="link-list">
+                    <a href="https://api.whatsapp.com/send?phone=+526184552878&text=Hola%20tengo%20una%20duda"
+                        target="_blank" rel="noopener noreferrer" class="link-card whatsapp">
+                        <div class="link-info">
+                            <span class="link-icon">💬</span>
+                            <span>Atención Administrativa de Secundaria y Preparatoria</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send?phone=+526181450658&text=Hola%20tengo%20una%20duda"
+                        target="_blank" rel="noopener noreferrer" class="link-card whatsapp">
+                        <div class="link-info">
+                            <span class="link-icon">💬</span>
+                            <span>Atención Administrativa de Licenciaturas</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send?phone=+526181898072&text=Hola%20tengo%20una%20duda"
+                        target="_blank" rel="noopener noreferrer" class="link-card whatsapp">
+                        <div class="link-info">
+                            <span class="link-icon">💬</span>
+                            <span>Atención Administrativa de Posgrados</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Pestaña de Documentos -->
+            <section id="documentos" class="tab-content">
+                <p class="section-title">Formatos y Reglamentos</p>
+                <div class="link-list">
+                    <a href="https://drive.google.com/file/d/16Gk0yODEgvVQuLVQ1M7ypbPl4b488vx4/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Autorización de uso de imagen</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/10Fk2pkOXXjh73H_4OHX2oonWVuAHk4mo/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Consentimiento Informado</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1fFiD2GN6urQmdeFtQrEcOpfg4er4zxvi/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Consentimiento Operación Mochila Preparatoria</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1WBGxOUQ_t6ejFlZOThGvmAcuKDWy-7pB/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Consentimiento Operación Mochila Secundaria</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1TENQ4I9e7zW4p6n7n3dB1tSy3BrreRrk/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Información nuevo ingreso</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1zjUKbTyTm2_QIJoGVl_bz9I4oyxLkTkf/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Lista de materiales escolares secundaria</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1s7-yIQoom4Yu8nVvX1t4-fdJuvcr2rRW/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Requisitos para ingreso a secundaria</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1BKdbH42GkLEHp4csC04E0IFCHdyCsA4l/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Requisitos para ingreso a preparatoria</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1ybL1RlEDJXKe3xgt_3KvmsBsH5SBi0LY/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="link-card pdf-card">
+                        <div class="link-info">
+                            <span class="link-icon">📄</span>
+                            <span>Resumen de Reglamento para junta de padres de familia</span>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        function switchTab(tabId, element) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
