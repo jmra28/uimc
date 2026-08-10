@@ -1,10 +1,3 @@
-/* =========================================================
-   FAQ.CSS
-   Bloque BEM: .faq
-   Tabs de categorías (radio hack, sin JS) + acordeón de
-   preguntas/respuestas (elementos nativos <details>/<summary>,
-   tampoco requieren JS).
-   ========================================================= */
 
 .faq {
   width: 100%;
@@ -34,7 +27,6 @@
   font-weight: var(--fw-bold);
 }
 
-/* -------------------- Tabs -------------------- */
 .faq__tabs {
   position: relative;
 }
@@ -80,7 +72,6 @@
   border-bottom-color: var(--color-blue);
 }
 
-/* -------------------- Paneles -------------------- */
 .faq__panel {
   display: none;
   flex-direction: column;
@@ -94,7 +85,6 @@
   display: flex;
 }
 
-/* -------------------- Acordeón -------------------- */
 .faq__item {
   padding: var(--space-3) var(--space-4);
   border: var(--border-width) solid var(--color-gray-medium);
@@ -138,7 +128,6 @@
   font-size: var(--fs-sm);
 }
 
-/* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .faq__title {
     font-size: var(--fs-3xl);

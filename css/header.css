@@ -1,10 +1,3 @@
-/* =========================================================
-   HEADER.CSS
-   Bloque BEM: .header
-   Logo + nav de 6 items (item2/item3 con submenú desplegable,
-   item5/item6 destacados). Móvil = menú hamburguesa (técnica
-   checkbox hack, sin JS). Tablet/desktop = nav horizontal.
-   ========================================================= */
 
 .header {
   position: relative;
@@ -25,11 +18,9 @@
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
   color: var(--color-red);
-  /* background-color: var(--color-blue); */
   padding: var(--space-2) var(--space-1);
 }
 
-/* -------------------- Toggle (hamburguesa) -------------------- */
 .header__toggle-input {
   position: absolute;
   opacity: 0;
@@ -54,7 +45,6 @@
   border-radius: 2px;
 }
 
-/* -------------------- Nav (móvil: panel desplegable) -------------------- */
 .header__nav {
   position: absolute;
   top: 100%;
@@ -89,7 +79,6 @@
 
 }
 
-/* Botones tipo "pill" para Acceso Alumnos / Acceso Docentes */
 .header__link.header__link--alumnos,
 .header__link.header__link--docentes {
   color: var(--color-white);
@@ -121,7 +110,6 @@
   transition: transform var(--transition-base);
 }
 
-/* -------------------- Submenú móvil: acordeón (radio hack, sin JS) -------------------- */
 .header__submenu-toggle {
   position: absolute;
   opacity: 0;
@@ -132,7 +120,6 @@
   cursor: pointer;
 }
 
-/* En móvil el submenú está cerrado por defecto; se abre uno a la vez */
 .header__submenu {
   display: none;
   flex-direction: column;
@@ -153,7 +140,6 @@
   color: var(--color-text-muted);
 }
 
-/* -------------------- Tablet / Desktop (>= 768px): nav horizontal -------------------- */
 @media (min-width: 768px) {
   .header__toggle {
     display: none;
@@ -222,7 +208,6 @@
   }
 }
 
-/* -------------------- Móvil pequeño (< 480px): ajustes finos -------------------- */
 @media (max-width: 480px) {
   .header__logo {
     font-size: var(--fs-base);

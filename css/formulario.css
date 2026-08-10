@@ -1,10 +1,3 @@
-/* =========================================================
-   FORMULARIO.CSS
-   Bloque BEM: .formulario
-   2 columnas: formulario (inputs redondeados + botón rojo
-   tipo píldora) / tarjeta blanca flotante con la lista de
-   sedes (ícono + dirección/teléfono). Se apilan en móvil.
-   ========================================================= */
 
 .formulario {
   width: 100%;
@@ -37,7 +30,6 @@
   font-weight: var(--fw-bold);
 }
 
-/* -------------------- Grid de 2 columnas -------------------- */
 .formulario__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -49,7 +41,6 @@
   display: flex;
 }
 
-/* -------------------- Columna: formulario -------------------- */
 .formulario__form-header {
   margin-bottom: var(--space-2);
 }
@@ -143,7 +134,6 @@
   text-decoration: underline;
 }
 
-/* -------------------- Columna: información (tarjeta flotante) -------------------- */
 .formulario__info-card {
   display: flex;
   flex: 1;
@@ -220,14 +210,12 @@
   fill: var(--color-red);
 }
 
-/* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .formulario__title {
     font-size: var(--fs-3xl);
   }
 }
 
-/* -------------------- Desktop (>= 1024px): lado a lado -------------------- */
 @media (min-width: 1024px) {
   .formulario__grid {
     grid-template-columns: 1fr 1fr;

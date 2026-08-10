@@ -1,11 +1,3 @@
-/* =========================================================
-   SLIDER-CARRUSEL.CSS
-   Bloque BEM: .slider-carrusel
-   Carrusel de imagen a todo el ancho (full-bleed), con flechas
-   prev/next (iconos) fijas a los costados y dots de navegación.
-   Radio hack para el estado activo; JS (slider-carrusel.js)
-   solo se encarga del autoplay, avanzando el radio checked.
-   ========================================================= */
 
 .slider-carrusel {
   position: relative;
@@ -100,7 +92,6 @@
   right: var(--space-3);
 }
 
-/* -------------------- Dots -------------------- */
 .slider-carrusel__dots {
   position: absolute;
   left: 0;
@@ -130,7 +121,6 @@
   background-color: var(--color-red);
 }
 
-/* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .slider-carrusel__arrow {
     width: 44px;
@@ -151,7 +141,6 @@
   }
 }
 
-/* -------------------- Desktop (>= 1024px) -------------------- */
 @media (min-width: 1024px) {
   .slider-carrusel__arrow {
     width: 52px;

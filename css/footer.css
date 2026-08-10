@@ -1,17 +1,8 @@
-/* =========================================================
-   FOOTER.CSS
-   Bloque BEM: .footer
-   Logo + redes sociales, 3 columnas de links y barra de copy.
-   El bloque superior (.footer__top-bg) y la barra de copy
-   (.footer__copy) llevan fondos distintos, cada uno a todo el
-   ancho de la pantalla.
-   ========================================================= */
 
 .footer {
   width: 100%;
 }
 
-/* -------------------- Bloque superior: degradado gris a negro -------------------- */
 .footer__top-bg {
   width: 100%;
   padding-block: var(--space-6);
@@ -24,7 +15,6 @@
   gap: var(--space-6);
 }
 
-/* -------------------- Marca + redes -------------------- */
 .footer__brand {
   display: flex;
   flex-direction: column;
@@ -70,7 +60,6 @@
   fill: currentColor;
 }
 
-/* -------------------- Columnas de links -------------------- */
 .footer__columns {
   display: grid;
   grid-template-columns: 1fr;
@@ -103,7 +92,6 @@
   color: var(--color-white);
 }
 
-/* -------------------- Barra de copy: fondo claro -------------------- */
 .footer__copy {
   width: 100%;
   padding-block: var(--space-4);
@@ -123,7 +111,6 @@
   text-transform: uppercase;
 }
 
-/* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .footer__top {
     flex-direction: row;

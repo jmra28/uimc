@@ -1,11 +1,4 @@
-/* =========================================================
-   BASE.CSS
-   Variables globales, reset y utilidades compartidas.
-   Este archivo se carga PRIMERO en todas las páginas, antes
-   que cualquier CSS de sección.
-   ========================================================= */
 
-/* -------------------- Fuente Gotham (local, en assets/fonts) -------------------- */
 @font-face {
   font-family: "Gotham";
   src: url("../assets/fonts/Gotham-Book.otf") format("opentype");
@@ -30,9 +23,6 @@
   font-display: swap;
 }
 
-/* No hay un archivo "Gotham-Bold" (regular) en assets/fonts, solo
-   "Gotham-BoldItalic". Se usa "Gotham-Ultra" (el peso más grueso
-   disponible sin cursiva) como sustituto para font-weight 700. */
 @font-face {
   font-family: "Gotham";
   src: url("../assets/fonts/Gotham-Ultra.otf") format("opentype");
@@ -42,14 +32,13 @@
 }
 
 :root {
-  /* -------------------- Colores -------------------- */
   --color-blue: #1b1e8c;
   --color-blue-dark: #12145e;
   --color-red: #e2231a;
   --color-red-dark: #b81b14;
 
   --fondo1: url(../assets/images/back.jpg);
-  
+
   --color-menu:#110138;
   --color-black: #111111;
   --color-white: #ffffff;
@@ -60,21 +49,20 @@
   --color-gray-dark: #9c9c9c;
   --gradient-gray: linear-gradient(180deg, var(--color-gray-light) 0%, var(--color-gray-dark) 100%);
 
-  
+
   --color-text: var(--color-black);
   --color-text-muted: #555555;
   --color-bg: var(--color-gray);
 
-  /* -------------------- Tipografía -------------------- */
   --font-family-base: "Gotham", "Segoe UI", Arial, Helvetica, sans-serif;
 
-  --fs-xs: 0.75rem;    /* 12px */
-  --fs-sm: 0.875rem;   /* 14px */
-  --fs-base: 1rem;     /* 16px */
-  --fs-lg: 1.25rem;    /* 20px */
-  --fs-xl: 1.5rem;     /* 24px */
-  --fs-2xl: 2rem;      /* 32px */
-  --fs-3xl: 2.5rem;    /* 40px */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.5rem;
 
   --fw-regular: 400;
   --fw-semibold: 600;
@@ -84,36 +72,24 @@
   --line-height-base: 1.5;
   --line-height-heading: 1.2;
 
-  /* -------------------- Espaciados -------------------- */
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 1rem;     /* 16px */
-  --space-4: 1.5rem;   /* 24px */
-  --space-5: 2rem;      /* 32px */
-  --space-6: 3rem;      /* 48px */
-  --space-7: 4rem;      /* 64px */
-  --space-8: 6rem;      /* 96px */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
 
   --section-padding-y: var(--space-7);
   --section-padding-x: var(--space-4);
 
-  /* -------------------- Layout -------------------- */
   --container-max-width: 1200px;
   --border-width: 1px;
   --transition-base: 0.2s ease;
 }
 
-/*
-  Nota sobre breakpoints (mobile-first, referencia para todos los
-  archivos de sección; CSS custom properties no funcionan dentro
-  de @media, por eso se documentan aquí como valores fijos):
 
-  Móvil:    estilos base (< 480px)
-  Tablet:   min-width: 768px
-  Desktop:  min-width: 1024px
-*/
-
-/* -------------------- Reset -------------------- */
 *,
 *::before,
 *::after {
@@ -167,7 +143,6 @@ select {
   font: inherit;
 }
 
-/* -------------------- Utilidades compartidas -------------------- */
 .container {
   width: 100%;
   max-width: var(--container-max-width);
@@ -180,5 +155,4 @@ select {
   height: var(--space-2);
   background: var(--gradient-gray);
 }
-/* -------------------- empresas fondo gris textura -------------------- */
 

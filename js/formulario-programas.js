@@ -75,7 +75,7 @@ function actualizarProgramaSelect(nivelSelect, programaSelect) {
 
   fetchProgramas(url)
     .then((programas) => {
-      if (nivelSelect.value !== nivel) return; // el usuario ya cambió de nivel
+      if (nivelSelect.value !== nivel) return;
       resetProgramaSelect(programaSelect, "Selecciona tu programa de interes ...");
       programas.forEach((programa) => {
         programaSelect.appendChild(crearOpcion(programa));

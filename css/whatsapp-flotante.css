@@ -1,10 +1,3 @@
-/* =========================================================
-   WHATSAPP-FLOTANTE.CSS
-   Bloque BEM: .whatsapp-flotante
-   Botón circular fijo (siempre visible) + tarjeta de saludo
-   que se abre/cierra al hacer clic (clase --visible controlada
-   por js/whatsapp-flotante.js).
-   ========================================================= */
 
 .whatsapp-flotante {
   position: fixed;
@@ -17,7 +10,6 @@
   gap: var(--space-3);
 }
 
-/* -------------------- Botón circular -------------------- */
 .whatsapp-flotante__toggle {
   display: flex;
   align-items: center;
@@ -43,7 +35,6 @@
   fill: var(--color-white);
 }
 
-/* -------------------- Tarjeta de saludo -------------------- */
 .whatsapp-flotante__card {
   width: min(88vw, 300px);
   background-color: var(--color-white);
@@ -175,7 +166,6 @@
   color: var(--color-text-muted);
 }
 
-/* -------------------- Móvil pequeño (< 480px) -------------------- */
 @media (max-width: 480px) {
   .whatsapp-flotante {
     right: var(--space-3);

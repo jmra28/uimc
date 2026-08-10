@@ -1,12 +1,3 @@
-/* =========================================================
-   DESCARGAS.CSS
-   Bloque BEM: .descargas
-   Estructura básica (pendiente de contenido final): tarjetas
-   de descarga de material (imagen + título + botón DESCARGAR).
-   Bloque propio, independiente de .planes, porque su
-   contenido/intención es distinta (descargar recurso, no
-   "saber más" de un plan de estudios).
-   ========================================================= */
 
 .descargas {
   width: 100%;
@@ -36,7 +27,6 @@
   font-weight: var(--fw-bold);
 }
 
-/* -------------------- Grid de tarjetas -------------------- */
 .descargas__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -124,7 +114,6 @@
   background-color: var(--color-blue);
 }
 
-/* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .descargas__title {
     font-size: var(--fs-3xl);

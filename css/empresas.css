@@ -1,10 +1,3 @@
-/* =========================================================
-   EMPRESAS.CSS
-   Bloque BEM: .empresas
-   Slider automático de logos (marquee infinito en CSS puro,
-   sin JS): se duplica el set de logos y se anima con
-   translateX(-50%) en loop.
-   ========================================================= */
 
 .empresas {
 background-image: var(--fondo1);
@@ -35,7 +28,6 @@ background-image: var(--fondo1);
   font-weight: var(--fw-bold);
 }
 
-/* -------------------- Slider automático -------------------- */
 .empresas__slider {
   width: 100%;
   overflow: hidden;
@@ -83,7 +75,6 @@ background-image: var(--fondo1);
   }
 }
 
-/* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .empresas__title {
     font-size: var(--fs-3xl);
@@ -99,7 +90,6 @@ background-image: var(--fondo1);
   }
 }
 
-/* -------------------- Desktop (>= 1024px) -------------------- */
 @media (min-width: 1024px) {
   .empresas__logo {
     width: 240px;
@@ -107,7 +97,6 @@ background-image: var(--fondo1);
   }
 }
 
-/* Respeta la preferencia de reducción de movimiento */
 @media (prefers-reduced-motion: reduce) {
   .empresas__track {
     animation: none;

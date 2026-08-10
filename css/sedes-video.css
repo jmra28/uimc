@@ -1,11 +1,3 @@
-/* =========================================================
-   SEDES-VIDEO.CSS
-   Bloques BEM: .sedes / .video-particulas
-   .sedes: imagen full-bleed (100% del ancho).
-   .video-particulas: video de partículas de fondo + imagen
-   "invierte" flotando encima, con fade in/out al hacer scroll
-   (JS, ver js/video-particulas.js).
-   ========================================================= */
 
 .sedes__media {
   display: flex;
@@ -24,7 +16,6 @@
   object-fit: cover;
 }
 
-/* -------------------- Video partículas + imagen -------------------- */
 .video-particulas {
   position: relative;
   width: 100%;
@@ -61,7 +52,6 @@
   transition: opacity 0.9s ease;
 }
 
-/* Mientras está a la vista, entra y sale en un ciclo continuo */
 .video-particulas__overlay-image--visible {
   animation: video-particulas-pulse 4s ease-in-out infinite;
 }
@@ -87,7 +77,6 @@
   }
 }
 
-/* -------------------- Desktop (>= 1024px) -------------------- */
 @media (min-width: 1024px) {
   .sedes__media,
   .video-particulas {

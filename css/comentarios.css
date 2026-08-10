@@ -1,13 +1,3 @@
-/* =========================================================
-   COMENTARIOS.CSS
-   Bloque BEM: .comentarios
-   Carrusel "filmstrip" de 8 testimonios: una sola tira de
-   tarjetas que se desliza de a una por vez (JS calcula el
-   transform), con tarjetas clon al inicio/final para el loop
-   infinito sin salto visible. Tarjeta central destacada
-   (fondo degradado azul) + laterales atenuadas + dots
-   cuadrados. Sin flechas.
-   ========================================================= */
 
 .comentarios {
   width: 100%;
@@ -37,14 +27,10 @@
   font-weight: var(--fw-bold);
 }
 
-/* El carrusel ocupa más ancho que el contenedor estándar del sitio,
-   pero el título/subtítulo se quedan en el ancho normal (.container)
-   para alinearse con el resto de las secciones. */
 .comentarios__carousel-wrap {
   max-width: 1400px;
 }
 
-/* -------------------- Carrusel -------------------- */
 .comentarios__carousel {
   position: relative;
 }
@@ -70,7 +56,6 @@
   transition: transform 0.6s ease;
 }
 
-/* -------------------- Tarjeta (slot de la tira) -------------------- */
 .comentarios__card {
   flex: 0 0 100%;
   max-width: 100%;
@@ -144,7 +129,6 @@
   line-height: 1.4;
 }
 
-/* Tarjeta destacada (la que está centrada en el viewport) */
 .comentarios__card--featured .comentarios__card-inner {
   opacity: 1;
   transform: scale(1);
@@ -167,7 +151,6 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* -------------------- Dots (cuadrados) -------------------- */
 .comentarios__dots {
   display: flex;
   align-items: center;
@@ -196,7 +179,6 @@
   background-color: var(--color-red);
 }
 
-/* -------------------- Tablet (>= 768px): se ven 3 tarjetas -------------------- */
 @media (min-width: 768px) {
   .comentarios__title {
     font-size: var(--fs-3xl);
@@ -212,7 +194,6 @@
   }
 }
 
-/* -------------------- Desktop (>= 1024px) -------------------- */
 @media (min-width: 1024px) {
   .comentarios__card-inner {
     height: 280px;

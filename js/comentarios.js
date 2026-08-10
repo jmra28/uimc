@@ -8,8 +8,8 @@ if (comentariosCarousel) {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const desktopQuery = window.matchMedia("(min-width: 768px)");
 
-  const lastTrackIndex = cards.length - 1; // clon de R1
-  let trackIndex = 1; // R1 (primer testimonio real)
+  const lastTrackIndex = cards.length - 1;
+  let trackIndex = 1;
   let autoplayTimer = null;
 
   function visibleCount() {

@@ -1,10 +1,3 @@
-/* =========================================================
-   VALORES.CSS
-   Bloque BEM: .valores
-   Título + subtítulo + grid estático de 10 imágenes (sin
-   título debajo de cada una). 5 columnas x 2 filas en
-   desktop.
-   ========================================================= */
 
 .valores {
   width: 100%;
@@ -34,7 +27,6 @@
   font-weight: var(--fw-bold);
 }
 
-/* -------------------- Grid de imágenes -------------------- */
 .valores__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -61,7 +53,6 @@
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
 }
 
-/* -------------------- Tablet (>= 768px) -------------------- */
 @media (min-width: 768px) {
   .valores__title {
     font-size: var(--fs-3xl);
@@ -72,7 +63,6 @@
   }
 }
 
-/* -------------------- Desktop (>= 1024px): 5 columnas -------------------- */
 @media (min-width: 1024px) {
   .valores__grid {
     grid-template-columns: repeat(5, 1fr);

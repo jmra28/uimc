@@ -1,13 +1,3 @@
-/* =========================================================
-   MENSAJE.CSS
-   Bloque BEM: .mensaje
-   Imagen a todo lo ancho de la pantalla (pegada al borde
-   izquierdo, sin contenedor) + texto en columna aparte con su
-   propio padding. Se apila en móvil/tablet; lado a lado desde
-   desktop, con un degradado en el borde de la imagen para que
-   la transición hacia el fondo de la página no se vea como un
-   corte.
-   ========================================================= */
 
 .mensaje {
   width: 100%;
@@ -88,7 +78,6 @@
   font-size: var(--fs-lg);
 }
 
-/* -------------------- Desktop (>= 1024px): lado a lado, imagen pegada al borde izquierdo -------------------- */
 @media (min-width: 1024px) {
   .mensaje {
     padding-block: 0;
