@@ -90,11 +90,11 @@
 }
 
 .header__link--alumnos {
-  background: linear-gradient(to top, var(--color-blue) 0%, #120b68 100%);
+  background: linear-gradient(to top, var(--color-blue) 0%, #0e0b51 100%);
 }
 
 .header__link--docentes {
-  background: linear-gradient(to top, var(--color-red) 0%, #601010 100%);
+  background: linear-gradient(to top, var(--color-red) 0%, #55071c 100%);
 }
 
 .header__link--alumnos:hover,

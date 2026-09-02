@@ -32,10 +32,10 @@
 }
 
 :root {
-  --color-blue: #1b1e8c;
-  --color-blue-dark: #12145e;
-  --color-red: #e2231a;
-  --color-red-dark: #b81b14;
+  --color-blue: #151f6d;
+  --color-blue-dark: #0e1549;
+  --color-red: #c8102e;
+  --color-red-dark: #a30c23;
 
   --fondo1: url(../assets/images/back.jpg);
 

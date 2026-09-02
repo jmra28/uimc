@@ -90,13 +90,13 @@
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   border-radius: 999px;
-  box-shadow: 0 6px 16px rgba(226, 35, 26, 0.4);
+  box-shadow: 0 6px 16px rgba(200, 16, 46, 0.4);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .video-promo__button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(226, 35, 26, 0.5);
+  box-shadow: 0 10px 22px rgba(200, 16, 46, 0.5);
 }
 
 .video-promo__col--image {

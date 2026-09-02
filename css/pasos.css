@@ -80,8 +80,8 @@
   border-radius: 50%;
   background-color: var(--color-white);
   box-shadow:
-    4px 4px 14px rgba(226, 35, 26, 0.2),
-    -4px -4px 14px rgba(27, 30, 140, 0.18);
+    4px 4px 14px rgba(200, 16, 46, 0.2),
+    -4px -4px 14px rgba(21, 31, 109, 0.18);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
@@ -94,8 +94,8 @@
 .pasos__item:hover .pasos__circle {
   transform: scale(1.08);
   box-shadow:
-    6px 6px 20px rgba(226, 35, 26, 0.32),
-    -6px -6px 20px rgba(27, 30, 140, 0.28);
+    6px 6px 20px rgba(200, 16, 46, 0.32),
+    -6px -6px 20px rgba(21, 31, 109, 0.28);
 }
 
 .pasos__step-title {

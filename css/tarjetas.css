@@ -43,7 +43,7 @@
   overflow: hidden;
   box-shadow:
     5px 5px 18px rgba(27, 23, 22, 0.12),
-    -5px -5px 18px rgba(27, 30, 140, 0.1);
+    -5px -5px 18px rgba(21, 31, 109, 0.1);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
