@@ -1,0 +1,101 @@
+{
+  "uim": {
+    "id": "uim",
+    "nombreCorto": "UIM",
+    "nombreCompleto": "Universidad Internacional Mexicana",
+    "logo": "assets/images/Logotipo UIM-03.png",
+    "plataformas": [
+      {
+        "titulo": "Plataforma de Pagos",
+        "descripcion": "Consulta y realiza tus pagos de colegiatura en línea.",
+        "url": "https://uim.mx/me/"
+      },
+      {
+        "titulo": "Cursos",
+        "descripcion": "Ingresa a tu tablero de cursos, tareas y material de clase.",
+        "url": "https://uim.mx/moo/my/"
+      },
+      {
+        "titulo": "Control Escolar",
+        "descripcion": "Consulta tus calificaciones y tu historial académico.",
+        "url": "https://ce.uim.mx/ords/f?p=100:LOGIN:3020112232031"
+      }
+    ],
+    "documentos": [
+      {
+        "titulo": "Reglamento de Laboratorios",
+        "descripcion": "Normas de uso y seguridad en los laboratorios.",
+        "url": "assets/documentos/reg_acad.pdf",
+        "provisional": true
+      },
+      {
+        "titulo": "Reglamento del Salón de Clases",
+        "descripcion": "Normas de convivencia dentro del salón de clases.",
+        "url": "assets/documentos/reg_acad.pdf",
+        "provisional": true
+      },
+      {
+        "titulo": "Anuncios y Comunicados",
+        "descripcion": "Mantente al día con los avisos oficiales de la institución.",
+        "url": "#TODO-anuncios-uim",
+        "provisional": true
+      }
+    ]
+  },
+  "ial": {
+    "id": "ial",
+    "nombreCorto": "IAL",
+    "nombreCompleto": "Instituto Abraham Lincoln",
+    "logo": "assets/images/Logotipo UIM-03.png",
+    "plataformas": [
+      {
+        "titulo": "Plataforma de Pagos",
+        "descripcion": "Consulta y realiza tus pagos de colegiatura en línea.",
+        "url": "https://uim.mx/me/"
+      },
+      {
+        "titulo": "Cursos",
+        "descripcion": "Ingresa a tu tablero de cursos, tareas y material de clase.",
+        "url": "https://uim.mx/moo/my/"
+      },
+      {
+        "titulo": "Control Escolar",
+        "descripcion": "Consulta tus calificaciones y tu historial académico.",
+        "url": "https://ce.uim.mx/ords/f?p=100:LOGIN:3020112232031"
+      }
+    ],
+    "documentos": [
+      {
+        "titulo": "Reglamento de Laboratorios",
+        "descripcion": "Normas de uso y seguridad en los laboratorios.",
+        "url": "assets/documentos/reg_acad.pdf",
+        "provisional": true
+      },
+      {
+        "titulo": "Reglamento del Salón de Clases",
+        "descripcion": "Normas de convivencia dentro del salón de clases.",
+        "url": "assets/documentos/reg_acad.pdf",
+        "provisional": true
+      },
+      {
+        "titulo": "Anuncios y Comunicados",
+        "descripcion": "Mantente al día con los avisos oficiales de la institución.",
+        "url": "#TODO-anuncios-ial",
+        "provisional": true
+      }
+    ]
+  },
+  "directorio": [
+    { "area": "Sistemas", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Control Escolar", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Dirección", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Cobranza Preparatoria", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Cobranza Licenciatura", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Cobranza Posgrado", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Cobranza Secundaria", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Coordinación Secundaria", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Coordinación Preparatoria", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Coordinación Licenciatura", "telefono": "XXX-XXX-XXXX" },
+    { "area": "Coordinación Posgrados", "telefono": "XXX-XXX-XXXX" }
+  ]
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal del Alumno - UIM/IAL</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/portal-alumno.css" />
+  <link rel="stylesheet" href="css/practicas-profesionales.css" />
+
+  <link rel="shortcut icon" type="image/icon" href="assets/images/icon_bufalo.png"/>
+</head>
+<body>
+
+  <section class="portal-alumno container">
+    <div class="portal-alumno__top">
+      <img src="assets/images/Logotipo UIM-03.png" alt="Logo" class="portal-alumno__logo">
+      <h1 class="portal-alumno__title">
+        <span class="portal-alumno__title-part portal-alumno__title-part--blue">PORTAL</span>
+        <span class="portal-alumno__title-part portal-alumno__title-part--red"> DEL ALUMNO</span>
+      </h1>
+      <p class="portal-alumno__subtitle">Selecciona tu institución para ver tus accesos</p>
+    </div>
+
+    <div class="portal-alumno__tabs">
+      <input type="radio" name="portal-alumno-tab" id="portal-alumno-tab-uim" class="portal-alumno__tab-radio" checked />
+      <input type="radio" name="portal-alumno-tab" id="portal-alumno-tab-ial" class="portal-alumno__tab-radio" />
+
+      <div class="portal-alumno__tab-list">
+        <label for="portal-alumno-tab-uim" class="portal-alumno__tab-label">UIM</label>
+        <label for="portal-alumno-tab-ial" class="portal-alumno__tab-label">IAL</label>
+      </div>
+
+      <div class="portal-alumno__panels">
+        <div class="portal-alumno__panel" data-portal-panel="uim">
+          <p class="portal-alumno__institucion-nombre" data-portal-nombre></p>
+
+          <div>
+            <h2 class="portal-alumno__section-title">Plataformas</h2>
+            <div class="portal-alumno__grid" data-portal-grid="plataformas"></div>
+          </div>
+
+          <div>
+            <h2 class="portal-alumno__section-title">Documentos y avisos</h2>
+            <div class="portal-alumno__grid" data-portal-grid="documentos"></div>
+          </div>
+        </div>
+
+        <div class="portal-alumno__panel" data-portal-panel="ial">
+          <p class="portal-alumno__institucion-nombre" data-portal-nombre></p>
+
+          <div>
+            <h2 class="portal-alumno__section-title">Plataformas</h2>
+            <div class="portal-alumno__grid" data-portal-grid="plataformas"></div>
+          </div>
+
+          <div>
+            <h2 class="portal-alumno__section-title">Documentos y avisos</h2>
+            <div class="portal-alumno__grid" data-portal-grid="documentos"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="practicas">
+      <div class="practicas__header">
+        <h2 class="practicas__title">
+          <span class="practicas__title-part practicas__title-part--blue">PRÁCTICAS</span>
+          <span class="practicas__title-part practicas__title-part--red"> PROFESIONALES</span>
+        </h2>
+        <p class="practicas__subtitle">Y SERVICIO SOCIAL</p>
+      </div>
+
+      <div class="practicas__tabs">
+        <input type="radio" name="practicas-tab" id="practicas-tab-licenciatura" class="practicas__tab-radio" checked />
+        <input type="radio" name="practicas-tab" id="practicas-tab-preparatoria" class="practicas__tab-radio" />
+
+        <div class="practicas__tab-list">
+          <label for="practicas-tab-licenciatura" class="practicas__tab-label">LICENCIATURA</label>
+          <label for="practicas-tab-preparatoria" class="practicas__tab-label">PREPARATORIA</label>
+        </div>
+
+        <div class="practicas__panels">
+          <div class="practicas__panel">
+            <div class="practicas__grid practicas__grid--dos">
+              <div class="practicas__card">
+                <h3 class="practicas__card-title">Prácticas Profesionales</h3>
+                <p class="practicas__card-text">Es la etapa formativa en la que aplicas los conocimientos adquiridos durante tu licenciatura en un entorno laboral real, bajo la supervisión de un asesor académico y un responsable en la organización receptora. Las prácticas profesionales te acercan al ejercicio de tu carrera y suman a tu desarrollo profesional.</p>
+              </div>
+              <div class="practicas__card">
+                <h3 class="practicas__card-title">Servicio Social</h3>
+                <p class="practicas__card-text">Es un requisito de titulación que consiste en aportar tu conocimiento y tiempo a proyectos de beneficio social, cumpliendo con el número de horas establecido por la normativa vigente. A través del servicio social retribuyes a la comunidad la formación recibida.</p>
+              </div>
+            </div>
+            <a href="assets/documentos/reg_acad.pdf" target="_blank" class="practicas__card-button">Descargar Reglamento</a>
+          </div>
+
+          <div class="practicas__panel">
+            <div class="practicas__grid">
+              <div class="practicas__card">
+                <h3 class="practicas__card-title">Servicio Social</h3>
+                <p class="practicas__card-text">En preparatoria, el servicio social te permite iniciar tu formación en responsabilidad social, participando en actividades comunitarias que fortalecen tu compromiso con tu entorno, cumpliendo con las horas y el proceso establecido por la institución.</p>
+              </div>
+            </div>
+            <a href="assets/documentos/reg_acad.pdf" target="_blank" class="practicas__card-button">Descargar Reglamento</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div>
+      <h2 class="portal-alumno__section-title">Directorio</h2>
+      <div class="portal-alumno__grid" data-portal-grid="directorio"></div>
+    </div>
+  </section>
+
+  <script src="js/portal-alumno.js" defer></script>
+</body>
+</html>
