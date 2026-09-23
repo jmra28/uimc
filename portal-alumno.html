@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/portal-alumno.css" />
   <link rel="stylesheet" href="css/practicas-profesionales.css" />
+  <link rel="stylesheet" href="css/slider-carrusel.css" />
+  <link rel="stylesheet" href="css/portal-chat.css" />
 
   <link rel="shortcut icon" type="image/icon" href="assets/images/icon_bufalo.png"/>
 </head>
@@ -15,13 +17,78 @@
 
   <section class="portal-alumno container">
     <div class="portal-alumno__top">
-      <img src="assets/images/Logotipo UIM-03.png" alt="Logo" class="portal-alumno__logo">
-      <h1 class="portal-alumno__title">
-        <span class="portal-alumno__title-part portal-alumno__title-part--blue">PORTAL</span>
-        <span class="portal-alumno__title-part portal-alumno__title-part--red"> DEL ALUMNO</span>
-      </h1>
-      <p class="portal-alumno__subtitle">Selecciona tu institución para ver tus accesos</p>
+      <img src="assets/images/Logotipo UIM-03.png" alt="Logo" class="portal-alumno__logo" id="portal-alumno-logo">
+      <div class="portal-alumno__top-title">
+        <h1 class="portal-alumno__title">
+          <span class="portal-alumno__title-part portal-alumno__title-part--blue">PORTAL</span>
+          <span class="portal-alumno__title-part portal-alumno__title-part--red"> DEL ALUMNO</span>
+        </h1>
+      </div>
     </div>
+
+    <section class="slider-carrusel">
+      <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-1" class="slider-carrusel__radio" checked />
+      <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-2" class="slider-carrusel__radio" />
+      <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-3" class="slider-carrusel__radio" />
+      <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-4" class="slider-carrusel__radio" />
+      <input type="radio" name="slider-carrusel-slide" id="slider-carrusel-slide-5" class="slider-carrusel__radio" />
+
+      <div class="slider-carrusel__track">
+        <div class="slider-carrusel__slide">
+          <div class="slider-carrusel__image"><img src="assets/documentos/lic/practicasprofesionales/1.png" alt="Orgullosamente Búfalo - UIM"></div>
+          <label for="slider-carrusel-slide-5" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+          <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+        </div>
+        <div class="slider-carrusel__slide">
+          <div class="slider-carrusel__image"><img src="assets/documentos/lic/practicasprofesionales/2.png" alt="UIM"></div>
+          <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+          <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+        </div>
+        <div class="slider-carrusel__slide">
+          <div class="slider-carrusel__image"><img src="assets/documentos/lic/practicasprofesionales/3.png" alt="Mi Universidad - UIM"></div>
+          <label for="slider-carrusel-slide-2" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+          <label for="slider-carrusel-slide-4" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+        </div>
+        <div class="slider-carrusel__slide">
+          <div class="slider-carrusel__image"><img src="assets/documentos/lic/practicasprofesionales/4.png" alt="¿Porqué sí, IAL? - Instituto Abraham Lincoln"></div>
+          <label for="slider-carrusel-slide-3" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+          <label for="slider-carrusel-slide-5" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+        </div>
+        <div class="slider-carrusel__slide">
+          <div class="slider-carrusel__image"><img src="assets/documentos/lic/practicasprofesionales/5.png" alt="Una nueva aventura - Instituto Abraham Lincoln"></div>
+          <label for="slider-carrusel-slide-4" class="slider-carrusel__arrow slider-carrusel__arrow--prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+          <label for="slider-carrusel-slide-1" class="slider-carrusel__arrow slider-carrusel__arrow--next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </label>
+        </div>
+      </div>
+
+      <div class="slider-carrusel__dots">
+        <label for="slider-carrusel-slide-1" class="slider-carrusel__dot" aria-label="Imagen 1"></label>
+        <label for="slider-carrusel-slide-2" class="slider-carrusel__dot" aria-label="Imagen 2"></label>
+        <label for="slider-carrusel-slide-3" class="slider-carrusel__dot" aria-label="Imagen 3"></label>
+        <label for="slider-carrusel-slide-4" class="slider-carrusel__dot" aria-label="Imagen 4"></label>
+        <label for="slider-carrusel-slide-5" class="slider-carrusel__dot" aria-label="Imagen 5"></label>
+      </div>
+    </section>
 
     <div class="portal-alumno__tabs">
       <input type="radio" name="portal-alumno-tab" id="portal-alumno-tab-uim" class="portal-alumno__tab-radio" checked />
@@ -36,41 +103,95 @@
         <div class="portal-alumno__panel" data-portal-panel="uim">
           <p class="portal-alumno__institucion-nombre" data-portal-nombre></p>
 
-          <div>
-            <h2 class="portal-alumno__section-title">Plataformas</h2>
-            <div class="portal-alumno__grid" data-portal-grid="plataformas"></div>
-          </div>
+          <details class="portal-alumno__collapsible">
+            <summary class="portal-alumno__collapsible-summary">
+              <h2 class="portal-alumno__section-title">Plataformas</h2>
+              <span class="portal-alumno__collapsible-toggle">
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--closed">Expandir</span>
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--open">Compactar</span>
+                <svg class="portal-alumno__collapsible-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="portal-alumno__collapsible-content">
+              <div class="portal-alumno__grid" data-portal-grid="plataformas"></div>
+            </div>
+          </details>
 
-          <div>
-            <h2 class="portal-alumno__section-title">Documentos y avisos</h2>
-            <div class="portal-alumno__grid" data-portal-grid="documentos"></div>
-          </div>
+          <details class="portal-alumno__collapsible">
+            <summary class="portal-alumno__collapsible-summary">
+              <h2 class="portal-alumno__section-title">Documentos y avisos</h2>
+              <span class="portal-alumno__collapsible-toggle">
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--closed">Expandir</span>
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--open">Compactar</span>
+                <svg class="portal-alumno__collapsible-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="portal-alumno__collapsible-content">
+              <div class="portal-alumno__grid" data-portal-grid="documentos"></div>
+            </div>
+          </details>
         </div>
 
         <div class="portal-alumno__panel" data-portal-panel="ial">
           <p class="portal-alumno__institucion-nombre" data-portal-nombre></p>
 
-          <div>
-            <h2 class="portal-alumno__section-title">Plataformas</h2>
-            <div class="portal-alumno__grid" data-portal-grid="plataformas"></div>
-          </div>
+          <details class="portal-alumno__collapsible">
+            <summary class="portal-alumno__collapsible-summary">
+              <h2 class="portal-alumno__section-title">Plataformas</h2>
+              <span class="portal-alumno__collapsible-toggle">
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--closed">Expandir</span>
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--open">Compactar</span>
+                <svg class="portal-alumno__collapsible-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="portal-alumno__collapsible-content">
+              <div class="portal-alumno__grid" data-portal-grid="plataformas"></div>
+            </div>
+          </details>
 
-          <div>
-            <h2 class="portal-alumno__section-title">Documentos y avisos</h2>
-            <div class="portal-alumno__grid" data-portal-grid="documentos"></div>
-          </div>
+          <details class="portal-alumno__collapsible">
+            <summary class="portal-alumno__collapsible-summary">
+              <h2 class="portal-alumno__section-title">Documentos y avisos</h2>
+              <span class="portal-alumno__collapsible-toggle">
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--closed">Expandir</span>
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--open">Compactar</span>
+                <svg class="portal-alumno__collapsible-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="portal-alumno__collapsible-content">
+              <div class="portal-alumno__grid" data-portal-grid="documentos"></div>
+            </div>
+          </details>
         </div>
       </div>
     </div>
 
     <section class="practicas">
-      <div class="practicas__header">
-        <h2 class="practicas__title">
-          <span class="practicas__title-part practicas__title-part--blue">PRÁCTICAS</span>
-          <span class="practicas__title-part practicas__title-part--red"> PROFESIONALES</span>
-        </h2>
-        <p class="practicas__subtitle">Y SERVICIO SOCIAL</p>
-      </div>
+      <details class="portal-alumno__collapsible">
+        <summary class="portal-alumno__collapsible-summary">
+          <div class="practicas__header">
+            <h2 class="practicas__title">
+              <span class="practicas__title-part practicas__title-part--blue">PRÁCTICAS</span>
+              <span class="practicas__title-part practicas__title-part--red"> PROFESIONALES</span>
+            </h2>
+            <p class="practicas__subtitle">Y SERVICIO SOCIAL</p>
+          </div>
+          <span class="portal-alumno__collapsible-toggle">
+            <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--closed">Expandir</span>
+            <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--open">Compactar</span>
+            <svg class="portal-alumno__collapsible-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
 
       <div class="practicas__tabs">
         <input type="radio" name="practicas-tab" id="practicas-tab-licenciatura" class="practicas__tab-radio" checked />
@@ -83,38 +204,76 @@
 
         <div class="practicas__panels">
           <div class="practicas__panel">
-            <div class="practicas__grid practicas__grid--dos">
-              <div class="practicas__card">
+            <div class="practicas__card">
+              <div class="practicas__card-header">
+                <img src="assets/images/vineta-fub-rojo.png" alt="" class="practicas__card-icon">
                 <h3 class="practicas__card-title">Prácticas Profesionales</h3>
-                <p class="practicas__card-text">Es la etapa formativa en la que aplicas los conocimientos adquiridos durante tu licenciatura en un entorno laboral real, bajo la supervisión de un asesor académico y un responsable en la organización receptora. Las prácticas profesionales te acercan al ejercicio de tu carrera y suman a tu desarrollo profesional.</p>
               </div>
-              <div class="practicas__card">
-                <h3 class="practicas__card-title">Servicio Social</h3>
-                <p class="practicas__card-text">Es un requisito de titulación que consiste en aportar tu conocimiento y tiempo a proyectos de beneficio social, cumpliendo con el número de horas establecido por la normativa vigente. A través del servicio social retribuyes a la comunidad la formación recibida.</p>
-              </div>
+              <p class="practicas__card-text" data-practicas-intro></p>
+              <ul class="practicas__card-list" data-practicas-puntos></ul>
+
+              <h4 class="practicas__documentos-title">Documentos y Formatos</h4>
+              <div class="portal-alumno__grid" data-portal-grid="practicas-documentos"></div>
             </div>
-            <a href="assets/documentos/reg_acad.pdf" target="_blank" class="practicas__card-button">Descargar Reglamento</a>
+
+            <div class="practicas__card">
+              <div class="practicas__card-header">
+                <img src="assets/images/vineta-fub-rojo.png" alt="" class="practicas__card-icon">
+                <h3 class="practicas__card-title">Servicio Social</h3>
+              </div>
+              <p class="practicas__card-text" data-servicio-intro></p>
+              <ul class="practicas__card-list" data-servicio-puntos></ul>
+
+              <h4 class="practicas__documentos-title">Documentos y Formatos</h4>
+              <div class="portal-alumno__grid" data-portal-grid="servicio-documentos"></div>
+            </div>
           </div>
 
           <div class="practicas__panel">
-            <div class="practicas__grid">
-              <div class="practicas__card">
+            <div class="practicas__card">
+              <div class="practicas__card-header">
+                <img src="assets/images/vineta-fub-rojo.png" alt="" class="practicas__card-icon">
                 <h3 class="practicas__card-title">Servicio Social</h3>
-                <p class="practicas__card-text">En preparatoria, el servicio social te permite iniciar tu formación en responsabilidad social, participando en actividades comunitarias que fortalecen tu compromiso con tu entorno, cumpliendo con las horas y el proceso establecido por la institución.</p>
               </div>
+              <p class="practicas__card-text" data-servicio-prepa-intro></p>
+              <ul class="practicas__card-list" data-servicio-prepa-puntos></ul>
+
+              <h4 class="practicas__documentos-title">Documentos y Formatos</h4>
+              <div class="portal-alumno__grid" data-portal-grid="servicio-documentos-prepa"></div>
             </div>
-            <a href="assets/documentos/reg_acad.pdf" target="_blank" class="practicas__card-button">Descargar Reglamento</a>
           </div>
         </div>
       </div>
+      </details>
     </section>
 
-    <div>
-      <h2 class="portal-alumno__section-title">Directorio</h2>
-      <div class="portal-alumno__grid" data-portal-grid="directorio"></div>
-    </div>
   </section>
 
+  <div class="portal-chat">
+    <div class="portal-chat__card" role="dialog" aria-label="Mensajería UIM/IAL">
+      <div class="portal-chat__header">
+        <button type="button" class="portal-chat__close" aria-label="Cerrar">&times;</button>
+        <div class="portal-chat__logos">
+          <img src="assets/images/Logotipo UIM-03.png" alt="UIM" class="portal-chat__logo" data-chat-logo="uim">
+          <img src="assets/images/logo ial.png" alt="IAL" class="portal-chat__logo" data-chat-logo="ial">
+        </div>
+        <div>
+          <p class="portal-chat__title">Mensajería</p>
+          <p class="portal-chat__tagline">¿En qué podemos ayudarte?</p>
+        </div>
+      </div>
+      <div class="portal-chat__body"></div>
+    </div>
+
+    <button type="button" class="portal-chat__toggle" aria-label="Abrir mensajería" aria-expanded="false">
+      <svg class="portal-chat__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4C7.35 4 3.5 7.85 3.5 12.55c0 1.5.4 2.96 1.14 4.25L3.4 21l4.32-1.2a8.99 8.99 0 0 0 4.33 1.1h.01c4.7 0 8.55-3.85 8.55-8.55 0-2.28-.9-4.43-2.51-6.03Zm-5.55 13.16h-.01a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.78.75-2.73-.18-.28a7.34 7.34 0 0 1-1.14-3.94c0-4.08 3.32-7.4 7.44-7.4a7.4 7.4 0 0 1 7.4 7.4c0 4.08-3.32 7.37-7.41 7.37Zm4.06-5.53c-.22-.11-1.31-.65-1.52-.72-.2-.08-.35-.11-.5.11-.14.22-.57.72-.7.87-.13.14-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.31-1.24-1.53-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.14-.22.22-.37.07-.14.04-.27-.02-.38-.05-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.81s.78 2.1.89 2.24c.11.14 1.53 2.34 3.71 3.28.52.22.92.36 1.24.46.52.17 1 .14 1.37.09.42-.06 1.31-.53 1.49-1.05.19-.51.19-.95.13-1.05-.06-.09-.2-.15-.42-.26Z"/>
+      </svg>
+    </button>
+  </div>
+
+  <script src="js/slider-carrusel.js" defer></script>
   <script src="js/portal-alumno.js" defer></script>
+  <script src="js/portal-chat.js" defer></script>
 </body>
 </html>

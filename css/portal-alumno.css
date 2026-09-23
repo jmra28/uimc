@@ -1,4 +1,8 @@
 
+body {
+  background-color: var(--color-white);
+}
+
 .portal-alumno {
   width: 100%;
   min-height: 100vh;
@@ -6,16 +10,22 @@
 }
 
 .portal-alumno__top {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  gap: var(--space-3);
   margin-bottom: var(--space-5);
-  text-align: center;
 }
 
 .portal-alumno__logo {
+  grid-column: 1;
+  justify-self: start;
   height: 64px;
-  margin-bottom: var(--space-3);
+}
+
+.portal-alumno__top-title {
+  grid-column: 2;
+  text-align: center;
 }
 
 .portal-alumno__title {
@@ -34,6 +44,30 @@
   margin-top: var(--space-1);
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
+}
+
+.portal-alumno .slider-carrusel {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-bottom: var(--space-5);
+}
+
+.portal-alumno .slider-carrusel__track {
+  height: 40vh;
+  min-height: 210px;
+}
+
+.portal-alumno .slider-carrusel__image img {
+  object-position: top;
+}
+
+@media (max-width: 767px) {
+  .portal-alumno .slider-carrusel__track {
+    height: auto;
+    aspect-ratio: 4.8 / 1;
+    min-height: 0;
+  }
 }
 
 .portal-alumno__institucion-nombre {
@@ -101,8 +135,70 @@
 /* -------------------- Secciones (Plataformas / Documentos y avisos) -------------------- */
 .portal-alumno__section-title {
   margin-bottom: var(--space-3);
-  color: var(--color-blue);
+  color: var(--color-red);
   font-size: var(--fs-lg);
+}
+
+/* -------------------- Bloques plegables (Expandir / Compactar) -------------------- */
+.portal-alumno__collapsible {
+  border-bottom: var(--border-width) solid var(--color-gray-medium);
+}
+
+.portal-alumno__collapsible-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  list-style: none;
+  cursor: pointer;
+}
+
+.portal-alumno__collapsible-summary::-webkit-details-marker {
+  display: none;
+}
+
+.portal-alumno__collapsible-summary .portal-alumno__section-title,
+.portal-alumno__collapsible-summary .practicas__header {
+  margin-bottom: 0;
+}
+
+.portal-alumno__collapsible-toggle {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-blue);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+}
+
+.portal-alumno__collapsible-toggle-text--open {
+  display: none;
+}
+
+.portal-alumno__collapsible[open] .portal-alumno__collapsible-toggle-text--closed {
+  display: none;
+}
+
+.portal-alumno__collapsible[open] .portal-alumno__collapsible-toggle-text--open {
+  display: inline;
+}
+
+.portal-alumno__collapsible-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-base);
+}
+
+.portal-alumno__collapsible[open] .portal-alumno__collapsible-icon {
+  transform: rotate(180deg);
+}
+
+.portal-alumno__collapsible-content {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-4);
 }
 
 .portal-alumno__grid {
@@ -127,9 +223,15 @@
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
 }
 
+.portal-alumno__card-icon {
+  width: 26px;
+  height: 26px;
+  margin-bottom: var(--space-2);
+}
+
 .portal-alumno__card-title {
   margin-bottom: var(--space-1);
-  color: var(--color-blue);
+  color: var(--color-red);
   font-size: var(--fs-base);
 }
 
@@ -140,7 +242,10 @@
 }
 
 .portal-alumno__card-button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
   margin-top: auto;
   padding: var(--space-2) var(--space-3);
   border: none;
@@ -154,30 +259,14 @@
   transition: background-color var(--transition-base), box-shadow var(--transition-base);
 }
 
+.portal-alumno__doc-icon {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+}
+
 .portal-alumno__card-button:hover {
   background-color: var(--color-red);
-}
-
-/* -------------------- Directorio -------------------- */
-.portal-alumno__directorio-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: var(--space-3) var(--space-4);
-  border-radius: 12px;
-  background-color: var(--color-white);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.portal-alumno__directorio-area {
-  color: var(--color-blue);
-  font-weight: var(--fw-semibold);
-  font-size: var(--fs-sm);
-}
-
-.portal-alumno__directorio-phone {
-  color: var(--color-text-muted);
-  font-size: var(--fs-sm);
 }
 
 .portal-alumno__card-tag {

@@ -46,7 +46,7 @@
     "id": "ial",
     "nombreCorto": "IAL",
     "nombreCompleto": "Instituto Abraham Lincoln",
-    "logo": "assets/images/Logotipo UIM-03.png",
+    "logo": "assets/images/logo ial.png",
     "plataformas": [
       {
         "titulo": "Plataforma de Pagos",
@@ -85,17 +85,134 @@
       }
     ]
   },
-  "directorio": [
-    { "area": "Sistemas", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Control Escolar", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Dirección", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Cobranza Preparatoria", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Cobranza Licenciatura", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Cobranza Posgrado", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Cobranza Secundaria", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Coordinación Secundaria", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Coordinación Preparatoria", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Coordinación Licenciatura", "telefono": "XXX-XXX-XXXX" },
-    { "area": "Coordinación Posgrados", "telefono": "XXX-XXX-XXXX" }
-  ]
+  "practicas": {
+    "licenciatura": {
+      "intro": "Es la etapa formativa en la que aplicas los conocimientos de tu carrera en un entorno laboral real. Todo el proceso —desde tu inscripción hasta tu liberación— se coordina a través de la plataforma Moodle, con acompañamiento de un asesor interno.",
+      "puntosClave": [
+        "Dos periodos al año: 1er periodo (inscripción en enero, asesoría de febrero a mayo, liberación en junio) y 2do periodo (inscripción en agosto, asesoría de septiembre a diciembre, liberación en enero).",
+        "Requisitos para iniciar: historial académico completo (60 materias aprobadas), pago de reinscripción más 4 mensualidades, un proyecto acorde a tu carrera, e inscripción al curso de Prácticas Profesionales en Moodle.",
+        "Duración total: 480 horas en 6 meses y 1 día.",
+        "El pago de reinscripción y primera mensualidad debe cubrirse a más tardar el día 10 del mes en que inicia el periodo (febrero o septiembre).",
+        "Durante 4 meses tendrás un asesor interno (docente) que te acompañará y evaluará a través de Moodle, donde encontrarás todos los formatos: solicitud, proyecto, aceptación/liberación y evaluaciones.",
+        "Para liberar tus prácticas necesitas la carta de liberación de la empresa en hoja membretada, firmada y sellada (entrega física, además de anexarla a tu documento final), y presentar una breve exposición ante autoridades, asesores y familiares."
+      ],
+      "documentos": [
+        {
+          "titulo": "Carta de Solicitud de Prácticas Profesionales",
+          "descripcion": "Formato con el que inicias formalmente tu solicitud para realizar prácticas profesionales.",
+          "url": "assets/documentos/lic/practicasprofesionales/CARTA DE  SOLICITUD PRÁCTICAS PROFESIONALES.docx"
+        },
+        {
+          "titulo": "Solicitud Interna UIM",
+          "descripcion": "Solicitud interna que formaliza tu registro al proceso ante la universidad.",
+          "url": "assets/documentos/lic/practicasprofesionales/SOLICITUD (INTERNA) UIM PRACTICAS PROFESIONALES.docx"
+        },
+        {
+          "titulo": "Evaluación de Reporte Final",
+          "descripcion": "Formato que tu asesor interno utiliza para evaluar tu reporte final de prácticas.",
+          "url": "assets/documentos/lic/practicasprofesionales/EVALUACIÓN DE REPORTE FINAL DE PRÁCTICASA PROFESIONALES .docx"
+        },
+        {
+          "titulo": "Seguimiento (Evaluación Bimestral)",
+          "descripcion": "Formato de seguimiento bimestral para reportar el avance de tus prácticas a tu asesor interno.",
+          "url": "assets/documentos/lic/practicasprofesionales/SEGUIMIENTO (EVALUACIÓN BIMESTRAL) DE PRÁCTICAS PROFESIONALES UIM.docx"
+        },
+        {
+          "titulo": "Formato para Prácticas Profesionales (Liberación)",
+          "descripcion": "Formato de solicitud, aceptación y liberación con el que cierras tu proceso de prácticas.",
+          "url": "assets/documentos/lic/practicasprofesionales/FORMATO PARA PRACTICAS PROFESIONALES (1).pdf"
+        },
+        {
+          "titulo": "Guía para Elaboración del Anteproyecto",
+          "descripcion": "Lineamientos y estructura para desarrollar el anteproyecto de tus prácticas.",
+          "url": "assets/documentos/lic/practicasprofesionales/GUÍA PARA ELABORACIÓN DEL ANTEPROYECTO .docx"
+        },
+        {
+          "titulo": "Guía para Elaboración del Reporte Final",
+          "descripcion": "Estructura y formato APA para redactar el reporte final de tus prácticas.",
+          "url": "assets/documentos/lic/practicasprofesionales/GUIA PARA ELABORACIÓN DEL REPORTE FINAL DE PRÁCTICAS PROFESIONALES UIM APA.docx"
+        },
+        {
+          "titulo": "Plantilla para Elaboración del Informe Técnico",
+          "descripcion": "Plantilla oficial para elaborar el informe técnico de tus prácticas profesionales.",
+          "url": "assets/documentos/lic/practicasprofesionales/PLANTILLA PARA LA ELABORACIÓN DEL INFORME TÉCNICO DE PRÁCTICAS PROFESIONALES UIM.docx"
+        }
+      ]
+    },
+    "servicioSocial": {
+      "intro": "El servicio social es un requisito de titulación que puedes iniciar una vez que hayas cursado 40 materias de tu mapa curricular. Se realiza en una dependencia pública, de gobierno o en una asociación civil, y todos los documentos del proceso se descargan desde la plataforma de Control Escolar.",
+      "puntosClave": [
+        "Puedes iniciar tu servicio social una vez que hayas cursado 40 materias de tu mapa curricular.",
+        "Debe realizarse en una dependencia pública, de gobierno o en una asociación civil.",
+        "Duración: 480 horas en 6 meses y 1 día.",
+        "Todos los documentos del proceso se descargan desde la plataforma de Control Escolar.",
+        "Tu Carta de Presentación debe llevar la firma del director de la Universidad.",
+        "Tu Carta de Aceptación se entrega en el formato original de la Universidad y en hoja membretada de la organización donde realices tu servicio social.",
+        "Debes entregar un reporte por cada bimestre (3 reportes en total) más una evaluación final.",
+        "Tu Carta de Liberación se entrega en el formato original de la Universidad y en hoja membretada de la organización donde realizaste tu servicio social."
+      ],
+      "documentos": [
+        {
+          "titulo": "Solicitud de Servicio Social",
+          "descripcion": "Formato con el que solicitas ante la Dirección Académica la autorización para prestar tu servicio social.",
+          "url": "assets/documentos/lic/serviciosocial/(1) Solicitud de Servicio Social.pdf"
+        },
+        {
+          "titulo": "Carta de Presentación de Servicio Social",
+          "descripcion": "Carta que te presenta ante la organización receptora; debe llevar la firma del director de la Universidad.",
+          "url": "assets/documentos/lic/serviciosocial/(2) Carta de Presentacion de Servicio Social UIM.pdf"
+        },
+        {
+          "titulo": "Carta de Aceptación de Servicio Social",
+          "descripcion": "Documento con el que la organización acepta tu servicio social; se entrega en el formato original de la Universidad y en hoja membretada de la organización.",
+          "url": "assets/documentos/lic/serviciosocial/(3) Carta de Aceptacion de Servicio Social-1UIM.pdf"
+        },
+        {
+          "titulo": "Reporte Parcial",
+          "descripcion": "Formato para reportar tus actividades de cada bimestre; se entregan 3 reportes más una evaluación final.",
+          "url": "assets/documentos/lic/serviciosocial/(4) Reporte Parcial-3UIM.pdf"
+        },
+        {
+          "titulo": "Carta de Liberación de Servicio Social",
+          "descripcion": "Documento con el que liberas tu servicio social; se entrega en el formato original de la Universidad y en hoja membretada de la organización.",
+          "url": "assets/documentos/lic/serviciosocial/(5) Carta de terminacion de Servicio SocialUIM.pdf"
+        }
+      ]
+    }
+  },
+  "mensajeria": {
+    "avisoIal": "Aún no contamos con un número directo para el Instituto Abraham Lincoln. Tu duda se hará llegar a la Dirección Académica, quien te dará seguimiento.",
+    "direccionAcademica": { "telefono": "526188152524" },
+    "categorias": [
+      {
+        "id": "direccion",
+        "label": "Dirección Académica",
+        "telefono": "526188152524"
+      },
+      {
+        "id": "coordinacion",
+        "label": "Coordinación académica",
+        "niveles": [
+          { "id": "secundaria", "label": "Secundaria", "telefono": "526181263926" },
+          { "id": "preparatoria", "label": "Preparatoria", "telefono": "526182004480" },
+          { "id": "licenciatura", "label": "Licenciatura", "telefono": "526188049598" },
+          { "id": "posgrado", "label": "Posgrado (Maestría / Doctorado)", "telefono": "526181098610" }
+        ]
+      },
+      {
+        "id": "cobranza",
+        "label": "Cobranza",
+        "niveles": [
+          { "id": "secundaria-preparatoria", "label": "Secundaria y Preparatoria", "telefono": "526184552878" },
+          { "id": "licenciatura", "label": "Licenciatura", "telefono": "521450658" },
+          { "id": "posgrado", "label": "Posgrado", "telefono": "526181898072" }
+        ]
+      },
+      {
+        "id": "control-escolar",
+        "label": "Control Escolar",
+        "telefono": "526188019365"
+      }
+    ]
+  }
 }
