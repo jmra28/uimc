@@ -54,20 +54,12 @@ body {
 }
 
 .portal-alumno .slider-carrusel__track {
-  height: 40vh;
-  min-height: 210px;
+  height: auto;
+  aspect-ratio: 1920 / 400;
 }
 
 .portal-alumno .slider-carrusel__image img {
   object-position: top;
-}
-
-@media (max-width: 767px) {
-  .portal-alumno .slider-carrusel__track {
-    height: auto;
-    aspect-ratio: 4.8 / 1;
-    min-height: 0;
-  }
 }
 
 .portal-alumno__institucion-nombre {
