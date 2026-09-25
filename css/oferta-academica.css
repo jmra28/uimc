@@ -39,7 +39,21 @@
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  opacity: 0;
+  transform: translateY(28px);
+  transition: transform 0.5s ease, box-shadow var(--transition-base), opacity 0.5s ease;
+}
+
+.oferta-academica__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oferta-academica__card {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .oferta-academica__card:hover {

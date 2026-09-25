@@ -194,7 +194,7 @@
         "label": "Coordinación académica",
         "niveles": [
           { "id": "secundaria", "label": "Secundaria", "telefono": "526181263926" },
-          { "id": "preparatoria", "label": "Preparatoria", "telefono": "526182004480" },
+          { "id": "preparatoria", "label": "Preparatoria", "telefono": "526188406963" },
           { "id": "licenciatura", "label": "Licenciatura", "telefono": "526188049598" },
           { "id": "posgrado", "label": "Posgrado (Maestría / Doctorado)", "telefono": "526181098610" }
         ]

@@ -1,0 +1,82 @@
+
+.formulario-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.formulario-modal--visible {
+  display: flex;
+}
+
+body.formulario-modal-open {
+  overflow: hidden;
+}
+
+.formulario-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(14, 21, 73, 0.6);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.formulario-modal--visible .formulario-modal__backdrop {
+  opacity: 1;
+}
+
+.formulario-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: var(--space-5) var(--space-4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.formulario-modal--visible .formulario-modal__dialog {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .formulario-modal__backdrop,
+  .formulario-modal__dialog {
+    transition: none;
+  }
+}
+
+.formulario-modal__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-gray-light);
+  color: var(--color-text);
+  font-size: var(--fs-lg);
+  line-height: 1;
+  transition: background-color var(--transition-base);
+}
+
+.formulario-modal__close:hover {
+  background-color: var(--color-gray-medium);
+}
+
+.formulario-modal .formulario__form {
+  margin-top: var(--space-2);
+}

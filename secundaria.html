@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/descargas.css" />
   <link rel="stylesheet" href="css/pasos.css" />
   <link rel="stylesheet" href="css/formulario.css" />
+  <link rel="stylesheet" href="css/formulario-modal.css" />
   <link rel="stylesheet" href="css/sedes-video.css" />
   <link rel="stylesheet" href="css/footer.css" />
 
@@ -159,7 +160,7 @@
             <h3 class="descargas__card-title">Programa académico</h3>
             <div class="descargas__actions">
               <a href="assets/documentos/secu/SECUNDARIA - 2026.pdf" target="_blank" class="descargas__button descargas__button--download">DESCARGAR</a>
-              <a href="#" class="descargas__button descargas__button--enroll">INSCRIBIRSE</a>
+              <button type="button" class="descargas__button descargas__button--enroll" data-modal-open="formulario-modal">INSCRIBIRSE</button>
             </div>
           </div>
         </article>
@@ -170,7 +171,7 @@
             <h3 class="descargas__card-title">Reglamento académico</h3>
             <div class="descargas__actions">
               <a href="assets/documentos/reg_acad.pdf" target="_blank" class="descargas__button descargas__button--download">DESCARGAR</a>
-              <a href="#" class="descargas__button descargas__button--enroll">INSCRIBIRSE</a>
+              <button type="button" class="descargas__button descargas__button--enroll" data-modal-open="formulario-modal">INSCRIBIRSE</button>
             </div>
           </div>
         </article>
@@ -447,8 +448,60 @@
     </div>
   </footer>
 
+  <div class="formulario-modal" id="formulario-modal" aria-hidden="true">
+    <div class="formulario-modal__backdrop" data-modal-close></div>
+    <div class="formulario-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="formulario-modal-title">
+      <button type="button" class="formulario-modal__close" aria-label="Cerrar" data-modal-close>&times;</button>
+
+      <div class="formulario__form-header">
+        <h3 class="formulario__form-title" id="formulario-modal-title">¡HABLEMOS!</h3>
+        <p class="formulario__form-subtitle">Estamos listos para ayudarte a avanzar y que seas un #BúfaloUIM</p>
+      </div>
+
+      <form class="formulario__form" action="https://formspree.io/f/mpqvevqw" method="POST">
+        <div class="formulario__field">
+          <label for="formulario-modal-nombre" class="formulario__label">Nombre*</label>
+          <input type="text" id="formulario-modal-nombre" name="nombre" class="formulario__input" placeholder="Ingresa tu nombre*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-apellidos" class="formulario__label">Apellidos*</label>
+          <input type="text" id="formulario-modal-apellidos" name="apellidos" class="formulario__input" placeholder="Ingresa tus apellidos*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-email" class="formulario__label">Correo Electrónico*</label>
+          <input type="email" id="formulario-modal-email" name="email" class="formulario__input" placeholder="Ingresa tu correo electrónico*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-telefono" class="formulario__label">Teléfono*</label>
+          <input type="tel" id="formulario-modal-telefono" name="telefono" class="formulario__input" placeholder="Ingresa tu teléfono*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-select-1" class="formulario__label">Nivel*</label>
+          <select id="formulario-modal-select-1" name="nivel" class="formulario__select" required>
+            <option>Selecciona tu nivel de interes...</option>
+          </select>
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-select-2" class="formulario__label">Programa*</label>
+          <select id="formulario-modal-select-2" name="programa" class="formulario__select" required>
+            <option>Selecciona tu programa de interes ... </option>
+          </select>
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-comentarios" class="formulario__label">Mensaje</label>
+          <textarea id="formulario-modal-comentarios" name="mensaje" class="formulario__textarea" placeholder="comentarios"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Nuevo prospecto desde el boton Inscribirse (Secundaria)" />
+        <button type="submit" class="formulario__submit">Enviar Mensaje</button>
+        <p class="formulario__disclaimer">*Al enviar tus datos, aceptas nuestros <a href="#" class="formulario__disclaimer-link">Términos y Condiciones</a> y puedes verificar nuestro <a href="#" class="formulario__disclaimer-link">Aviso de Privacidad</a>.</p>
+      </form>
+    </div>
+  </div>
+
   <script src="js/slider-carrusel.js" defer></script>
   <script src="js/video-particulas.js" defer></script>
   <script src="js/formulario-programas.js" defer></script>
+  <script src="js/reveal-tarjetas.js" defer></script>
+  <script src="js/formulario-modal.js" defer></script>
 </body>
 </html>
