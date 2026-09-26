@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/pasos.css" />
   <link rel="stylesheet" href="css/faq.css" />
   <link rel="stylesheet" href="css/formulario.css" />
+  <link rel="stylesheet" href="css/formulario-modal.css" />
+  <link rel="stylesheet" href="css/pasos-modales.css" />
   <link rel="stylesheet" href="css/sedes-video.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/whatsapp-flotante.css" />
@@ -582,7 +584,7 @@
           <div class="pasos__circle"> <img src="assets/images/p1.png" alt="" srcset="">  </div>
           <h3 class="pasos__step-title">Haz tu test</h3>
           <p class="pasos__text">Llena nuestro formulario inicial para comenzar tu proceso de inscripción en UIM.</p>
-          <a href="#" class="pasos__button">Entrar</a>
+          <button type="button" class="pasos__button" data-modal-open="modal-test-vocacional">Entrar</button>
         </div>
 
         <div class="pasos__arrow">→</div>
@@ -591,7 +593,7 @@
           <div class="pasos__circle"><img src="assets/images/p2.png" alt="" srcset=""> </div>
           <h3 class="pasos__step-title">Solicita tu beca</h3>
           <p class="pasos__text">Postúlate a una de nuestras becas.</p>
-          <a href="#" class="pasos__button">Entrar</a>
+          <button type="button" class="pasos__button" data-modal-open="modal-becas">Entrar</button>
         </div>
 
         <div class="pasos__arrow">→</div>
@@ -603,7 +605,7 @@
 
 
 </p>
-          <a href="#" class="pasos__button">boton</a>
+          <button type="button" class="pasos__button" data-modal-open="formulario-modal">Contactar</button>
         </div>
       </div>
     </div>
@@ -919,6 +921,123 @@
     </div>
   </footer>
 
+  <div class="formulario-modal" id="formulario-modal" aria-hidden="true">
+    <div class="formulario-modal__backdrop" data-modal-close></div>
+    <div class="formulario-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="formulario-modal-title">
+      <button type="button" class="formulario-modal__close" aria-label="Cerrar" data-modal-close>&times;</button>
+
+      <div class="formulario__form-header">
+        <h3 class="formulario__form-title" id="formulario-modal-title">¡HABLEMOS!</h3>
+        <p class="formulario__form-subtitle">Estamos listos para ayudarte a avanzar y que seas un #BúfaloUIM</p>
+      </div>
+
+      <form class="formulario__form" action="https://formspree.io/f/mpqvevqw" method="POST">
+        <div class="formulario__field">
+          <label for="formulario-modal-nombre" class="formulario__label">Nombre*</label>
+          <input type="text" id="formulario-modal-nombre" name="nombre" class="formulario__input" placeholder="Ingresa tu nombre*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-apellidos" class="formulario__label">Apellidos*</label>
+          <input type="text" id="formulario-modal-apellidos" name="apellidos" class="formulario__input" placeholder="Ingresa tus apellidos*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-email" class="formulario__label">Correo Electrónico*</label>
+          <input type="email" id="formulario-modal-email" name="email" class="formulario__input" placeholder="Ingresa tu correo electrónico*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-telefono" class="formulario__label">Teléfono*</label>
+          <input type="tel" id="formulario-modal-telefono" name="telefono" class="formulario__input" placeholder="Ingresa tu teléfono*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-select-1" class="formulario__label">Nivel*</label>
+          <select id="formulario-modal-select-1" name="nivel" class="formulario__select" required>
+            <option>Selecciona tu nivel de interes...</option>
+          </select>
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-select-2" class="formulario__label">Programa*</label>
+          <select id="formulario-modal-select-2" name="programa" class="formulario__select" required>
+            <option>Selecciona tu programa de interes ... </option>
+          </select>
+        </div>
+        <div class="formulario__field">
+          <label for="formulario-modal-comentarios" class="formulario__label">Mensaje</label>
+          <textarea id="formulario-modal-comentarios" name="mensaje" class="formulario__textarea" placeholder="comentarios"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Nuevo prospecto desde el boton Contactar (Inicio)" />
+        <button type="submit" class="formulario__submit">Enviar Mensaje</button>
+        <p class="formulario__disclaimer">*Al enviar tus datos, aceptas nuestros <a href="#" class="formulario__disclaimer-link">Términos y Condiciones</a> y puedes verificar nuestro <a href="#" class="formulario__disclaimer-link">Aviso de Privacidad</a>.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="formulario-modal" id="modal-test-vocacional" aria-hidden="true">
+    <div class="formulario-modal__backdrop" data-modal-close></div>
+    <div class="formulario-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-test-vocacional-title">
+      <button type="button" class="formulario-modal__close" aria-label="Cerrar" data-modal-close>&times;</button>
+
+      <div class="test-vocacional">
+        <div class="formulario__form-header">
+          <h3 class="formulario__form-title" id="modal-test-vocacional-title">Test Vocacional</h3>
+          <p class="formulario__form-subtitle">Responde estas preguntas y descubre qué área es para ti.</p>
+        </div>
+        <p class="test-vocacional__progress" data-test-progress></p>
+        <div class="test-vocacional__body" data-test-body></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="formulario-modal" id="modal-becas" aria-hidden="true">
+    <div class="formulario-modal__backdrop" data-modal-close></div>
+    <div class="formulario-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-becas-title">
+      <button type="button" class="formulario-modal__close" aria-label="Cerrar" data-modal-close>&times;</button>
+
+      <div class="formulario__form-header">
+        <h3 class="formulario__form-title" id="modal-becas-title">SOLICITA TU BECA</h3>
+        <p class="formulario__form-subtitle">Aplica a una beca deportiva o por excelencia académica y adjunta tu constancia.</p>
+      </div>
+
+      <form class="becas__form" action="https://formspree.io/f/mpqvevqw" method="POST" enctype="multipart/form-data">
+        <div class="formulario__field">
+          <label for="becas-nombre" class="formulario__label">Nombre*</label>
+          <input type="text" id="becas-nombre" name="nombre" class="formulario__input" placeholder="Ingresa tu nombre*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="becas-apellidos" class="formulario__label">Apellidos*</label>
+          <input type="text" id="becas-apellidos" name="apellidos" class="formulario__input" placeholder="Ingresa tus apellidos*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="becas-email" class="formulario__label">Correo Electrónico*</label>
+          <input type="email" id="becas-email" name="email" class="formulario__input" placeholder="Ingresa tu correo electrónico*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="becas-telefono" class="formulario__label">Teléfono*</label>
+          <input type="tel" id="becas-telefono" name="telefono" class="formulario__input" placeholder="Ingresa tu teléfono*" required />
+        </div>
+        <div class="formulario__field">
+          <label for="becas-tipo" class="formulario__label">Tipo de beca*</label>
+          <select id="becas-tipo" name="tipo_beca" class="formulario__select" required>
+            <option value="" disabled selected>Selecciona el tipo de beca...</option>
+            <option value="Beca Deportiva">Beca Deportiva</option>
+            <option value="Beca por Excelencia Académica">Beca por Excelencia Académica</option>
+          </select>
+        </div>
+        <div class="formulario__field">
+          <label for="becas-constancia" class="formulario__label">Constancia que respalde tu solicitud*</label>
+          <input type="file" id="becas-constancia" name="constancia" class="formulario__input formulario__input--file" accept=".pdf,.jpg,.jpeg,.png" required />
+          <p class="becas__hint">Sube una constancia deportiva o académica (certificado, kardex, reconocimiento) en PDF o imagen.</p>
+        </div>
+        <div class="formulario__field">
+          <label for="becas-comentarios" class="formulario__label">Cuéntanos sobre tu logro</label>
+          <textarea id="becas-comentarios" name="mensaje" class="formulario__textarea" placeholder="Describe brevemente tu logro deportivo o académico"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Nueva solicitud de beca (Inicio)" />
+        <button type="submit" class="formulario__submit">Enviar Solicitud</button>
+        <p class="formulario__disclaimer">*Al enviar tus datos, aceptas nuestros <a href="#" class="formulario__disclaimer-link">Términos y Condiciones</a> y puedes verificar nuestro <a href="#" class="formulario__disclaimer-link">Aviso de Privacidad</a>.</p>
+      </form>
+    </div>
+  </div>
+
   <div class="whatsapp-flotante">
     <div class="whatsapp-flotante__card" role="dialog" aria-label="Chat de WhatsApp UIM">
       <div class="whatsapp-flotante__header">
@@ -953,5 +1072,7 @@
   <script src="js/video-particulas.js" defer></script>
   <script src="js/formulario-programas.js" defer></script>
   <script src="js/whatsapp-flotante.js" defer></script>
+  <script src="js/formulario-modal.js" defer></script>
+  <script src="js/test-vocacional.js" defer></script>
 </body>
 </html>

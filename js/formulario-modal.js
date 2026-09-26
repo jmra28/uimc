@@ -8,6 +8,7 @@ function initFormularioModal(modal) {
     modal.classList.add("formulario-modal--visible");
     modal.setAttribute("aria-hidden", "false");
     document.body.classList.add("formulario-modal-open");
+    modal.dispatchEvent(new CustomEvent("modal:open"));
   }
 
   function cerrar() {
