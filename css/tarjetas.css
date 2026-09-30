@@ -2,6 +2,7 @@
 .tarjetas {
   width: 100%;
   padding-block: var(--section-padding-y);
+  overflow-x: hidden;
 }
 
 .tarjetas__header {
@@ -44,7 +45,28 @@
   box-shadow:
     5px 5px 18px rgba(27, 23, 22, 0.12),
     -5px -5px 18px rgba(21, 31, 109, 0.1);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  opacity: 0;
+  transition: transform 0.6s ease, box-shadow var(--transition-base), opacity 0.6s ease;
+}
+
+.tarjetas__card:nth-child(odd) {
+  transform: translateX(-70px);
+}
+
+.tarjetas__card:nth-child(even) {
+  transform: translateX(70px);
+}
+
+.tarjetas__card.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjetas__card {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .tarjetas__card:hover {

@@ -2,6 +2,7 @@
 .talleres-galeria {
   width: 100%;
   padding-block: var(--section-padding-y);
+  overflow-x: hidden;
 }
 
 .talleres-galeria__header {
@@ -32,7 +33,28 @@
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  opacity: 0;
+  transition: transform 0.6s ease, box-shadow var(--transition-base), opacity 0.6s ease;
+}
+
+.talleres-galeria__card:nth-child(odd) {
+  transform: translateX(-70px);
+}
+
+.talleres-galeria__card:nth-child(even) {
+  transform: translateX(70px);
+}
+
+.talleres-galeria__card.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .talleres-galeria__card {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .talleres-galeria__card:hover {

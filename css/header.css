@@ -76,7 +76,8 @@
   padding: var(--space-3) var(--space-4);
   color: var(--color-menu);
   font-weight: var(--fw-bold-menu);
-
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 .header__link.header__link--alumnos,
@@ -104,9 +105,21 @@
 }
 
 .header__item--dropdown > .header__link::after {
-  content: "⌄";
+  content: "";
   display: inline-block;
-  margin-left: var(--space-1);
+  width: 9px;
+  height: 9px;
+  margin-left: 6px;
+  vertical-align: 1px;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc+PHBhdGggZD0nTTYgOWw2IDYgNi02JyBmaWxsPSdub25lJyBzdHJva2U9JyMwMDAnIHN0cm9rZS13aWR0aD0nMi40JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48L3N2Zz4=");
+  mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc+PHBhdGggZD0nTTYgOWw2IDYgNi02JyBmaWxsPSdub25lJyBzdHJva2U9JyMwMDAnIHN0cm9rZS13aWR0aD0nMi40JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48L3N2Zz4=");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
   transition: transform var(--transition-base);
 }
 
@@ -114,10 +127,6 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
-}
-
-.header__link {
-  cursor: pointer;
 }
 
 .header__submenu {
@@ -134,10 +143,20 @@
   transform: rotate(180deg);
 }
 
+.header__submenu li + li {
+  border-top: var(--border-width) solid var(--color-gray-medium);
+}
+
 .header__sublink {
   display: block;
   padding: var(--space-2) var(--space-4) var(--space-2) var(--space-6);
   color: var(--color-text-muted);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.header__sublink:hover {
+  background-color: var(--color-gray-light);
+  color: var(--color-red);
 }
 
 @media (min-width: 768px) {
@@ -181,21 +200,41 @@
     height: 55px !important;
   }
 
+  .header__item:nth-child(2),
+  .header__item:nth-child(3) {
+    padding-left: var(--space-3);
+    border-left: 1px solid var(--color-gray-medium);
+  }
+
+  .header__link:not(.header__link--alumnos):not(.header__link--docentes):hover {
+    color: var(--color-red);
+    background-color: rgba(200, 16, 46, 0.06);
+    border-radius: 6px;
+  }
+
   .header__submenu {
-    display: none;
+    display: flex;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px);
     left: 0;
-    min-width: 180px;
+    min-width: 200px;
     flex-direction: column;
     background-color: var(--color-white);
-    border: var(--border-width) solid var(--color-gray-medium);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 16px 36px rgba(21, 31, 109, 0.16), 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding-block: var(--space-1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
   }
 
   .header__item--dropdown:hover .header__submenu,
   .header__item--dropdown:focus-within .header__submenu {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .header__sublink {
@@ -205,6 +244,8 @@
 
   .header__sublink:hover {
     background-color: var(--color-gray-light);
+    color: var(--color-red);
+    padding-left: calc(var(--space-3) + 4px);
   }
 }
 

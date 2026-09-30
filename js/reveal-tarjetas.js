@@ -1,4 +1,4 @@
-const revealTarjetas = document.querySelectorAll(".oferta-academica__card, .descargas__card");
+const revealTarjetas = document.querySelectorAll(".oferta-academica__card, .descargas__card, .tarjetas__card, .talleres-galeria__card, .barras-progreso__image, .barras-progreso__content, .mision__card, .valores__item, .pasos__item");
 
 const revealTarjetasPorGrupo = new Map();
 revealTarjetas.forEach((tarjeta) => {

@@ -2,6 +2,7 @@
 .valores {
   width: 100%;
   padding-block: var(--section-padding-y);
+  overflow-x: hidden;
 }
 
 .valores__header {
@@ -45,7 +46,28 @@
   font-weight: var(--fw-semibold);
   border: var(--border-width) solid var(--color-gray-medium);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  opacity: 0;
+  transition: transform 0.6s ease, box-shadow var(--transition-base), opacity 0.6s ease;
+}
+
+.valores__item:nth-child(odd) {
+  transform: translateX(-70px);
+}
+
+.valores__item:nth-child(even) {
+  transform: translateX(70px);
+}
+
+.valores__item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .valores__item {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .valores__item:hover {

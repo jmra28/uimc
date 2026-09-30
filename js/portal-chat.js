@@ -84,6 +84,32 @@ function initPortalChat() {
     body.appendChild(crearBotonRegresar(renderCategorias));
   }
 
+  function renderRespuesta(categoria, faq) {
+    limpiarBody();
+    body.appendChild(crearBurbuja(faq.pregunta));
+    body.appendChild(crearBurbuja(faq.respuesta));
+    renderOpciones([
+      { texto: "Ver otra pregunta", onClick: () => renderPreguntas(categoria) },
+      { texto: "Continuar en WhatsApp", onClick: () => renderFinal(categoria.label, categoria.telefono) },
+    ]);
+    body.appendChild(crearBotonRegresar(renderCategorias));
+  }
+
+  function renderPreguntas(categoria) {
+    limpiarBody();
+    body.appendChild(crearBurbuja(`Estas son algunas preguntas frecuentes sobre ${categoria.label.toLowerCase()}:`));
+    const opciones = categoria.preguntasFrecuentes.map((faq) => ({
+      texto: faq.pregunta,
+      onClick: () => renderRespuesta(categoria, faq),
+    }));
+    opciones.push({
+      texto: "Mi duda no está aquí",
+      onClick: () => renderFinal(categoria.label, categoria.telefono),
+    });
+    renderOpciones(opciones);
+    body.appendChild(crearBotonRegresar(renderCategorias));
+  }
+
   function renderNiveles(categoria) {
     limpiarBody();
     body.appendChild(crearBurbuja(`¿De qué nivel es tu duda de ${categoria.label.toLowerCase()}?`));
@@ -110,6 +136,8 @@ function initPortalChat() {
         onClick: () => {
           if (categoria.niveles) {
             renderNiveles(categoria);
+          } else if (categoria.preguntasFrecuentes) {
+            renderPreguntas(categoria);
           } else {
             renderFinal(categoria.label, categoria.telefono);
           }

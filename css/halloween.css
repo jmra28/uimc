@@ -1,0 +1,349 @@
+
+/* -------------------- Arañas colgantes -------------------- */
+.halloween-spider {
+  position: fixed;
+  top: 0;
+  width: 34px;
+  height: 130px;
+  transform-origin: top center;
+  animation: halloween-swing 3.6s ease-in-out infinite;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.halloween-spider--left {
+  left: 18px;
+  height: 150px;
+  animation-delay: -0.4s;
+}
+
+.halloween-spider--center-left {
+  left: 26%;
+  height: 100px;
+  animation-delay: -1.2s;
+}
+
+.halloween-spider--center {
+  left: 50%;
+  margin-left: -17px;
+  height: 135px;
+  animation-delay: -2.6s;
+}
+
+.halloween-spider--center-right {
+  left: 74%;
+  height: 95px;
+  animation-delay: -0.9s;
+}
+
+.halloween-spider--right {
+  right: 18px;
+  height: 115px;
+  animation-delay: -2s;
+}
+
+.halloween-spider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: rgba(32, 34, 43, 0.35);
+  transform: translateX(-50%);
+}
+
+.halloween-spider svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes halloween-swing {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
+html:not(.halloween-season) .halloween-spider,
+html.halloween-hidden .halloween-spider {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .halloween-spider {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halloween-spider {
+    animation: none;
+  }
+}
+
+/* -------------------- Murciélagos junto a las arañas -------------------- */
+.halloween-bat {
+  position: fixed;
+  top: 6px;
+  width: 26px;
+  height: 10px;
+  z-index: 41;
+  pointer-events: none;
+  animation: halloween-bat-flutter 2.4s ease-in-out infinite;
+}
+
+.halloween-bat svg {
+  width: 100%;
+  height: 100%;
+}
+
+.halloween-bat--a {
+  left: 10%;
+  animation-delay: -0.6s;
+}
+
+.halloween-bat--b {
+  left: 42%;
+  top: 18px;
+  animation-delay: -1.4s;
+}
+
+.halloween-bat--c {
+  right: 10%;
+  top: 2px;
+  animation-delay: -0.2s;
+}
+
+@keyframes halloween-bat-flutter {
+  0%, 100% { transform: translateY(0) scaleX(1); }
+  50% { transform: translateY(6px) scaleX(0.82); }
+}
+
+html:not(.halloween-season) .halloween-bat,
+html.halloween-hidden .halloween-bat {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .halloween-bat {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halloween-bat {
+    animation: none;
+  }
+}
+
+/* -------------------- Bruja voladora -------------------- */
+.halloween-witch {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 56px;
+  z-index: 41;
+  pointer-events: none;
+  opacity: 0;
+  animation: halloween-witch-fly 27s ease-in-out infinite;
+}
+
+@keyframes halloween-witch-fly {
+  0%, 75% { opacity: 0; transform: translate(-15vw, 0) rotate(-4deg); }
+  78% { opacity: 1; }
+  87% { transform: translate(55vw, -18px) rotate(2deg); }
+  97% { opacity: 1; }
+  100% { opacity: 0; transform: translate(120vw, 6px) rotate(-4deg); }
+}
+
+html:not(.halloween-season) .halloween-witch,
+html.halloween-hidden .halloween-witch {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .halloween-witch {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halloween-witch {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* -------------------- Murcielaguito en botones de Descargar / Inscribirse -------------------- */
+html.halloween-season:not(.halloween-hidden) .descargas__button--download,
+html.halloween-season:not(.halloween-hidden) .descargas__button--enroll,
+html.halloween-season:not(.halloween-hidden) .oferta-academica__action--download,
+html.halloween-season:not(.halloween-hidden) .oferta-academica__action--enroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+html.halloween-season:not(.halloween-hidden) .descargas__button--download::after,
+html.halloween-season:not(.halloween-hidden) .descargas__button--enroll::after,
+html.halloween-season:not(.halloween-hidden) .oferta-academica__action--download::after,
+html.halloween-season:not(.halloween-hidden) .oferta-academica__action--enroll::after {
+  content: "";
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 26px;
+  height: 10px;
+  background-color: #eef0f5;
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNDAgNTAnPjxwYXRoIGQ9J002MiwxNiBDNDAsNiAxNSw0IDQsMTQgQzE1LDIyIDQwLDI4IDYyLDMwIFonLz48cGF0aCBkPSdNNzgsMTYgQzEwMCw2IDEyNSw0IDEzNiwxNCBDMTI1LDIyIDEwMCwyOCA3OCwzMCBaJy8+PGVsbGlwc2UgY3g9JzcwJyBjeT0nMjEnIHJ4PSc5JyByeT0nMTEnLz48cGF0aCBkPSdNNjIsMTAgTDU4LDIgTDY2LDggWicvPjxwYXRoIGQ9J003OCwxMCBMODIsMiBMNzQsOCBaJy8+PC9zdmc+");
+  mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNDAgNTAnPjxwYXRoIGQ9J002MiwxNiBDNDAsNiAxNSw0IDQsMTQgQzE1LDIyIDQwLDI4IDYyLDMwIFonLz48cGF0aCBkPSdNNzgsMTYgQzEwMCw2IDEyNSw0IDEzNiwxNCBDMTI1LDIyIDEwMCwyOCA3OCwzMCBaJy8+PGVsbGlwc2UgY3g9JzcwJyBjeT0nMjEnIHJ4PSc5JyByeT0nMTEnLz48cGF0aCBkPSdNNjIsMTAgTDU4LDIgTDY2LDggWicvPjxwYXRoIGQ9J003OCwxMCBMODIsMiBMNzQsOCBaJy8+PC9zdmc+");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* -------------------- Burbuja de mensajería con tema de Halloween -------------------- */
+.halloween-bubble {
+  position: fixed;
+  left: var(--space-4, 16px);
+  bottom: var(--space-4, 16px);
+  z-index: 50;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: none;
+}
+
+html.halloween-season .halloween-bubble {
+  display: flex;
+}
+
+.halloween-bubble__toggle {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(155deg, #ff7a1a, #c85a0a);
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.halloween-bubble__toggle:hover {
+  transform: scale(1.08);
+}
+
+.halloween-bubble__card {
+  width: min(88vw, 280px);
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.halloween-bubble--open .halloween-bubble__card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.halloween-bubble__header {
+  background: linear-gradient(120deg, #ff7a1a, #c85a0a);
+  color: #fff;
+  padding: 12px 14px;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.halloween-bubble__close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.halloween-bubble__body {
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: var(--color-text, #1c2033);
+  line-height: 1.5;
+}
+
+.halloween-bubble__body p {
+  margin: 0;
+}
+
+.halloween-bubble__action {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  padding: 9px;
+  border-radius: 999px;
+  background-color: var(--color-red, #c8102e);
+  color: #fff;
+  font-weight: 700;
+  font-size: 12.5px;
+  transition: background-color var(--transition-base, 0.2s ease);
+}
+
+.halloween-bubble__action:hover {
+  background-color: var(--color-red-dark, #a30c23);
+}
+
+.halloween-bubble__toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 11.5px;
+  color: var(--color-text-muted, #6b7080);
+}
+
+.halloween-bubble__switch {
+  border: 1px solid #d7dae4;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-blue, #151f6d);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.halloween-bubble__switch:hover {
+  background-color: var(--color-gray-light, #f3f4f8);
+}
+
+@media (max-width: 480px) {
+  .halloween-bubble {
+    left: var(--space-3, 12px);
+    bottom: var(--space-3, 12px);
+  }
+}

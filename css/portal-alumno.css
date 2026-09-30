@@ -47,9 +47,6 @@ body {
 }
 
 .portal-alumno .slider-carrusel {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
   margin-bottom: var(--space-5);
 }
 
@@ -274,12 +271,357 @@ body {
   text-transform: uppercase;
 }
 
+/* -------------------- Documentos: tarjetas desplegables (Reglamentos / Tutoriales) -------------------- */
+.portal-alumno__doc-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.portal-alumno__doc-card {
+  border-radius: 12px;
+  background-color: var(--color-white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.portal-alumno__doc-card-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  list-style: none;
+  cursor: pointer;
+}
+
+.portal-alumno__doc-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.portal-alumno__doc-card-summary .portal-alumno__card-icon {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.portal-alumno__doc-card-title {
+  flex: 1;
+  color: var(--color-red);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+}
+
+.portal-alumno__doc-card .portal-alumno__collapsible-icon {
+  color: var(--color-blue);
+}
+
+.portal-alumno__doc-card[open] .portal-alumno__collapsible-icon {
+  transform: rotate(180deg);
+}
+
+.portal-alumno__doc-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.portal-alumno__doc-list-item {
+  border-top: var(--border-width) solid var(--color-gray-medium);
+}
+
+.portal-alumno__doc-list-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+  color: var(--color-blue);
+  transition: color var(--transition-base);
+}
+
+.portal-alumno__doc-list-link:hover {
+  color: var(--color-red);
+}
+
+.portal-alumno__doc-list-link--pendiente {
+  color: var(--color-text-muted);
+  cursor: default;
+}
+
+.portal-alumno__doc-list-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portal-alumno__doc-list-title {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+
+.portal-alumno__doc-list-desc {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+}
+
+/* -------------------- Tutoriales de proceso (expandir para ver los pasos) -------------------- */
+.portal-alumno__proceso {
+  padding: var(--space-3) 0;
+}
+
+.portal-alumno__proceso-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-blue);
+  cursor: pointer;
+  list-style: none;
+}
+
+.portal-alumno__proceso-summary::-webkit-details-marker {
+  display: none;
+}
+
+.portal-alumno__proceso-summary:hover {
+  color: var(--color-red);
+}
+
+.portal-alumno__proceso-toggle {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  color: var(--color-blue);
+  transition: transform var(--transition-base);
+}
+
+.portal-alumno__proceso[open] .portal-alumno__proceso-toggle {
+  transform: rotate(180deg);
+}
+
+.portal-alumno__proceso-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  padding-left: var(--space-5);
+  list-style: decimal;
+}
+
+.portal-alumno__proceso-step-title {
+  display: block;
+  color: var(--color-blue-dark);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+
+.portal-alumno__proceso-step-detail {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  line-height: var(--line-height-base);
+}
+
+/* -------------------- Avisos: sección más grande (eventos próximos / pasados) -------------------- */
+.portal-alumno__avisos-title {
+  margin-bottom: var(--space-3);
+  color: var(--color-red);
+  font-size: var(--fs-lg);
+}
+
+.portal-alumno__avisos-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.portal-alumno__avisos-empty {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-style: italic;
+}
+
+.portal-alumno__aviso {
+  border: var(--border-width) solid var(--color-gray-medium);
+  border-top: 3px solid var(--color-red);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow var(--transition-base);
+}
+
+.portal-alumno__aviso--pasado {
+  border-top-color: var(--color-gray-medium);
+}
+
+.portal-alumno__aviso[open] {
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
+}
+
+/* Estado cerrado (por defecto): fila compacta, miniatura pequeña */
+.portal-alumno__aviso-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  list-style: none;
+}
+
+.portal-alumno__aviso-summary::-webkit-details-marker {
+  display: none;
+}
+
+.portal-alumno__aviso-foto {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: width var(--transition-base), height var(--transition-base), border-radius var(--transition-base);
+}
+
+.portal-alumno__aviso-head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  padding-right: var(--space-4);
+}
+
+.portal-alumno__aviso-head::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-text-muted);
+  border-bottom: 2px solid var(--color-text-muted);
+  transform: rotate(45deg);
+  transition: transform var(--transition-base), top var(--transition-base);
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-head::after {
+  top: 2px;
+  transform: rotate(225deg);
+}
+
+.portal-alumno__aviso-estado {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 2px;
+  padding: 1px var(--space-2);
+  border-radius: 999px;
+  background-color: var(--color-gray-light);
+  color: var(--color-red);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.portal-alumno__aviso--pasado .portal-alumno__aviso-estado {
+  color: var(--color-text-muted);
+}
+
+.portal-alumno__aviso-titulo {
+  color: var(--color-blue);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+}
+
+.portal-alumno__aviso-fecha {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+}
+
+.portal-alumno__aviso-toggle {
+  display: none;
+  align-items: center;
+  gap: var(--space-1);
+  align-self: flex-start;
+  margin-top: var(--space-2);
+  color: var(--color-blue);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+
+.portal-alumno__aviso-summary:hover .portal-alumno__aviso-titulo {
+  color: var(--color-red);
+}
+
+.portal-alumno__aviso-toggle-text--closed,
+.portal-alumno__aviso-toggle-text--open {
+  display: none;
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-toggle-text--open {
+  display: inline;
+}
+
+/* Estado abierto: la imagen crece (máx. 25% del ancho) junto al título, la nota completa queda debajo */
+.portal-alumno__aviso[open] .portal-alumno__aviso-summary {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-foto {
+  width: 25%;
+  max-width: 25%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  flex: 0 0 25%;
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-head {
+  padding: 0;
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-estado {
+  margin-bottom: var(--space-2);
+  padding: 2px var(--space-2);
+  font-size: var(--fs-xs);
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-titulo {
+  margin-bottom: var(--space-1);
+  font-size: var(--fs-lg);
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-fecha {
+  margin-bottom: var(--space-2);
+}
+
+.portal-alumno__aviso[open] .portal-alumno__aviso-toggle {
+  display: inline-flex;
+}
+
+.portal-alumno__aviso-desc {
+  padding: 0 var(--space-4) var(--space-4);
+  margin-top: calc(-1 * var(--space-1));
+  padding-top: var(--space-3);
+  border-top: var(--border-width) solid var(--color-gray-medium);
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+  line-height: var(--line-height-base);
+}
+
 @media (min-width: 768px) {
   .portal-alumno__title {
     font-size: var(--fs-2xl);
   }
 
   .portal-alumno__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portal-alumno__doc-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }

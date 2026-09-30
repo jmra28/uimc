@@ -66,7 +66,8 @@
 .faq__tab-radio:nth-of-type(1):checked ~ .faq__tab-list .faq__tab-label:nth-child(1),
 .faq__tab-radio:nth-of-type(2):checked ~ .faq__tab-list .faq__tab-label:nth-child(2),
 .faq__tab-radio:nth-of-type(3):checked ~ .faq__tab-list .faq__tab-label:nth-child(3),
-.faq__tab-radio:nth-of-type(4):checked ~ .faq__tab-list .faq__tab-label:nth-child(4) {
+.faq__tab-radio:nth-of-type(4):checked ~ .faq__tab-list .faq__tab-label:nth-child(4),
+.faq__tab-radio:nth-of-type(5):checked ~ .faq__tab-list .faq__tab-label:nth-child(5) {
   background-color: var(--color-blue);
   color: var(--color-white);
   border-bottom-color: var(--color-blue);
@@ -81,7 +82,8 @@
 .faq__tab-radio:nth-of-type(1):checked ~ .faq__panels .faq__panel:nth-child(1),
 .faq__tab-radio:nth-of-type(2):checked ~ .faq__panels .faq__panel:nth-child(2),
 .faq__tab-radio:nth-of-type(3):checked ~ .faq__panels .faq__panel:nth-child(3),
-.faq__tab-radio:nth-of-type(4):checked ~ .faq__panels .faq__panel:nth-child(4) {
+.faq__tab-radio:nth-of-type(4):checked ~ .faq__panels .faq__panel:nth-child(4),
+.faq__tab-radio:nth-of-type(5):checked ~ .faq__panels .faq__panel:nth-child(5) {
   display: flex;
 }
 

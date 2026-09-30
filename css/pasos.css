@@ -63,7 +63,32 @@
   align-items: center;
   max-width: 320px;
   text-align: center;
-  transition: transform var(--transition-base);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.pasos__item:nth-child(1) {
+  transform: translateX(-70px);
+}
+
+.pasos__item:nth-child(3) {
+  transform: translateX(70px);
+}
+
+.pasos__item:nth-child(5) {
+  transform: translateX(-70px);
+}
+
+.pasos__item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pasos__item {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .pasos__item:hover {

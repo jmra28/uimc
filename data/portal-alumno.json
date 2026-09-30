@@ -21,26 +21,116 @@
         "url": "https://ce.uim.mx/ords/f?p=100:LOGIN:3020112232031"
       }
     ],
-    "documentos": [
-      {
-        "titulo": "Reglamento de Laboratorios",
-        "descripcion": "Normas de uso y seguridad en los laboratorios.",
-        "url": "assets/documentos/reg_acad.pdf",
-        "provisional": true
-      },
-      {
-        "titulo": "Reglamento del Salón de Clases",
-        "descripcion": "Normas de convivencia dentro del salón de clases.",
-        "url": "assets/documentos/reg_acad.pdf",
-        "provisional": true
-      },
-      {
-        "titulo": "Anuncios y Comunicados",
-        "descripcion": "Mantente al día con los avisos oficiales de la institución.",
-        "url": "#TODO-anuncios-uim",
-        "provisional": true
-      }
-    ]
+    "documentos": {
+      "reglamentos": [
+        {
+          "titulo": "Reglamento Académico General",
+          "descripcion": "Normas generales que rigen la vida académica en UIM.",
+          "url": "assets/documentos/reg_acad.pdf"
+        },
+        {
+          "titulo": "Reglamento de Laboratorios",
+          "descripcion": "Normas de uso y seguridad en los laboratorios.",
+          "url": "assets/documentos/reg_acad.pdf",
+          "provisional": true
+        },
+        {
+          "titulo": "Reglamento del Salón de Clases",
+          "descripcion": "Normas de convivencia dentro del salón de clases.",
+          "url": "assets/documentos/reg_acad.pdf",
+          "provisional": true
+        }
+      ],
+      "tutoriales": [
+        {
+          "titulo": "Manual de uso de la plataforma",
+          "descripcion": "Guía completa para conocer y utilizar la plataforma institucional.",
+          "url": "assets/documentos/tutoriales/manual_uso_plataforma_uim.pdf"
+        },
+        {
+          "titulo": "Moodle Virtual - Parte I",
+          "descripcion": "Video tutorial con los primeros pasos para ingresar y navegar en Moodle.",
+          "url": "assets/documentos/tutoriales/Moodle Virtual Parte I.mp4"
+        },
+        {
+          "titulo": "Moodle Virtual - Parte II",
+          "descripcion": "Video tutorial para consultar tareas y material de clase en Moodle.",
+          "url": "assets/documentos/tutoriales/VIDEO MOODLE PARTE II.mp4"
+        },
+        {
+          "titulo": "Cómo revisar tus calificaciones",
+          "descripcion": "Video tutorial para consultar tus calificaciones en la plataforma.",
+          "url": "assets/documentos/tutoriales/Checar calificaciones.mp4"
+        },
+        {
+          "titulo": "Cómo pagar tu colegiatura",
+          "descripcion": "Guía paso a paso para realizar el pago de tu colegiatura en línea.",
+          "url": "assets/documentos/tutoriales/Pago colegiatura.pdf"
+        },
+        {
+          "titulo": "Cómo contestar la encuesta docente",
+          "descripcion": "Guía para responder la encuesta de evaluación docente.",
+          "url": "assets/documentos/tutoriales/encuesta docente.pdf"
+        },
+        {
+          "titulo": "Pasos para solicitar una constancia",
+          "descripcion": "Proceso completo para tramitar tu constancia de estudios.",
+          "pasos": [
+            {
+              "titulo": "Realizar el pago de la constancia",
+              "detalle": "Constancia simple: $100.00. Constancia con calificaciones: $150.00. Puedes generar tu ficha de pago con el Departamento de Administración o pagar directamente en la plataforma institucional (uim.mx/me)."
+            },
+            {
+              "titulo": "Solicitar la carta de no adeudo",
+              "detalle": "Una vez realizado el pago, comunícate con el Departamento de Administración para solicitar tu carta de no adeudo; es necesaria para la entrega de la constancia."
+            },
+            {
+              "titulo": "Enviar la información a Control Escolar",
+              "detalle": "Comunícate con Control Escolar y envía tu comprobante de pago, además de las especificaciones adicionales que requieras que aparezcan en la constancia."
+            },
+            {
+              "titulo": "Recibir la constancia",
+              "detalle": "Puedes recibirla en físico pasando directamente a ventanilla, o de forma escaneada solicitando que se envíe por medios digitales."
+            }
+          ]
+        },
+        {
+          "titulo": "Pasos para solicitar una credencial",
+          "descripcion": "Proceso completo para tramitar tu credencial de estudiante.",
+          "pasos": [
+            {
+              "titulo": "Realizar el pago de la credencial",
+              "detalle": "Costo: $100.00. Puedes generar tu ficha de pago con el Departamento de Administración o pagar directamente en la plataforma institucional (uim.mx/me)."
+            },
+            {
+              "titulo": "Enviar la información a Control Escolar",
+              "detalle": "Comunícate con Control Escolar y envía tu comprobante de pago de la credencial junto con una fotografía digital con fondo blanco, de frente y con buena iluminación."
+            },
+            {
+              "titulo": "Recibir la credencial",
+              "detalle": "Una vez lista, podrás recogerla directamente en ventanilla del Departamento de Control Escolar."
+            }
+          ]
+        }
+      ],
+      "avisos": [
+        {
+          "titulo": "Convocatoria: Escuela para Padres",
+          "descripcion": "La Dirección Académica, en cumplimiento con los lineamientos de la Secretaría de Educación, convoca a todos los padres y madres de familia a la sesión de Escuela para Padres, que se llevará a cabo el viernes 2 de octubre a las 5:00 de la tarde. Durante esta sesión se abordarán temas fundamentales para el acompañamiento en el desarrollo de sus hijos, entre ellos: pautas de comportamiento y disciplina positiva, estrategias para fortalecer la comunicación en casa, y orientación sobre cómo dar seguimiento a la educación de sus hijos desde el hogar. Su asistencia es muy importante, ya que el trabajo conjunto entre familia y escuela es clave para el desarrollo integral de nuestros alumnos. Los esperamos puntualmente a las 5:00 p.m.",
+          "fecha": "2026-10-02",
+          "estado": "proximo",
+          "foto": "assets/documentos/avisos/reunion de padres.jpg",
+          "abierto": true
+        },
+        {
+          "titulo": "Muestra Gastronómica UIM",
+          "descripcion": "El pasado 15 de septiembre celebramos la Muestra Gastronómica UIM, una actividad organizada en el marco de las fiestas patrias. Nuestros alumnos se organizaron en equipos, cada uno representando a un estado de la República Mexicana, para compartir con la comunidad universitaria su platillo típico y la vestimenta tradicional característica de la región. Cada equipo montó un stand decorado con elementos representativos de su estado, compartiendo con profesores y compañeros datos culturales, historia y sabores de distintas regiones del país. La actividad fomentó el trabajo en equipo, el orgullo por la identidad mexicana y el conocimiento de la riqueza gastronómica y cultural de México. ¡Gracias a todos los equipos por su creatividad y dedicación!",
+          "fecha": "2026-09-15",
+          "estado": "pasado",
+          "foto": "assets/documentos/avisos/kermes2016.jpg"
+        }
+      ]
+    }
   },
   "ial": {
     "id": "ial",
@@ -64,26 +154,116 @@
         "url": "https://ce.uim.mx/ords/f?p=100:LOGIN:3020112232031"
       }
     ],
-    "documentos": [
-      {
-        "titulo": "Reglamento de Laboratorios",
-        "descripcion": "Normas de uso y seguridad en los laboratorios.",
-        "url": "assets/documentos/reg_acad.pdf",
-        "provisional": true
-      },
-      {
-        "titulo": "Reglamento del Salón de Clases",
-        "descripcion": "Normas de convivencia dentro del salón de clases.",
-        "url": "assets/documentos/reg_acad.pdf",
-        "provisional": true
-      },
-      {
-        "titulo": "Anuncios y Comunicados",
-        "descripcion": "Mantente al día con los avisos oficiales de la institución.",
-        "url": "#TODO-anuncios-ial",
-        "provisional": true
-      }
-    ]
+    "documentos": {
+      "reglamentos": [
+        {
+          "titulo": "Reglamento Académico General",
+          "descripcion": "Normas generales que rigen la vida académica en IAL.",
+          "url": "assets/documentos/reg_acad.pdf"
+        },
+        {
+          "titulo": "Reglamento de Laboratorios",
+          "descripcion": "Normas de uso y seguridad en los laboratorios.",
+          "url": "assets/documentos/reg_acad.pdf",
+          "provisional": true
+        },
+        {
+          "titulo": "Reglamento del Salón de Clases",
+          "descripcion": "Normas de convivencia dentro del salón de clases.",
+          "url": "assets/documentos/reg_acad.pdf",
+          "provisional": true
+        }
+      ],
+      "tutoriales": [
+        {
+          "titulo": "Manual de uso de la plataforma",
+          "descripcion": "Guía completa para conocer y utilizar la plataforma institucional.",
+          "url": "assets/documentos/tutoriales/manual_uso_plataforma_uim.pdf"
+        },
+        {
+          "titulo": "Moodle Virtual - Parte I",
+          "descripcion": "Video tutorial con los primeros pasos para ingresar y navegar en Moodle.",
+          "url": "assets/documentos/tutoriales/Moodle Virtual Parte I.mp4"
+        },
+        {
+          "titulo": "Moodle Virtual - Parte II",
+          "descripcion": "Video tutorial para consultar tareas y material de clase en Moodle.",
+          "url": "assets/documentos/tutoriales/VIDEO MOODLE PARTE II.mp4"
+        },
+        {
+          "titulo": "Cómo revisar tus calificaciones",
+          "descripcion": "Video tutorial para consultar tus calificaciones en la plataforma.",
+          "url": "assets/documentos/tutoriales/Checar calificaciones.mp4"
+        },
+        {
+          "titulo": "Cómo pagar tu colegiatura",
+          "descripcion": "Guía paso a paso para realizar el pago de tu colegiatura en línea.",
+          "url": "assets/documentos/tutoriales/Pago colegiatura.pdf"
+        },
+        {
+          "titulo": "Cómo contestar la encuesta docente",
+          "descripcion": "Guía para responder la encuesta de evaluación docente.",
+          "url": "assets/documentos/tutoriales/encuesta docente.pdf"
+        },
+        {
+          "titulo": "Pasos para solicitar una constancia",
+          "descripcion": "Proceso completo para tramitar tu constancia de estudios.",
+          "pasos": [
+            {
+              "titulo": "Realizar el pago de la constancia",
+              "detalle": "Constancia simple: $100.00. Constancia con calificaciones: $150.00. Puedes generar tu ficha de pago con el Departamento de Administración o pagar directamente en la plataforma institucional (uim.mx/me)."
+            },
+            {
+              "titulo": "Solicitar la carta de no adeudo",
+              "detalle": "Una vez realizado el pago, comunícate con el Departamento de Administración para solicitar tu carta de no adeudo; es necesaria para la entrega de la constancia."
+            },
+            {
+              "titulo": "Enviar la información a Control Escolar",
+              "detalle": "Comunícate con Control Escolar y envía tu comprobante de pago, además de las especificaciones adicionales que requieras que aparezcan en la constancia."
+            },
+            {
+              "titulo": "Recibir la constancia",
+              "detalle": "Puedes recibirla en físico pasando directamente a ventanilla, o de forma escaneada solicitando que se envíe por medios digitales."
+            }
+          ]
+        },
+        {
+          "titulo": "Pasos para solicitar una credencial",
+          "descripcion": "Proceso completo para tramitar tu credencial de estudiante.",
+          "pasos": [
+            {
+              "titulo": "Realizar el pago de la credencial",
+              "detalle": "Costo: $100.00. Puedes generar tu ficha de pago con el Departamento de Administración o pagar directamente en la plataforma institucional (uim.mx/me)."
+            },
+            {
+              "titulo": "Enviar la información a Control Escolar",
+              "detalle": "Comunícate con Control Escolar y envía tu comprobante de pago de la credencial junto con una fotografía digital con fondo blanco, de frente y con buena iluminación."
+            },
+            {
+              "titulo": "Recibir la credencial",
+              "detalle": "Una vez lista, podrás recogerla directamente en ventanilla del Departamento de Control Escolar."
+            }
+          ]
+        }
+      ],
+      "avisos": [
+        {
+          "titulo": "Convocatoria: Escuela para Padres",
+          "descripcion": "La Dirección Académica, en cumplimiento con los lineamientos de la Secretaría de Educación, convoca a todos los padres y madres de familia a la sesión de Escuela para Padres, que se llevará a cabo el viernes 2 de octubre a las 5:00 de la tarde. Durante esta sesión se abordarán temas fundamentales para el acompañamiento en el desarrollo de sus hijos, entre ellos: pautas de comportamiento y disciplina positiva, estrategias para fortalecer la comunicación en casa, y orientación sobre cómo dar seguimiento a la educación de sus hijos desde el hogar. Su asistencia es muy importante, ya que el trabajo conjunto entre familia y escuela es clave para el desarrollo integral de nuestros alumnos. Los esperamos puntualmente a las 5:00 p.m.",
+          "fecha": "2026-10-02",
+          "estado": "proximo",
+          "foto": "assets/documentos/avisos/reunion de padres.jpg",
+          "abierto": true
+        },
+        {
+          "titulo": "Muestra Gastronómica UIM",
+          "descripcion": "El pasado 15 de septiembre celebramos la Muestra Gastronómica UIM, una actividad organizada en el marco de las fiestas patrias. Nuestros alumnos se organizaron en equipos, cada uno representando a un estado de la República Mexicana, para compartir con la comunidad universitaria su platillo típico y la vestimenta tradicional característica de la región. Cada equipo montó un stand decorado con elementos representativos de su estado, compartiendo con profesores y compañeros datos culturales, historia y sabores de distintas regiones del país. La actividad fomentó el trabajo en equipo, el orgullo por la identidad mexicana y el conocimiento de la riqueza gastronómica y cultural de México. ¡Gracias a todos los equipos por su creatividad y dedicación!",
+          "fecha": "2026-09-15",
+          "estado": "pasado",
+          "foto": "assets/documentos/avisos/kermes2016.jpg"
+        }
+      ]
+    }
   },
   "practicas": {
     "licenciatura": {
@@ -108,34 +288,9 @@
           "url": "assets/documentos/lic/practicasprofesionales/SOLICITUD (INTERNA) UIM PRACTICAS PROFESIONALES.docx"
         },
         {
-          "titulo": "Evaluación de Reporte Final",
-          "descripcion": "Formato que tu asesor interno utiliza para evaluar tu reporte final de prácticas.",
-          "url": "assets/documentos/lic/practicasprofesionales/EVALUACIÓN DE REPORTE FINAL DE PRÁCTICASA PROFESIONALES .docx"
-        },
-        {
-          "titulo": "Seguimiento (Evaluación Bimestral)",
-          "descripcion": "Formato de seguimiento bimestral para reportar el avance de tus prácticas a tu asesor interno.",
-          "url": "assets/documentos/lic/practicasprofesionales/SEGUIMIENTO (EVALUACIÓN BIMESTRAL) DE PRÁCTICAS PROFESIONALES UIM.docx"
-        },
-        {
-          "titulo": "Formato para Prácticas Profesionales (Liberación)",
-          "descripcion": "Formato de solicitud, aceptación y liberación con el que cierras tu proceso de prácticas.",
-          "url": "assets/documentos/lic/practicasprofesionales/FORMATO PARA PRACTICAS PROFESIONALES (1).pdf"
-        },
-        {
           "titulo": "Guía para Elaboración del Anteproyecto",
           "descripcion": "Lineamientos y estructura para desarrollar el anteproyecto de tus prácticas.",
           "url": "assets/documentos/lic/practicasprofesionales/GUÍA PARA ELABORACIÓN DEL ANTEPROYECTO .docx"
-        },
-        {
-          "titulo": "Guía para Elaboración del Reporte Final",
-          "descripcion": "Estructura y formato APA para redactar el reporte final de tus prácticas.",
-          "url": "assets/documentos/lic/practicasprofesionales/GUIA PARA ELABORACIÓN DEL REPORTE FINAL DE PRÁCTICAS PROFESIONALES UIM APA.docx"
-        },
-        {
-          "titulo": "Plantilla para Elaboración del Informe Técnico",
-          "descripcion": "Plantilla oficial para elaborar el informe técnico de tus prácticas profesionales.",
-          "url": "assets/documentos/lic/practicasprofesionales/PLANTILLA PARA LA ELABORACIÓN DEL INFORME TÉCNICO DE PRÁCTICAS PROFESIONALES UIM.docx"
         }
       ]
     },
@@ -156,26 +311,6 @@
           "titulo": "Solicitud de Servicio Social",
           "descripcion": "Formato con el que solicitas ante la Dirección Académica la autorización para prestar tu servicio social.",
           "url": "assets/documentos/lic/serviciosocial/(1) Solicitud de Servicio Social.pdf"
-        },
-        {
-          "titulo": "Carta de Presentación de Servicio Social",
-          "descripcion": "Carta que te presenta ante la organización receptora; debe llevar la firma del director de la Universidad.",
-          "url": "assets/documentos/lic/serviciosocial/(2) Carta de Presentacion de Servicio Social UIM.pdf"
-        },
-        {
-          "titulo": "Carta de Aceptación de Servicio Social",
-          "descripcion": "Documento con el que la organización acepta tu servicio social; se entrega en el formato original de la Universidad y en hoja membretada de la organización.",
-          "url": "assets/documentos/lic/serviciosocial/(3) Carta de Aceptacion de Servicio Social-1UIM.pdf"
-        },
-        {
-          "titulo": "Reporte Parcial",
-          "descripcion": "Formato para reportar tus actividades de cada bimestre; se entregan 3 reportes más una evaluación final.",
-          "url": "assets/documentos/lic/serviciosocial/(4) Reporte Parcial-3UIM.pdf"
-        },
-        {
-          "titulo": "Carta de Liberación de Servicio Social",
-          "descripcion": "Documento con el que liberas tu servicio social; se entrega en el formato original de la Universidad y en hoja membretada de la organización.",
-          "url": "assets/documentos/lic/serviciosocial/(5) Carta de terminacion de Servicio SocialUIM.pdf"
         }
       ]
     }
@@ -211,7 +346,26 @@
       {
         "id": "control-escolar",
         "label": "Control Escolar",
-        "telefono": "526188019365"
+        "telefono": "526188019365",
+        "preguntasFrecuentes": [
+          { "pregunta": "¿Cuál es el horario de atención de Control Escolar?", "respuesta": "El horario de atención es de lunes a viernes, de 8:00 a.m. a 5:00 p.m." },
+          { "pregunta": "¿Cómo puedo comunicarme con Control Escolar?", "respuesta": "Puedes comunicarte por llamada telefónica o WhatsApp al 618 801 9365." },
+          { "pregunta": "¿Cómo puedo solicitar un historial académico?", "respuesta": "Debes solicitarlo directamente en Control Escolar. Es necesario realizar el pago correspondiente, que tiene el mismo costo que una constancia de estudios con calificaciones." },
+          { "pregunta": "Olvidé mi contraseña de la plataforma, ¿qué hago?", "respuesta": "Puedes acudir personalmente a Control Escolar o comunicarte por llamada o WhatsApp al 618 801 9365 para recibir apoyo." },
+          { "pregunta": "¿Cómo puedo solicitar una constancia de estudios?", "respuesta": "Puedes acudir personalmente a Control Escolar o solicitarla por llamada o WhatsApp al 618 801 9365." },
+          { "pregunta": "¿Con qué departamento obtengo mi carta de no adeudo?", "respuesta": "La carta de no adeudo se tramita en el Departamento de Administración. Puedes acudir personalmente o comunicarte por llamada o WhatsApp al 618 455 2878." },
+          { "pregunta": "¿Quién genera mi ficha de pago de colegiatura, credencial o constancia?", "respuesta": "La ficha de pago la emite el Departamento de Administración. Puedes solicitarla personalmente o por llamada o WhatsApp al 618 455 2878." },
+          { "pregunta": "¿Qué formas de pago aceptan?", "respuesta": "No se acepta efectivo. Los pagos pueden realizarse por transferencia bancaria o con tarjeta directamente en el Departamento de Administración." },
+          { "pregunta": "¿Cuál es el costo de una constancia de estudios?", "respuesta": "Constancia simple: $100.00 MXN (nombre, matrícula, estatus académico y promedio). Constancia con calificaciones: $150.00 MXN (incluye además la relación de calificaciones)." },
+          { "pregunta": "¿Qué necesito para que me entreguen la constancia de estudios?", "respuesta": "Debes presentar tu carta de no adeudo y tu comprobante de pago." },
+          { "pregunta": "¿Qué pasa si tengo adeudos con la escuela?", "respuesta": "Mientras existan adeudos pendientes, no será posible entregar constancias ni documentos originales." },
+          { "pregunta": "¿Cómo tramito una baja?", "respuesta": "Debes dirigirte directamente con el Coordinador del nivel educativo correspondiente." },
+          { "pregunta": "¿Cómo obtengo una credencial de estudiante?", "respuesta": "Puedes solicitarla directamente en Control Escolar o comunicarte por llamada o WhatsApp al 618 801 9365." },
+          { "pregunta": "¿Qué documentos necesito para integrar el expediente de mi hijo(a)?", "respuesta": "Certificado de estudios del nivel anterior, acta de nacimiento y CURP." },
+          { "pregunta": "¿Cuánto tiempo tengo para entregar la documentación?", "respuesta": "Se otorga una prórroga máxima de un mes a partir de la fecha de ingreso del alumno para completar la entrega de documentos." },
+          { "pregunta": "¿Qué documentos necesito para cambiarme de otra escuela?", "respuesta": "Para Secundaria: hoja de traslado expedida por la escuela de procedencia. Para Preparatoria: Kardex y certificado parcial de estudios o equivalencia de estudios, según corresponda." },
+          { "pregunta": "¿Con quién me comunico si el alumno presenta una demora o ausencia?", "respuesta": "Deben comunicarse directamente con el Coordinador del nivel correspondiente, de manera presencial o por teléfono." }
+        ]
       }
     ]
   }
