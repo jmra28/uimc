@@ -75,7 +75,7 @@
   display: block;
   padding: var(--space-3) var(--space-4);
   color: var(--color-menu);
-  font-weight: var(--fw-bold-menu);
+  font-weight: var(--fw-bold);
   cursor: pointer;
   transition: background-color var(--transition-base), color var(--transition-base);
 }
@@ -197,7 +197,7 @@
   }
 
   .header__logo img {
-    height: 55px !important;
+    height: 72px !important;
   }
 
   .header__item:nth-child(2),

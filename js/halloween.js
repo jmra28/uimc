@@ -33,6 +33,31 @@
     document.body.appendChild(crearArana(modificador));
   });
 
+  function crearTelarana(modificador) {
+    var div = document.createElement("div");
+    div.className = "halloween-cobweb halloween-cobweb--" + modificador;
+    div.setAttribute("aria-hidden", "true");
+    div.innerHTML =
+      '<svg viewBox="0 0 100 100" fill="none">' +
+      '<g stroke="rgba(32,34,43,0.45)" stroke-width="1.1" stroke-linecap="round">' +
+      '<line x1="0" y1="0" x2="100" y2="0"/><line x1="0" y1="0" x2="92.4" y2="38.3"/><line x1="0" y1="0" x2="70.7" y2="70.7"/><line x1="0" y1="0" x2="38.3" y2="92.4"/><line x1="0" y1="0" x2="0" y2="100"/>' +
+      '<path d="M33,0 L30.5,12.6 L23.3,23.3 L12.6,30.5 L0,33"/>' +
+      '<path d="M62,0 L57.3,23.7 L43.8,43.8 L23.7,57.3 L0,62"/>' +
+      '<path d="M90,0 L83.2,34.4 L63.6,63.6 L34.4,83.2 L0,90"/>' +
+      "</g>" +
+      '<g stroke="#20222b" stroke-width="1.6" stroke-linecap="round">' +
+      '<line x1="48" y1="45" x2="40" y2="36"/><line x1="48" y1="45" x2="38" y2="45"/><line x1="48" y1="45" x2="40" y2="54"/>' +
+      '<line x1="48" y1="45" x2="56" y2="36"/><line x1="48" y1="45" x2="58" y2="45"/><line x1="48" y1="45" x2="56" y2="54"/>' +
+      "</g>" +
+      '<circle cx="48" cy="46" r="5" fill="#20222b"/><circle cx="48" cy="39" r="3.2" fill="#20222b"/>' +
+      "</svg>";
+    return div;
+  }
+
+  ["left", "right"].forEach(function (modificador) {
+    document.body.appendChild(crearTelarana(modificador));
+  });
+
   function crearMurcielago(modificador) {
     var div = document.createElement("div");
     div.className = "halloween-bat halloween-bat--" + modificador;

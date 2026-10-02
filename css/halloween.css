@@ -82,6 +82,44 @@ html.halloween-hidden .halloween-spider {
   }
 }
 
+/* -------------------- Telarañas en las esquinas -------------------- */
+.halloween-cobweb {
+  position: fixed;
+  top: 0;
+  width: 110px;
+  height: 110px;
+  z-index: 39;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.halloween-cobweb--left {
+  left: 0;
+}
+
+.halloween-cobweb--right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.halloween-cobweb svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+html:not(.halloween-season) .halloween-cobweb,
+html.halloween-hidden .halloween-cobweb {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .halloween-cobweb {
+    width: 72px;
+    height: 72px;
+  }
+}
+
 /* -------------------- Murciélagos junto a las arañas -------------------- */
 .halloween-bat {
   position: fixed;
@@ -175,7 +213,7 @@ html.halloween-hidden .halloween-witch {
   }
 }
 
-/* -------------------- Murcielaguito en botones de Descargar / Inscribirse -------------------- */
+/* -------------------- Fantasma en botones de Descargar / Inscribirse -------------------- */
 html.halloween-season:not(.halloween-hidden) .descargas__button--download,
 html.halloween-season:not(.halloween-hidden) .descargas__button--enroll,
 html.halloween-season:not(.halloween-hidden) .oferta-academica__action--download,
@@ -193,11 +231,11 @@ html.halloween-season:not(.halloween-hidden) .oferta-academica__action--enroll::
   content: "";
   display: inline-block;
   flex: 0 0 auto;
-  width: 26px;
-  height: 10px;
+  width: 14px;
+  height: 16px;
   background-color: #eef0f5;
-  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNDAgNTAnPjxwYXRoIGQ9J002MiwxNiBDNDAsNiAxNSw0IDQsMTQgQzE1LDIyIDQwLDI4IDYyLDMwIFonLz48cGF0aCBkPSdNNzgsMTYgQzEwMCw2IDEyNSw0IDEzNiwxNCBDMTI1LDIyIDEwMCwyOCA3OCwzMCBaJy8+PGVsbGlwc2UgY3g9JzcwJyBjeT0nMjEnIHJ4PSc5JyByeT0nMTEnLz48cGF0aCBkPSdNNjIsMTAgTDU4LDIgTDY2LDggWicvPjxwYXRoIGQ9J003OCwxMCBMODIsMiBMNzQsOCBaJy8+PC9zdmc+");
-  mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNDAgNTAnPjxwYXRoIGQ9J002MiwxNiBDNDAsNiAxNSw0IDQsMTQgQzE1LDIyIDQwLDI4IDYyLDMwIFonLz48cGF0aCBkPSdNNzgsMTYgQzEwMCw2IDEyNSw0IDEzNiwxNCBDMTI1LDIyIDEwMCwyOCA3OCwzMCBaJy8+PGVsbGlwc2UgY3g9JzcwJyBjeT0nMjEnIHJ4PSc5JyByeT0nMTEnLz48cGF0aCBkPSdNNjIsMTAgTDU4LDIgTDY2LDggWicvPjxwYXRoIGQ9J003OCwxMCBMODIsMiBMNzQsOCBaJy8+PC9zdmc+");
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAzNCc+PHBhdGggZD0nTTE1IDIgQzggMiAyIDggMiAxNiBMMiAzMCBMNiAyNiBMMTAgMzAgTDE1IDI2IEwyMCAzMCBMMjQgMjYgTDI4IDMwIEwyOCAxNiBDMjggOCAyMiAyIDE1IDIgWicvPjwvc3ZnPg==");
+  mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAzNCc+PHBhdGggZD0nTTE1IDIgQzggMiAyIDggMiAxNiBMMiAzMCBMNiAyNiBMMTAgMzAgTDE1IDI2IEwyMCAzMCBMMjQgMjYgTDI4IDMwIEwyOCAxNiBDMjggOCAyMiAyIDE1IDIgWicvPjwvc3ZnPg==");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: contain;
