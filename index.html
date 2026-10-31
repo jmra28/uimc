@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INICIO - UIM</title>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6G5XJRFJ6F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6G5XJRFJ6F');
+  </script>
+
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/hero.css" />
@@ -22,7 +31,7 @@
   <link rel="stylesheet" href="css/sedes-video.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/whatsapp-flotante.css" />
-  <link rel="stylesheet" href="css/halloween.css" />
+  <link rel="stylesheet" href="assets/anim_mens/cargador.css" />
 
       <link rel="shortcut icon" type="image/icon" href="assets/images/icon_bufalo.png"/>
 
@@ -71,8 +80,8 @@
             <input type="radio" name="header-mobile-submenu" id="header-submenu-alumnos" class="header__submenu-toggle" />
             <label for="header-submenu-alumnos" class="header__link header__link--alumnos">ACCESO ALUMNOS</label>
             <ul class="header__submenu">
-              <li><a href="https://uim.mx/moo/login/index.php" class="header__sublink">Plataforma UIM</a></li>
-              <li><a href="https://ce.uim.mx/ords/f?p=100:LOGIN:3020112232031" class="header__sublink">Control Escolar</a></li>
+              <li><a href="https://moo.uim.mx/" class="header__sublink">Plataforma UIM</a></li>
+              <li><a href="https://ce.uim.mx/ords/f?p=100:LOGIN:6571779908519" class="header__sublink">Control Escolar</a></li>
               <li><a href="https://uim.mx/me/ " class="header__sublink">Realizar Pagos</a></li>
             </ul>
           </li>
@@ -80,8 +89,8 @@
             <input type="radio" name="header-mobile-submenu" id="header-submenu-docentes" class="header__submenu-toggle" />
             <label for="header-submenu-docentes" class="header__link header__link--docentes">ACCESO DOCENTES</label>
             <ul class="header__submenu">
-              <li><a href="https://uim.mx/moo/login/index.php" class="header__sublink">Plataforma UIM</a></li>
-              <li><a href=" https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::" class="header__sublink">Control Escolar</a></li>              
+              <li><a href="https://moo.uim.mx/" class="header__sublink">Plataforma UIM</a></li>
+              <li><a href="https://ce.uim.mx/ords/f?p=100:LOGIN:6571779908519" class="header__sublink">Control Escolar</a></li>              
             </ul>
           </li>
         </ul>
@@ -94,7 +103,7 @@
   <section class="hero">
     <div class="hero__media">
       <video class="hero__video" autoplay muted loop playsinline>
-        <source src="assets/video/video-hero.mp4" type="video/mp4">
+        <source src="assets/video/video-hero2.mp4" type="video/mp4">
         Tu navegador no soporta el video.
       </video>
     </div>
@@ -969,8 +978,8 @@
           <div class="footer__column">
             <span class="footer__column-label">LINKS DIRECTOS</span>
             <ul class="footer__links">
-              <li><a href="https://uim.mx/moo/login/index.php" class="footer__link">PLATAFORMA UIM</a></li>
-              <li><a href="https://sist-control-escolar.com/apex/f?p=205:LOGIN:977975742588:::::" class="footer__link">CONTROL ESCOLAR</a></li>
+              <li><a href="https://moo.uim.mx/" class="footer__link">PLATAFORMA UIM</a></li>
+              <li><a href="https://ce.uim.mx/ords/f?p=100:LOGIN:6571779908519" class="footer__link">CONTROL ESCOLAR</a></li>
               <li><a href="https://uim.mx/me/ " class="footer__link">PAGOS</a></li>
             </ul>
           </div>
@@ -1126,13 +1135,29 @@
         </div>
       </div>
       <div class="whatsapp-flotante__body">
-        <div class="whatsapp-flotante__bubble">
-          <p class="whatsapp-flotante__bubble-name">UIM</p>
-          <p class="whatsapp-flotante__bubble-text">Te damos la bienvenida a la Universidad Internacional Mexicana. 🦬</p>
-          <p class="whatsapp-flotante__bubble-text">¡Hablemos!</p>
+        <div class="whatsapp-flotante__reglas" data-whatsapp-reglas>
+          <p class="whatsapp-flotante__reglas-titulo">Antes de continuar, te pedimos respetar estas reglas:</p>
+          <ul class="whatsapp-flotante__reglas-list">
+            <li>Sé respetuoso: no se permiten groserías, insultos ni lenguaje ofensivo.</li>
+            <li>No envíes mensajes de spam, cadenas ni contenido publicitario ajeno a la universidad.</li>
+            <li>Sé específico: describe tu duda o solicitud con claridad para que podamos ayudarte más rápido.</li>
+            <li>Usa este medio solo para dudas académicas, administrativas o de servicios escolares.</li>
+            <li>No compartas contraseñas ni datos personales de otros alumnos.</li>
+            <li>Evita enviar el mismo mensaje varias veces; nuestro equipo responde en horario hábil (lunes a viernes).</li>
+            <li>No se atenderán mensajes con amenazas, acoso o contenido discriminatorio.</li>
+          </ul>
+          <button type="button" class="whatsapp-flotante__action" data-whatsapp-continuar>Continuar</button>
         </div>
-        <a href="https://wa.me/526181560378?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20de%20UIM." target="_blank" rel="noopener" class="whatsapp-flotante__action">Iniciar conversación</a>
-        <a href="mailto:vinculacion@uim.mx" class="whatsapp-flotante__contact">vinculacion@uim.mx</a>
+
+        <div class="whatsapp-flotante__contenido" data-whatsapp-contenido hidden>
+          <div class="whatsapp-flotante__bubble">
+            <p class="whatsapp-flotante__bubble-name">UIM</p>
+            <p class="whatsapp-flotante__bubble-text">Te damos la bienvenida a la Universidad Internacional Mexicana. 🦬</p>
+            <p class="whatsapp-flotante__bubble-text">¡Hablemos!</p>
+          </div>
+          <a href="https://wa.me/526181560378?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20de%20UIM." target="_blank" rel="noopener" class="whatsapp-flotante__action">Iniciar conversación</a>
+          <a href="mailto:vinculacion@uim.mx" class="whatsapp-flotante__contact">vinculacion@uim.mx</a>
+        </div>
       </div>
     </div>
 
@@ -1152,6 +1177,6 @@
   <script src="js/whatsapp-flotante.js" defer></script>
   <script src="js/formulario-modal.js" defer></script>
   <script src="js/test-vocacional.js" defer></script>
-  <script src="js/halloween.js" defer></script>
+  <script src="assets/anim_mens/cargador.js" defer></script>
 </body>
 </html>

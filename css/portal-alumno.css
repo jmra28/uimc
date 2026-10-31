@@ -66,7 +66,6 @@ body {
   text-align: center;
 }
 
-/* -------------------- Tabs de institución (mismo patrón que .faq__tabs) -------------------- */
 .portal-alumno__tabs {
   position: relative;
 }
@@ -121,14 +120,12 @@ body {
   display: flex;
 }
 
-/* -------------------- Secciones (Plataformas / Documentos y avisos) -------------------- */
 .portal-alumno__section-title {
   margin-bottom: var(--space-3);
   color: var(--color-red);
   font-size: var(--fs-lg);
 }
 
-/* -------------------- Bloques plegables (Expandir / Compactar) -------------------- */
 .portal-alumno__collapsible {
   border-bottom: var(--border-width) solid var(--color-gray-medium);
 }
@@ -196,7 +193,6 @@ body {
   gap: var(--space-4);
 }
 
-/* -------------------- Tarjeta de acceso (mismo lenguaje visual que .descargas__card) -------------------- */
 .portal-alumno__card {
   display: flex;
   flex-direction: column;
@@ -271,7 +267,6 @@ body {
   text-transform: uppercase;
 }
 
-/* -------------------- Documentos: tarjetas desplegables (Reglamentos / Tutoriales) -------------------- */
 .portal-alumno__doc-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -364,7 +359,6 @@ body {
   font-size: var(--fs-xs);
 }
 
-/* -------------------- Tutoriales de proceso (expandir para ver los pasos) -------------------- */
 .portal-alumno__proceso {
   padding: var(--space-3) 0;
 }
@@ -421,7 +415,6 @@ body {
   line-height: var(--line-height-base);
 }
 
-/* -------------------- Avisos: sección más grande (eventos próximos / pasados) -------------------- */
 .portal-alumno__avisos-title {
   margin-bottom: var(--space-3);
   color: var(--color-red);
@@ -458,7 +451,6 @@ body {
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
 }
 
-/* Estado cerrado (por defecto): fila compacta, miniatura pequeña */
 .portal-alumno__aviso-summary {
   display: flex;
   align-items: center;
@@ -562,7 +554,6 @@ body {
   display: inline;
 }
 
-/* Estado abierto: la imagen crece (máx. 25% del ancho) junto al título, la nota completa queda debajo */
 .portal-alumno__aviso[open] .portal-alumno__aviso-summary {
   flex-direction: row;
   align-items: flex-start;

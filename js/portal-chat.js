@@ -1,3 +1,34 @@
+const REGLAS_CHAT = [
+  "Sé respetuoso: no se permiten groserías, insultos ni lenguaje ofensivo.",
+  "No envíes mensajes de spam, cadenas ni contenido publicitario ajeno a la universidad.",
+  "Sé específico: describe tu duda o solicitud con claridad para que podamos ayudarte más rápido.",
+  "Usa este medio solo para dudas académicas, administrativas o de servicios escolares.",
+  "No compartas contraseñas ni datos personales de otros alumnos.",
+  "Evita enviar el mismo mensaje varias veces; nuestro equipo responde en horario hábil (lunes a viernes).",
+  "No se atenderán mensajes con amenazas, acoso o contenido discriminatorio.",
+];
+
+function crearBloqueReglas() {
+  const div = document.createElement("div");
+  div.className = "portal-chat__bubble portal-chat__reglas";
+
+  const titulo = document.createElement("p");
+  titulo.className = "portal-chat__reglas-titulo";
+  titulo.textContent = "Antes de continuar, te pedimos respetar estas reglas:";
+  div.appendChild(titulo);
+
+  const ul = document.createElement("ul");
+  ul.className = "portal-chat__reglas-list";
+  REGLAS_CHAT.forEach((regla) => {
+    const li = document.createElement("li");
+    li.textContent = regla;
+    ul.appendChild(li);
+  });
+  div.appendChild(ul);
+
+  return div;
+}
+
 function crearBurbuja(texto) {
   const p = document.createElement("p");
   p.className = "portal-chat__bubble";
@@ -122,6 +153,19 @@ function initPortalChat() {
     body.appendChild(crearBotonRegresar(renderCategorias));
   }
 
+  function renderReglas() {
+    limpiarBody();
+    body.appendChild(crearBurbuja("Hola 👋 Bienvenido a la mensajería de UIM/IAL."));
+    body.appendChild(crearBloqueReglas());
+
+    const continuar = document.createElement("button");
+    continuar.type = "button";
+    continuar.className = "portal-chat__action";
+    continuar.textContent = "Continuar";
+    continuar.addEventListener("click", renderCategorias);
+    body.appendChild(continuar);
+  }
+
   function renderCategorias() {
     limpiarBody();
 
@@ -149,7 +193,7 @@ function initPortalChat() {
   function setVisible(visible) {
     widget.classList.toggle("portal-chat--visible", visible);
     toggleButton.setAttribute("aria-expanded", String(visible));
-    if (visible && mensajeria) renderCategorias();
+    if (visible && mensajeria) renderReglas();
   }
 
   toggleButton.addEventListener("click", () => {

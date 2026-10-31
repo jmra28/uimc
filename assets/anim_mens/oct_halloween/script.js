@@ -1,19 +1,4 @@
 (function () {
-  var HALLOWEEN_MONTH = 9; // Octubre (0-indexado)
-  var STORAGE_KEY = "uim-halloween-hidden";
-
-  var forzado = /[?&]halloween=(on|off)/.exec(location.search);
-  var activo = forzado ? forzado[1] === "on" : new Date().getMonth() === HALLOWEEN_MONTH;
-  if (!activo) return;
-
-  document.documentElement.classList.add("halloween-season");
-
-  var oculto = false;
-  try {
-    oculto = localStorage.getItem(STORAGE_KEY) === "1";
-  } catch (e) {}
-  if (oculto) document.documentElement.classList.add("halloween-hidden");
-
   function crearArana(modificador) {
     var div = document.createElement("div");
     div.className = "halloween-spider halloween-spider--" + modificador;
@@ -91,67 +76,4 @@
     '<path d="M25 6 L27 -4 L29 6 Z" fill="#151f6d"/>' +
     "</svg>";
   document.body.appendChild(witch);
-
-  var bubble = document.createElement("div");
-  bubble.className = "halloween-bubble";
-  bubble.innerHTML =
-    '<div class="halloween-bubble__card">' +
-    '<div class="halloween-bubble__header">' +
-    "<span>🦇 UIM Búfalo</span>" +
-    '<button type="button" class="halloween-bubble__close" aria-label="Cerrar">&times;</button>' +
-    "</div>" +
-    '<div class="halloween-bubble__body">' +
-    "<p>¡Truco o trato! 🎃 ¿Tienes dudas sobre algún programa? Escríbenos.</p>" +
-    '<a class="halloween-bubble__action" target="_blank" rel="noopener" href="https://wa.me/526181560378?text=%C2%A1Hola!%20Vi%20la%20sorpresa%20de%20Halloween%20en%20el%20sitio%20de%20UIM%20y%20quiero%20informaci%C3%B3n.">Iniciar conversación</a>' +
-    '<div class="halloween-bubble__toggle-row">' +
-    "<span>Decoración de Halloween</span>" +
-    '<button type="button" class="halloween-bubble__switch" id="halloweenSwitch"></button>' +
-    "</div>" +
-    "</div>" +
-    "</div>" +
-    '<button type="button" class="halloween-bubble__toggle" aria-label="Abrir sorpresa de Halloween" aria-expanded="false">🦇</button>';
-  document.body.appendChild(bubble);
-
-  var toggleBtn = bubble.querySelector(".halloween-bubble__toggle");
-  var closeBtn = bubble.querySelector(".halloween-bubble__close");
-  var switchBtn = bubble.querySelector("#halloweenSwitch");
-
-  function actualizarSwitch() {
-    var estaOculto = document.documentElement.classList.contains("halloween-hidden");
-    switchBtn.textContent = estaOculto ? "Mostrar" : "Ocultar";
-  }
-  actualizarSwitch();
-
-  function abrir() {
-    bubble.classList.add("halloween-bubble--open");
-    toggleBtn.setAttribute("aria-expanded", "true");
-  }
-
-  function cerrar() {
-    bubble.classList.remove("halloween-bubble--open");
-    toggleBtn.setAttribute("aria-expanded", "false");
-  }
-
-  toggleBtn.addEventListener("click", function () {
-    if (bubble.classList.contains("halloween-bubble--open")) {
-      cerrar();
-    } else {
-      abrir();
-    }
-  });
-
-  closeBtn.addEventListener("click", cerrar);
-
-  document.addEventListener("click", function (event) {
-    if (!event.composedPath().includes(bubble)) cerrar();
-  });
-
-  switchBtn.addEventListener("click", function () {
-    var ocultarAhora = !document.documentElement.classList.contains("halloween-hidden");
-    document.documentElement.classList.toggle("halloween-hidden", ocultarAhora);
-    try {
-      localStorage.setItem(STORAGE_KEY, ocultarAhora ? "1" : "0");
-    } catch (e) {}
-    actualizarSwitch();
-  });
 })();

@@ -241,6 +241,132 @@ function renderAvisos(panel, avisos) {
   avisos.forEach((aviso) => lista.appendChild(crearAviso(aviso)));
 }
 
+const ICONO_RECARGO_SVG = `
+  <svg class="politicas-pago__dia-alerta-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 3 1 21h22L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M12 10v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="12" cy="18" r="1" fill="currentColor"/>
+  </svg>
+`;
+
+const ICONO_CHECK_SVG = `
+  <svg class="politicas-pago__check-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M8 12.5 10.8 15.3 16 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+`;
+
+const ICONO_METODO_SVG = `
+  <svg class="politicas-pago__metodo-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="2" y="5" width="20" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M2 9.5h20" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M5.5 14.5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </svg>
+`;
+
+function crearDiaPagoCard(item) {
+  const card = document.createElement("div");
+  card.className = "politicas-pago__dia-card";
+
+  const badge = document.createElement("div");
+  badge.className = "politicas-pago__dia-badge";
+  badge.innerHTML = `<span class="politicas-pago__dia-numero">${item.diaLimite}</span><span class="politicas-pago__dia-label">de cada mes</span>`;
+  card.appendChild(badge);
+
+  const body = document.createElement("div");
+  body.className = "politicas-pago__dia-body";
+
+  const nivel = document.createElement("h4");
+  nivel.className = "politicas-pago__dia-nivel";
+  nivel.textContent = item.nivel;
+  body.appendChild(nivel);
+
+  const alerta = document.createElement("p");
+  alerta.className = "politicas-pago__dia-alerta";
+  alerta.innerHTML = `${ICONO_RECARGO_SVG}<span>A partir del día <strong>${item.diaRecargo}</strong> se genera un recargo de <strong>${item.montoRecargo}</strong>.</span>`;
+  body.appendChild(alerta);
+
+  card.appendChild(body);
+  return card;
+}
+
+function crearMetodoPagoChip(item) {
+  const chip = document.createElement("div");
+  chip.className = "politicas-pago__metodo";
+  chip.innerHTML = `
+    <span class="politicas-pago__metodo-icon-wrap">${ICONO_METODO_SVG}</span>
+    <span class="politicas-pago__metodo-text">
+      <span class="politicas-pago__metodo-nombre">${item.nombre}</span>
+      <span class="politicas-pago__metodo-detalle">${item.detalle}</span>
+    </span>
+  `;
+  return chip;
+}
+
+function crearConceptoItem(texto) {
+  const li = document.createElement("li");
+  li.className = "politicas-pago__concepto";
+  li.innerHTML = `${ICONO_CHECK_SVG}<span>${texto}</span>`;
+  return li;
+}
+
+function crearReinscripcionItem(item) {
+  const li = document.createElement("li");
+  li.className = "politicas-pago__reinscripcion-item";
+  li.innerHTML = `
+    <span class="politicas-pago__reinscripcion-dot"></span>
+    <span class="politicas-pago__reinscripcion-text">
+      <strong>${item.nivel}</strong>
+      <span>${item.detalle}</span>
+    </span>
+  `;
+  return li;
+}
+
+function renderPoliticasPago(politicasPago) {
+  if (!politicasPago) return;
+
+  document.querySelectorAll("[data-politicas-pago]").forEach((contenedor) => {
+    const diasWrap = document.createElement("div");
+    diasWrap.className = "politicas-pago__dias";
+    politicasPago.diasPago.forEach((item) => diasWrap.appendChild(crearDiaPagoCard(item)));
+    contenedor.appendChild(diasWrap);
+
+    const metodosTitle = document.createElement("h3");
+    metodosTitle.className = "politicas-pago__subtitle";
+    metodosTitle.textContent = "Formas de pago";
+    contenedor.appendChild(metodosTitle);
+
+    const metodosWrap = document.createElement("div");
+    metodosWrap.className = "politicas-pago__metodos";
+    politicasPago.metodosPago.forEach((item) => metodosWrap.appendChild(crearMetodoPagoChip(item)));
+    contenedor.appendChild(metodosWrap);
+
+    const columnas = document.createElement("div");
+    columnas.className = "politicas-pago__columnas";
+
+    const conceptosCard = document.createElement("div");
+    conceptosCard.className = "politicas-pago__panel-card";
+    conceptosCard.innerHTML = `<h3 class="politicas-pago__subtitle">Para nuevo ingreso</h3>`;
+    const conceptosList = document.createElement("ul");
+    conceptosList.className = "politicas-pago__conceptos";
+    politicasPago.conceptosNuevoIngreso.forEach((texto) => conceptosList.appendChild(crearConceptoItem(texto)));
+    conceptosCard.appendChild(conceptosList);
+    columnas.appendChild(conceptosCard);
+
+    const reinscripcionesCard = document.createElement("div");
+    reinscripcionesCard.className = "politicas-pago__panel-card";
+    reinscripcionesCard.innerHTML = `<h3 class="politicas-pago__subtitle">Reinscripciones y anualidades</h3>`;
+    const reinscripcionesList = document.createElement("ul");
+    reinscripcionesList.className = "politicas-pago__reinscripciones";
+    politicasPago.reinscripciones.forEach((item) => reinscripcionesList.appendChild(crearReinscripcionItem(item)));
+    reinscripcionesCard.appendChild(reinscripcionesList);
+    columnas.appendChild(reinscripcionesCard);
+
+    contenedor.appendChild(columnas);
+  });
+}
+
 function renderInstitucion(id, data) {
   const panel = document.querySelector(`[data-portal-panel="${id}"]`);
   if (!panel || !data) return;
@@ -305,6 +431,7 @@ function initPortalAlumno() {
     .then((data) => {
       renderInstitucion("uim", data.uim);
       renderInstitucion("ial", data.ial);
+      renderPoliticasPago(data.politicasPago);
       renderBloqueProceso(data.practicas.licenciatura, "[data-practicas-intro]", "[data-practicas-puntos]", "practicas-documentos");
       renderBloqueProceso(data.practicas.servicioSocial, "[data-servicio-intro]", "[data-servicio-puntos]", "servicio-documentos");
       renderBloqueProceso(data.practicas.servicioSocial, "[data-servicio-prepa-intro]", "[data-servicio-prepa-puntos]", "servicio-documentos-prepa");

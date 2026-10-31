@@ -157,6 +157,21 @@
     "documentos": {
       "reglamentos": [
         {
+          "titulo": "Reglamento de Secundaria",
+          "descripcion": "Normas académicas y de conducta para el nivel secundaria en IAL.",
+          "url": "assets/documentos/Reglamento Nivel Secundaria T.M. (1).pdf"
+        },
+        {
+          "titulo": "Reglamento de Preparatoria",
+          "descripcion": "Normas académicas y de conducta para el nivel preparatoria en IAL.",
+          "url": "assets/documentos/Reglamento Nivel Preparatoria (2).pdf"
+        },
+        {
+          "titulo": "Reglamento de Pagos 2026-2027",
+          "descripcion": "Normas y condiciones de pago vigentes para el ciclo 2026-2027 en IAL.",
+          "url": "assets/documentos/Reglamento de Pagos IAL 2026-2027.pdf"
+        },
+        {
           "titulo": "Reglamento Académico General",
           "descripcion": "Normas generales que rigen la vida académica en IAL.",
           "url": "assets/documentos/reg_acad.pdf"
@@ -264,6 +279,57 @@
         }
       ]
     }
+  },
+  "politicasPago": {
+    "diasPago": [
+      {
+        "nivel": "Secundaria, preparatoria y licenciaturas",
+        "diaLimite": 10,
+        "diaRecargo": 11,
+        "montoRecargo": "$500"
+      },
+      {
+        "nivel": "Posgrados",
+        "diaLimite": 17,
+        "diaRecargo": 18,
+        "montoRecargo": "$500"
+      }
+    ],
+    "metodosPago": [
+      {
+        "nombre": "App BBVA",
+        "detalle": "Realiza tu pago directamente desde la aplicación móvil BBVA."
+      },
+      {
+        "nombre": "Practicaja",
+        "detalle": "Paga en efectivo o con tarjeta en cualquier sucursal BBVA."
+      },
+      {
+        "nombre": "Mercado Pago",
+        "detalle": "Disponible con un incremento del 5% sobre el total a pagar."
+      }
+    ],
+    "conceptosNuevoIngreso": [
+      "Seguro escolar",
+      "Uniforme",
+      "Inscripción",
+      "Libros de texto (secundaria y preparatoria)",
+      "Primera mensualidad"
+    ],
+    "reinscripciones": [
+      {
+        "nivel": "Secundaria",
+        "detalle": "Reinscripción cada año."
+      },
+      {
+        "nivel": "Preparatoria",
+        "detalle": "Reinscripción cada seis meses."
+      },
+      {
+        "nivel": "Maestría",
+        "detalle": "Pago de anualidad al concluir el primer año de curso."
+      }
+    ]
   },
   "practicas": {
     "licenciatura": {

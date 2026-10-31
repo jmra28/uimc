@@ -1,0 +1,282 @@
+.ddm {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(8, 3, 20, 0.84);
+  isolation: isolate;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.ddm.ddm-activo {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ddm {
+    transition: none;
+  }
+}
+
+.ddm-fondo,
+.ddm-camino {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ddm-fondo {
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.ddm-papel {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6px;
+  pointer-events: none;
+}
+.ddm-papel::before {
+  content: "";
+  position: absolute;
+  top: 9px; left: 0; right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, .45);
+}
+.ddm-bandera {
+  flex: 0 0 auto;
+  width: clamp(44px, 7.5vw, 80px);
+  height: clamp(31px, 5.3vw, 56px);
+  margin-top: 10px;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .55));
+  transform-origin: 50% 0;
+  animation: ddm-ondea 3s ease-in-out infinite alternate;
+}
+.ddm-bandera svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@keyframes ddm-ondea {
+  from { transform: rotate(-4deg); }
+  to   { transform: rotate(4deg); }
+}
+
+.ddm-estrella { animation: ddm-titila 3s ease-in-out infinite alternate; }
+@keyframes ddm-titila {
+  from { opacity: .25; }
+  to   { opacity: 1; }
+}
+.ddm-luz-pueblo { animation: ddm-titila 5s ease-in-out infinite alternate; }
+
+.ddm-oscuro {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(ellipse at 50% 75%, rgba(5, 0, 18, .25), rgba(5, 0, 18, .72));
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  pointer-events: none;
+}
+.ddm.ddm-activo .ddm-oscuro { opacity: 1; }
+
+.ddm-camino {
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity .8s ease;
+}
+.ddm-camino.ddm-saliendo { opacity: 0; }
+
+.ddm-resplandor {
+  filter: url(#ddm-difuso);
+  opacity: 0;
+  animation:
+    ddm-resplandor-entra 2s ease 1.6s forwards,
+    ddm-pulso 4s ease-in-out 3.6s infinite alternate;
+}
+@keyframes ddm-resplandor-entra { to { opacity: .5; } }
+@keyframes ddm-pulso {
+  from { opacity: .38; }
+  to   { opacity: .62; }
+}
+
+.ddm-petalo {
+  scale: 0;
+  opacity: 0;
+  animation: ddm-brota .6s cubic-bezier(.3, 1.6, .5, 1) forwards;
+}
+@keyframes ddm-brota {
+  to { scale: 1; opacity: 1; }
+}
+
+.ddm-vela {
+  opacity: 0;
+  animation: ddm-aparece .8s ease forwards;
+}
+@keyframes ddm-aparece { to { opacity: 1; } }
+
+.ddm-llama {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: ddm-flama .16s ease-in-out infinite alternate;
+}
+@keyframes ddm-flama {
+  from { transform: scale(1, 1); }
+  to   { transform: scale(.85, 1.18); }
+}
+
+.ddm-chispa {
+  opacity: 0;
+  animation: ddm-sube 3.5s ease-out infinite;
+}
+@keyframes ddm-sube {
+  0%   { opacity: 0; transform: translateY(0); }
+  20%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(calc(var(--d) * -1px)); }
+}
+
+.ddm-pierna {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: ddm-paso .62s ease-in-out infinite alternate;
+}
+@keyframes ddm-paso {
+  from { transform: scaleY(1); }
+  to   { transform: scaleY(.8); }
+}
+.ddm-brazo {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: ddm-brazo .62s ease-in-out infinite alternate;
+}
+@keyframes ddm-brazo {
+  from { transform: rotate(14deg); }
+  to   { transform: rotate(-14deg); }
+}
+.ddm-rebote { animation: ddm-rebote .31s ease-in-out infinite alternate; }
+@keyframes ddm-rebote {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-3.5px); }
+}
+.ddm-cabeza {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: ddm-cabecea 1.24s ease-in-out infinite alternate;
+}
+@keyframes ddm-cabecea {
+  from { transform: rotate(-6deg); }
+  to   { transform: rotate(6deg); }
+}
+.ddm-brazo.ddm-saluda { animation: ddm-saluda .38s ease-in-out infinite alternate; }
+@keyframes ddm-saluda {
+  from { transform: rotate(-165deg); }
+  to   { transform: rotate(-130deg); }
+}
+
+.ddm-frases {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+.ddm-frase {
+  position: absolute;
+  top: 40%;
+  width: min(27%, 340px);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(18px) scale(.94);
+  transition: opacity 1.1s ease, transform 1.4s cubic-bezier(.2, .8, .2, 1);
+}
+.ddm-izq { left: 3.5%; }
+.ddm-der { right: 3.5%; }
+.ddm-frase.ddm-ver { opacity: 1; transform: none; }
+
+.ddm-avatar {
+  position: absolute;
+  left: -14px;
+  bottom: -14px;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  background: #efe6fb;
+  border: 3px solid #efe6fb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .5);
+}
+
+.ddm-nube {
+  position: relative;
+  padding: 1.15em 1.3em 1em;
+  border-radius: 46px;
+  background: #efe6fb;
+  color: #2b1240;
+  box-shadow: 0 0 40px rgba(239, 230, 251, .28), 0 10px 30px rgba(0, 0, 0, .35);
+  animation: ddm-flota 5s ease-in-out infinite alternate;
+}
+@keyframes ddm-flota {
+  from { translate: 0 0; }
+  to   { translate: 0 -8px; }
+}
+
+.ddm-cita {
+  position: relative;
+  margin: 0;
+  font: italic 500 clamp(14px, 1.45vw, 19px)/1.4 var(--font-family-base, "Gotham"), Georgia, "Times New Roman", serif;
+  text-wrap: balance;
+}
+.ddm-autor {
+  position: relative;
+  margin-top: .55em;
+  padding-left: 40px;
+  font: 600 clamp(10px, .95vw, 12.5px)/1.2 var(--font-family-base, "Gotham"), sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #b4440a;
+}
+.ddm-autor::before { content: "— "; }
+
+.ddm-flor {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .35));
+  animation: ddm-gira 9s linear infinite;
+}
+.ddm-flor-0 { width: 54px; left: -20px; bottom: -22px; }
+.ddm-flor-1 { width: 38px; left: 22px;  bottom: -26px; animation-direction: reverse; }
+.ddm-flor-2 { width: 46px; right: -16px; top: -18px; }
+.ddm-flor-3 { width: 30px; right: 26px; bottom: -16px; animation-direction: reverse; }
+@keyframes ddm-gira { to { rotate: 360deg; } }
+
+@media (max-width: 640px) {
+  .ddm-frase { top: clamp(140px, 24%, 190px); width: 74%; }
+  .ddm-izq { left: 5%; }
+  .ddm-der { right: 5%; }
+  .ddm-nube { padding: .9em 1em .8em; border-radius: 34px; }
+  .ddm-cita { font-size: 14.5px; }
+  .ddm-autor { font-size: 10px; padding-left: 32px; }
+  .ddm-flor-0 { width: 40px; left: -12px; bottom: -16px; }
+  .ddm-flor-1 { width: 28px; left: 22px; bottom: -18px; }
+  .ddm-flor-2 { width: 34px; right: -10px; top: -14px; }
+  .ddm-flor-3 { width: 24px; }
+  .ddm-avatar { width: 48px; height: 48px; left: -10px; bottom: -10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ddm-bandera, .ddm-estrella, .ddm-luz-pueblo, .ddm-chispa, .ddm-nube, .ddm-flor { animation: none; }
+  .ddm-chispa { opacity: 0; }
+  .ddm-petalo, .ddm-vela { animation-duration: .01s; animation-delay: 0s !important; }
+}

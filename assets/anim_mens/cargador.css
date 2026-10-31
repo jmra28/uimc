@@ -1,0 +1,88 @@
+.anim-mens-toggle {
+  position: fixed;
+  left: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 20px 6px 6px;
+  border: 1px solid rgba(255, 199, 110, 0.5);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2c1444 0%, #140a24 55%, #1f0f38 100%);
+  color: #ffe4ad;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.015em;
+  white-space: nowrap;
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 199, 110, 0.12) inset,
+    0 1px 0 rgba(255, 255, 255, 0.14) inset;
+  cursor: pointer;
+  animation: anim-mens-pulso 2.6s ease-in-out infinite;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base), border-color var(--transition-base);
+}
+
+.anim-mens-toggle__icono {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fff1cf, #ffb703 55%, #c97a0a 100%);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset, 0 2px 6px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.anim-mens-toggle:hover {
+  transform: translateY(-3px) scale(1.035);
+  border-color: rgba(255, 199, 110, 0.85);
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 199, 110, 0.3) inset,
+    0 1px 0 rgba(255, 255, 255, 0.18) inset;
+}
+
+.anim-mens-toggle--activo {
+  background: linear-gradient(135deg, #3b1753 0%, #190a2b 55%, #260f42 100%);
+  border-color: rgba(255, 199, 110, 0.85);
+}
+
+@keyframes anim-mens-pulso {
+  0%, 100% {
+    box-shadow:
+      0 10px 28px rgba(0, 0, 0, 0.45),
+      0 0 0 0 rgba(255, 183, 3, 0.38),
+      0 1px 0 rgba(255, 255, 255, 0.14) inset;
+  }
+  50% {
+    box-shadow:
+      0 10px 28px rgba(0, 0, 0, 0.45),
+      0 0 0 9px rgba(255, 183, 3, 0),
+      0 1px 0 rgba(255, 255, 255, 0.14) inset;
+  }
+}
+
+@media (max-width: 480px) {
+  .anim-mens-toggle {
+    left: var(--space-3);
+    bottom: var(--space-3);
+    padding: 5px 16px 5px 5px;
+    font-size: var(--fs-xs);
+  }
+  .anim-mens-toggle__icono {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-mens-toggle {
+    animation: none;
+  }
+}

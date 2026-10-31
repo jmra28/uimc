@@ -27,7 +27,6 @@
   font-weight: var(--fw-bold);
 }
 
-/* -------------------- Tabs de nivel (mismo patrón que .faq__tabs) -------------------- */
 .practicas__tabs {
   position: relative;
 }
@@ -82,7 +81,6 @@
   display: flex;
 }
 
-/* -------------------- Tarjetas de contenido (mismo patrón que .mision__card) -------------------- */
 .practicas__card {
   padding: var(--space-5) var(--space-4);
   border: var(--border-width) solid var(--color-gray-medium);

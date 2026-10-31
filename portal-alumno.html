@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal del Alumno - UIM/IAL</title>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6G5XJRFJ6F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6G5XJRFJ6F');
+  </script>
+
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/portal-alumno.css" />
   <link rel="stylesheet" href="css/practicas-profesionales.css" />
   <link rel="stylesheet" href="css/slider-carrusel.css" />
   <link rel="stylesheet" href="css/portal-chat.css" />
+  <link rel="stylesheet" href="css/politicas-pago.css" />
 
   <link rel="shortcut icon" type="image/icon" href="assets/images/icon_bufalo.png"/>
 </head>
@@ -159,6 +169,22 @@
               <div class="portal-alumno__avisos-list" data-portal-avisos></div>
             </div>
           </details>
+
+          <details class="portal-alumno__collapsible">
+            <summary class="portal-alumno__collapsible-summary">
+              <h2 class="portal-alumno__section-title">Políticas de Pago</h2>
+              <span class="portal-alumno__collapsible-toggle">
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--closed">Expandir</span>
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--open">Compactar</span>
+                <svg class="portal-alumno__collapsible-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="portal-alumno__collapsible-content">
+              <div class="politicas-pago" data-politicas-pago></div>
+            </div>
+          </details>
         </div>
 
         <div class="portal-alumno__panel" data-portal-panel="ial">
@@ -218,6 +244,22 @@
 
               <h3 class="portal-alumno__avisos-title">Avisos</h3>
               <div class="portal-alumno__avisos-list" data-portal-avisos></div>
+            </div>
+          </details>
+
+          <details class="portal-alumno__collapsible">
+            <summary class="portal-alumno__collapsible-summary">
+              <h2 class="portal-alumno__section-title">Políticas de Pago</h2>
+              <span class="portal-alumno__collapsible-toggle">
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--closed">Expandir</span>
+                <span class="portal-alumno__collapsible-toggle-text portal-alumno__collapsible-toggle-text--open">Compactar</span>
+                <svg class="portal-alumno__collapsible-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="portal-alumno__collapsible-content">
+              <div class="politicas-pago" data-politicas-pago></div>
             </div>
           </details>
         </div>
